@@ -1,0 +1,3931 @@
+
+./nachos:     file format elf32-i386
+
+
+Disassembly of section .init:
+
+0804897c <_init>:
+ 804897c:	53                   	push   %ebx
+ 804897d:	83 ec 08             	sub    $0x8,%esp
+ 8048980:	e8 bb 02 00 00       	call   8048c40 <__x86.get_pc_thunk.bx>
+ 8048985:	81 c3 7b 56 00 00    	add    $0x567b,%ebx
+ 804898b:	8b 83 fc ff ff ff    	mov    -0x4(%ebx),%eax
+ 8048991:	85 c0                	test   %eax,%eax
+ 8048993:	74 05                	je     804899a <_init+0x1e>
+ 8048995:	e8 66 02 00 00       	call   8048c00 <__gmon_start__@plt>
+ 804899a:	83 c4 08             	add    $0x8,%esp
+ 804899d:	5b                   	pop    %ebx
+ 804899e:	c3                   	ret
+
+Disassembly of section .plt:
+
+080489a0 <.plt>:
+ 80489a0:	ff 35 04 e0 04 08    	pushl  0x804e004
+ 80489a6:	ff 25 08 e0 04 08    	jmp    *0x804e008
+ 80489ac:	00 00                	add    %al,(%eax)
+	...
+
+080489b0 <open@plt>:
+ 80489b0:	ff 25 0c e0 04 08    	jmp    *0x804e00c
+ 80489b6:	68 00 00 00 00       	push   $0x0
+ 80489bb:	e9 e0 ff ff ff       	jmp    80489a0 <.plt>
+
+080489c0 <_Znwj@plt>:
+ 80489c0:	ff 25 10 e0 04 08    	jmp    *0x804e010
+ 80489c6:	68 08 00 00 00       	push   $0x8
+ 80489cb:	e9 d0 ff ff ff       	jmp    80489a0 <.plt>
+
+080489d0 <getpagesize@plt>:
+ 80489d0:	ff 25 14 e0 04 08    	jmp    *0x804e014
+ 80489d6:	68 10 00 00 00       	push   $0x10
+ 80489db:	e9 c0 ff ff ff       	jmp    80489a0 <.plt>
+
+080489e0 <socket@plt>:
+ 80489e0:	ff 25 18 e0 04 08    	jmp    *0x804e018
+ 80489e6:	68 18 00 00 00       	push   $0x18
+ 80489eb:	e9 b0 ff ff ff       	jmp    80489a0 <.plt>
+
+080489f0 <select@plt>:
+ 80489f0:	ff 25 1c e0 04 08    	jmp    *0x804e01c
+ 80489f6:	68 20 00 00 00       	push   $0x20
+ 80489fb:	e9 a0 ff ff ff       	jmp    80489a0 <.plt>
+
+08048a00 <sleep@plt>:
+ 8048a00:	ff 25 20 e0 04 08    	jmp    *0x804e020
+ 8048a06:	68 28 00 00 00       	push   $0x28
+ 8048a0b:	e9 90 ff ff ff       	jmp    80489a0 <.plt>
+
+08048a10 <lseek@plt>:
+ 8048a10:	ff 25 24 e0 04 08    	jmp    *0x804e024
+ 8048a16:	68 30 00 00 00       	push   $0x30
+ 8048a1b:	e9 80 ff ff ff       	jmp    80489a0 <.plt>
+
+08048a20 <write@plt>:
+ 8048a20:	ff 25 28 e0 04 08    	jmp    *0x804e028
+ 8048a26:	68 38 00 00 00       	push   $0x38
+ 8048a2b:	e9 70 ff ff ff       	jmp    80489a0 <.plt>
+
+08048a30 <fprintf@plt>:
+ 8048a30:	ff 25 2c e0 04 08    	jmp    *0x804e02c
+ 8048a36:	68 40 00 00 00       	push   $0x40
+ 8048a3b:	e9 60 ff ff ff       	jmp    80489a0 <.plt>
+
+08048a40 <_ZdlPvj@plt>:
+ 8048a40:	ff 25 30 e0 04 08    	jmp    *0x804e030
+ 8048a46:	68 48 00 00 00       	push   $0x48
+ 8048a4b:	e9 50 ff ff ff       	jmp    80489a0 <.plt>
+
+08048a50 <strcmp@plt>:
+ 8048a50:	ff 25 34 e0 04 08    	jmp    *0x804e034
+ 8048a56:	68 50 00 00 00       	push   $0x50
+ 8048a5b:	e9 40 ff ff ff       	jmp    80489a0 <.plt>
+
+08048a60 <_Znaj@plt>:
+ 8048a60:	ff 25 38 e0 04 08    	jmp    *0x804e038
+ 8048a66:	68 58 00 00 00       	push   $0x58
+ 8048a6b:	e9 30 ff ff ff       	jmp    80489a0 <.plt>
+
+08048a70 <__errno_location@plt>:
+ 8048a70:	ff 25 3c e0 04 08    	jmp    *0x804e03c
+ 8048a76:	68 60 00 00 00       	push   $0x60
+ 8048a7b:	e9 20 ff ff ff       	jmp    80489a0 <.plt>
+
+08048a80 <fflush@plt>:
+ 8048a80:	ff 25 40 e0 04 08    	jmp    *0x804e040
+ 8048a86:	68 68 00 00 00       	push   $0x68
+ 8048a8b:	e9 10 ff ff ff       	jmp    80489a0 <.plt>
+
+08048a90 <srand@plt>:
+ 8048a90:	ff 25 44 e0 04 08    	jmp    *0x804e044
+ 8048a96:	68 70 00 00 00       	push   $0x70
+ 8048a9b:	e9 00 ff ff ff       	jmp    80489a0 <.plt>
+
+08048aa0 <strchr@plt>:
+ 8048aa0:	ff 25 48 e0 04 08    	jmp    *0x804e048
+ 8048aa6:	68 78 00 00 00       	push   $0x78
+ 8048aab:	e9 f0 fe ff ff       	jmp    80489a0 <.plt>
+
+08048ab0 <__libc_start_main@plt>:
+ 8048ab0:	ff 25 4c e0 04 08    	jmp    *0x804e04c
+ 8048ab6:	68 80 00 00 00       	push   $0x80
+ 8048abb:	e9 e0 fe ff ff       	jmp    80489a0 <.plt>
+
+08048ac0 <signal@plt>:
+ 8048ac0:	ff 25 50 e0 04 08    	jmp    *0x804e050
+ 8048ac6:	68 88 00 00 00       	push   $0x88
+ 8048acb:	e9 d0 fe ff ff       	jmp    80489a0 <.plt>
+
+08048ad0 <rand@plt>:
+ 8048ad0:	ff 25 54 e0 04 08    	jmp    *0x804e054
+ 8048ad6:	68 90 00 00 00       	push   $0x90
+ 8048adb:	e9 c0 fe ff ff       	jmp    80489a0 <.plt>
+
+08048ae0 <recvfrom@plt>:
+ 8048ae0:	ff 25 58 e0 04 08    	jmp    *0x804e058
+ 8048ae6:	68 98 00 00 00       	push   $0x98
+ 8048aeb:	e9 b0 fe ff ff       	jmp    80489a0 <.plt>
+
+08048af0 <_ZdaPv@plt>:
+ 8048af0:	ff 25 5c e0 04 08    	jmp    *0x804e05c
+ 8048af6:	68 a0 00 00 00       	push   $0xa0
+ 8048afb:	e9 a0 fe ff ff       	jmp    80489a0 <.plt>
+
+08048b00 <exit@plt>:
+ 8048b00:	ff 25 60 e0 04 08    	jmp    *0x804e060
+ 8048b06:	68 a8 00 00 00       	push   $0xa8
+ 8048b0b:	e9 90 fe ff ff       	jmp    80489a0 <.plt>
+
+08048b10 <printf@plt>:
+ 8048b10:	ff 25 64 e0 04 08    	jmp    *0x804e064
+ 8048b16:	68 b0 00 00 00       	push   $0xb0
+ 8048b1b:	e9 80 fe ff ff       	jmp    80489a0 <.plt>
+
+08048b20 <puts@plt>:
+ 8048b20:	ff 25 68 e0 04 08    	jmp    *0x804e068
+ 8048b26:	68 b8 00 00 00       	push   $0xb8
+ 8048b2b:	e9 70 fe ff ff       	jmp    80489a0 <.plt>
+
+08048b30 <perror@plt>:
+ 8048b30:	ff 25 6c e0 04 08    	jmp    *0x804e06c
+ 8048b36:	68 c0 00 00 00       	push   $0xc0
+ 8048b3b:	e9 60 fe ff ff       	jmp    80489a0 <.plt>
+
+08048b40 <atoi@plt>:
+ 8048b40:	ff 25 70 e0 04 08    	jmp    *0x804e070
+ 8048b46:	68 c8 00 00 00       	push   $0xc8
+ 8048b4b:	e9 50 fe ff ff       	jmp    80489a0 <.plt>
+
+08048b50 <sendto@plt>:
+ 8048b50:	ff 25 74 e0 04 08    	jmp    *0x804e074
+ 8048b56:	68 d0 00 00 00       	push   $0xd0
+ 8048b5b:	e9 40 fe ff ff       	jmp    80489a0 <.plt>
+
+08048b60 <__gxx_personality_v0@plt>:
+ 8048b60:	ff 25 78 e0 04 08    	jmp    *0x804e078
+ 8048b66:	68 d8 00 00 00       	push   $0xd8
+ 8048b6b:	e9 30 fe ff ff       	jmp    80489a0 <.plt>
+
+08048b70 <close@plt>:
+ 8048b70:	ff 25 7c e0 04 08    	jmp    *0x804e07c
+ 8048b76:	68 e0 00 00 00       	push   $0xe0
+ 8048b7b:	e9 20 fe ff ff       	jmp    80489a0 <.plt>
+
+08048b80 <read@plt>:
+ 8048b80:	ff 25 80 e0 04 08    	jmp    *0x804e080
+ 8048b86:	68 e8 00 00 00       	push   $0xe8
+ 8048b8b:	e9 10 fe ff ff       	jmp    80489a0 <.plt>
+
+08048b90 <abort@plt>:
+ 8048b90:	ff 25 84 e0 04 08    	jmp    *0x804e084
+ 8048b96:	68 f0 00 00 00       	push   $0xf0
+ 8048b9b:	e9 00 fe ff ff       	jmp    80489a0 <.plt>
+
+08048ba0 <_Unwind_Resume@plt>:
+ 8048ba0:	ff 25 88 e0 04 08    	jmp    *0x804e088
+ 8048ba6:	68 f8 00 00 00       	push   $0xf8
+ 8048bab:	e9 f0 fd ff ff       	jmp    80489a0 <.plt>
+
+08048bb0 <vfprintf@plt>:
+ 8048bb0:	ff 25 8c e0 04 08    	jmp    *0x804e08c
+ 8048bb6:	68 00 01 00 00       	push   $0x100
+ 8048bbb:	e9 e0 fd ff ff       	jmp    80489a0 <.plt>
+
+08048bc0 <unlink@plt>:
+ 8048bc0:	ff 25 90 e0 04 08    	jmp    *0x804e090
+ 8048bc6:	68 08 01 00 00       	push   $0x108
+ 8048bcb:	e9 d0 fd ff ff       	jmp    80489a0 <.plt>
+
+08048bd0 <strcpy@plt>:
+ 8048bd0:	ff 25 94 e0 04 08    	jmp    *0x804e094
+ 8048bd6:	68 10 01 00 00       	push   $0x110
+ 8048bdb:	e9 c0 fd ff ff       	jmp    80489a0 <.plt>
+
+08048be0 <mprotect@plt>:
+ 8048be0:	ff 25 98 e0 04 08    	jmp    *0x804e098
+ 8048be6:	68 18 01 00 00       	push   $0x118
+ 8048beb:	e9 b0 fd ff ff       	jmp    80489a0 <.plt>
+
+08048bf0 <bind@plt>:
+ 8048bf0:	ff 25 9c e0 04 08    	jmp    *0x804e09c
+ 8048bf6:	68 20 01 00 00       	push   $0x120
+ 8048bfb:	e9 a0 fd ff ff       	jmp    80489a0 <.plt>
+
+Disassembly of section .plt.got:
+
+08048c00 <__gmon_start__@plt>:
+ 8048c00:	ff 25 fc df 04 08    	jmp    *0x804dffc
+ 8048c06:	66 90                	xchg   %ax,%ax
+
+Disassembly of section .text:
+
+08048c10 <_start>:
+ 8048c10:	31 ed                	xor    %ebp,%ebp
+ 8048c12:	5e                   	pop    %esi
+ 8048c13:	89 e1                	mov    %esp,%ecx
+ 8048c15:	83 e4 f0             	and    $0xfffffff0,%esp
+ 8048c18:	50                   	push   %eax
+ 8048c19:	54                   	push   %esp
+ 8048c1a:	52                   	push   %edx
+ 8048c1b:	68 80 b2 04 08       	push   $0x804b280
+ 8048c20:	68 20 b2 04 08       	push   $0x804b220
+ 8048c25:	51                   	push   %ecx
+ 8048c26:	56                   	push   %esi
+ 8048c27:	68 02 8d 04 08       	push   $0x8048d02
+ 8048c2c:	e8 7f fe ff ff       	call   8048ab0 <__libc_start_main@plt>
+ 8048c31:	f4                   	hlt
+ 8048c32:	66 90                	xchg   %ax,%ax
+ 8048c34:	66 90                	xchg   %ax,%ax
+ 8048c36:	66 90                	xchg   %ax,%ax
+ 8048c38:	66 90                	xchg   %ax,%ax
+ 8048c3a:	66 90                	xchg   %ax,%ax
+ 8048c3c:	66 90                	xchg   %ax,%ax
+ 8048c3e:	66 90                	xchg   %ax,%ax
+
+08048c40 <__x86.get_pc_thunk.bx>:
+ 8048c40:	8b 1c 24             	mov    (%esp),%ebx
+ 8048c43:	c3                   	ret
+ 8048c44:	66 90                	xchg   %ax,%ax
+ 8048c46:	66 90                	xchg   %ax,%ax
+ 8048c48:	66 90                	xchg   %ax,%ax
+ 8048c4a:	66 90                	xchg   %ax,%ax
+ 8048c4c:	66 90                	xchg   %ax,%ax
+ 8048c4e:	66 90                	xchg   %ax,%ax
+
+08048c50 <deregister_tm_clones>:
+ 8048c50:	b8 d0 e0 04 08       	mov    $0x804e0d0,%eax
+ 8048c55:	3d d0 e0 04 08       	cmp    $0x804e0d0,%eax
+ 8048c5a:	74 24                	je     8048c80 <deregister_tm_clones+0x30>
+ 8048c5c:	b8 00 00 00 00       	mov    $0x0,%eax
+ 8048c61:	85 c0                	test   %eax,%eax
+ 8048c63:	74 1b                	je     8048c80 <deregister_tm_clones+0x30>
+ 8048c65:	55                   	push   %ebp
+ 8048c66:	89 e5                	mov    %esp,%ebp
+ 8048c68:	83 ec 14             	sub    $0x14,%esp
+ 8048c6b:	68 d0 e0 04 08       	push   $0x804e0d0
+ 8048c70:	ff d0                	call   *%eax
+ 8048c72:	83 c4 10             	add    $0x10,%esp
+ 8048c75:	c9                   	leave
+ 8048c76:	c3                   	ret
+ 8048c77:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+ 8048c7e:	66 90                	xchg   %ax,%ax
+ 8048c80:	c3                   	ret
+ 8048c81:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+ 8048c88:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+ 8048c8f:	90                   	nop
+
+08048c90 <register_tm_clones>:
+ 8048c90:	b8 d0 e0 04 08       	mov    $0x804e0d0,%eax
+ 8048c95:	2d d0 e0 04 08       	sub    $0x804e0d0,%eax
+ 8048c9a:	89 c2                	mov    %eax,%edx
+ 8048c9c:	c1 e8 1f             	shr    $0x1f,%eax
+ 8048c9f:	c1 fa 02             	sar    $0x2,%edx
+ 8048ca2:	01 d0                	add    %edx,%eax
+ 8048ca4:	d1 f8                	sar    %eax
+ 8048ca6:	74 20                	je     8048cc8 <register_tm_clones+0x38>
+ 8048ca8:	ba 00 00 00 00       	mov    $0x0,%edx
+ 8048cad:	85 d2                	test   %edx,%edx
+ 8048caf:	74 17                	je     8048cc8 <register_tm_clones+0x38>
+ 8048cb1:	55                   	push   %ebp
+ 8048cb2:	89 e5                	mov    %esp,%ebp
+ 8048cb4:	83 ec 10             	sub    $0x10,%esp
+ 8048cb7:	50                   	push   %eax
+ 8048cb8:	68 d0 e0 04 08       	push   $0x804e0d0
+ 8048cbd:	ff d2                	call   *%edx
+ 8048cbf:	83 c4 10             	add    $0x10,%esp
+ 8048cc2:	c9                   	leave
+ 8048cc3:	c3                   	ret
+ 8048cc4:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+ 8048cc8:	c3                   	ret
+ 8048cc9:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+
+08048cd0 <__do_global_dtors_aux>:
+ 8048cd0:	80 3d dc e0 04 08 00 	cmpb   $0x0,0x804e0dc
+ 8048cd7:	75 17                	jne    8048cf0 <__do_global_dtors_aux+0x20>
+ 8048cd9:	55                   	push   %ebp
+ 8048cda:	89 e5                	mov    %esp,%ebp
+ 8048cdc:	83 ec 08             	sub    $0x8,%esp
+ 8048cdf:	e8 6c ff ff ff       	call   8048c50 <deregister_tm_clones>
+ 8048ce4:	c6 05 dc e0 04 08 01 	movb   $0x1,0x804e0dc
+ 8048ceb:	c9                   	leave
+ 8048cec:	c3                   	ret
+ 8048ced:	8d 76 00             	lea    0x0(%esi),%esi
+ 8048cf0:	c3                   	ret
+ 8048cf1:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+ 8048cf8:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
+ 8048cff:	90                   	nop
+
+08048d00 <frame_dummy>:
+ 8048d00:	eb 8e                	jmp    8048c90 <register_tm_clones>
+
+08048d02 <main>:
+ 8048d02:	8d 4c 24 04          	lea    0x4(%esp),%ecx
+ 8048d06:	83 e4 f0             	and    $0xfffffff0,%esp
+ 8048d09:	ff 71 fc             	pushl  -0x4(%ecx)
+ 8048d0c:	55                   	push   %ebp
+ 8048d0d:	89 e5                	mov    %esp,%ebp
+ 8048d0f:	53                   	push   %ebx
+ 8048d10:	51                   	push   %ecx
+ 8048d11:	83 ec 10             	sub    $0x10,%esp
+ 8048d14:	89 cb                	mov    %ecx,%ebx
+ 8048d16:	83 ec 08             	sub    $0x8,%esp
+ 8048d19:	68 fb b2 04 08       	push   $0x804b2fb
+ 8048d1e:	6a 74                	push   $0x74
+ 8048d20:	e8 14 13 00 00       	call   804a039 <_Z5DEBUGcPKcz>
+ 8048d25:	83 c4 10             	add    $0x10,%esp
+ 8048d28:	83 ec 08             	sub    $0x8,%esp
+ 8048d2b:	ff 73 04             	pushl  0x4(%ebx)
+ 8048d2e:	ff 33                	pushl  (%ebx)
+ 8048d30:	e8 7c 0a 00 00       	call   80497b1 <_Z10InitializeiPPc>
+ 8048d35:	83 c4 10             	add    $0x10,%esp
+ 8048d38:	83 2b 01             	subl   $0x1,(%ebx)
+ 8048d3b:	83 43 04 04          	addl   $0x4,0x4(%ebx)
+ 8048d3f:	83 3b 00             	cmpl   $0x0,(%ebx)
+ 8048d42:	7e 54                	jle    8048d98 <main+0x96>
+ 8048d44:	c7 45 f4 01 00 00 00 	movl   $0x1,-0xc(%ebp)
+ 8048d4b:	8b 43 04             	mov    0x4(%ebx),%eax
+ 8048d4e:	8b 00                	mov    (%eax),%eax
+ 8048d50:	83 c0 01             	add    $0x1,%eax
+ 8048d53:	0f b6 00             	movzbl (%eax),%eax
+ 8048d56:	0f be c0             	movsbl %al,%eax
+ 8048d59:	83 f8 71             	cmp    $0x71,%eax
+ 8048d5c:	75 1f                	jne    8048d7d <main+0x7b>
+ 8048d5e:	8b 43 04             	mov    0x4(%ebx),%eax
+ 8048d61:	83 c0 04             	add    $0x4,%eax
+ 8048d64:	8b 00                	mov    (%eax),%eax
+ 8048d66:	83 ec 0c             	sub    $0xc,%esp
+ 8048d69:	50                   	push   %eax
+ 8048d6a:	e8 d1 fd ff ff       	call   8048b40 <atoi@plt>
+ 8048d6f:	83 c4 10             	add    $0x10,%esp
+ 8048d72:	a3 ac e0 04 08       	mov    %eax,0x804e0ac
+ 8048d77:	83 45 f4 01          	addl   $0x1,-0xc(%ebp)
+ 8048d7b:	eb 0b                	jmp    8048d88 <main+0x86>
+ 8048d7d:	c7 05 ac e0 04 08 01 	movl   $0x1,0x804e0ac
+ 8048d84:	00 00 00
+ 8048d87:	90                   	nop
+ 8048d88:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8048d8b:	29 03                	sub    %eax,(%ebx)
+ 8048d8d:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8048d90:	c1 e0 02             	shl    $0x2,%eax
+ 8048d93:	01 43 04             	add    %eax,0x4(%ebx)
+ 8048d96:	eb a7                	jmp    8048d3f <main+0x3d>
+ 8048d98:	e8 b3 13 00 00       	call   804a150 <_Z10ThreadTestv>
+ 8048d9d:	83 2b 01             	subl   $0x1,(%ebx)
+ 8048da0:	83 43 04 04          	addl   $0x4,0x4(%ebx)
+ 8048da4:	83 3b 00             	cmpl   $0x0,(%ebx)
+ 8048da7:	7e 42                	jle    8048deb <main+0xe9>
+ 8048da9:	c7 45 f4 01 00 00 00 	movl   $0x1,-0xc(%ebp)
+ 8048db0:	8b 43 04             	mov    0x4(%ebx),%eax
+ 8048db3:	8b 00                	mov    (%eax),%eax
+ 8048db5:	83 ec 08             	sub    $0x8,%esp
+ 8048db8:	68 09 b3 04 08       	push   $0x804b309
+ 8048dbd:	50                   	push   %eax
+ 8048dbe:	e8 8d fc ff ff       	call   8048a50 <strcmp@plt>
+ 8048dc3:	83 c4 10             	add    $0x10,%esp
+ 8048dc6:	85 c0                	test   %eax,%eax
+ 8048dc8:	75 11                	jne    8048ddb <main+0xd9>
+ 8048dca:	a1 a8 e0 04 08       	mov    0x804e0a8,%eax
+ 8048dcf:	83 ec 0c             	sub    $0xc,%esp
+ 8048dd2:	50                   	push   %eax
+ 8048dd3:	e8 38 fd ff ff       	call   8048b10 <printf@plt>
+ 8048dd8:	83 c4 10             	add    $0x10,%esp
+ 8048ddb:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8048dde:	29 03                	sub    %eax,(%ebx)
+ 8048de0:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8048de3:	c1 e0 02             	shl    $0x2,%eax
+ 8048de6:	01 43 04             	add    %eax,0x4(%ebx)
+ 8048de9:	eb b9                	jmp    8048da4 <main+0xa2>
+ 8048deb:	a1 e0 e0 04 08       	mov    0x804e0e0,%eax
+ 8048df0:	83 ec 0c             	sub    $0xc,%esp
+ 8048df3:	50                   	push   %eax
+ 8048df4:	e8 69 0e 00 00       	call   8049c62 <_ZN6Thread6FinishEv>
+ 8048df9:	83 c4 10             	add    $0x10,%esp
+ 8048dfc:	b8 00 00 00 00       	mov    $0x0,%eax
+ 8048e01:	8d 65 f8             	lea    -0x8(%ebp),%esp
+ 8048e04:	59                   	pop    %ecx
+ 8048e05:	5b                   	pop    %ebx
+ 8048e06:	5d                   	pop    %ebp
+ 8048e07:	8d 61 fc             	lea    -0x4(%ecx),%esp
+ 8048e0a:	c3                   	ret
+ 8048e0b:	90                   	nop
+
+08048e0c <_ZN11ListElementC1EPvi>:
+ 8048e0c:	55                   	push   %ebp
+ 8048e0d:	89 e5                	mov    %esp,%ebp
+ 8048e0f:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048e12:	8b 55 0c             	mov    0xc(%ebp),%edx
+ 8048e15:	89 50 08             	mov    %edx,0x8(%eax)
+ 8048e18:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048e1b:	8b 55 10             	mov    0x10(%ebp),%edx
+ 8048e1e:	89 50 04             	mov    %edx,0x4(%eax)
+ 8048e21:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048e24:	c7 00 00 00 00 00    	movl   $0x0,(%eax)
+ 8048e2a:	90                   	nop
+ 8048e2b:	5d                   	pop    %ebp
+ 8048e2c:	c3                   	ret
+ 8048e2d:	90                   	nop
+
+08048e2e <_ZN4ListC1Ev>:
+ 8048e2e:	55                   	push   %ebp
+ 8048e2f:	89 e5                	mov    %esp,%ebp
+ 8048e31:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048e34:	c7 40 04 00 00 00 00 	movl   $0x0,0x4(%eax)
+ 8048e3b:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048e3e:	8b 50 04             	mov    0x4(%eax),%edx
+ 8048e41:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048e44:	89 10                	mov    %edx,(%eax)
+ 8048e46:	90                   	nop
+ 8048e47:	5d                   	pop    %ebp
+ 8048e48:	c3                   	ret
+ 8048e49:	90                   	nop
+
+08048e4a <_ZN4ListD1Ev>:
+ 8048e4a:	55                   	push   %ebp
+ 8048e4b:	89 e5                	mov    %esp,%ebp
+ 8048e4d:	83 ec 08             	sub    $0x8,%esp
+ 8048e50:	83 ec 0c             	sub    $0xc,%esp
+ 8048e53:	ff 75 08             	pushl  0x8(%ebp)
+ 8048e56:	e8 e3 00 00 00       	call   8048f3e <_ZN4List6RemoveEv>
+ 8048e5b:	83 c4 10             	add    $0x10,%esp
+ 8048e5e:	85 c0                	test   %eax,%eax
+ 8048e60:	0f 95 c0             	setne  %al
+ 8048e63:	84 c0                	test   %al,%al
+ 8048e65:	74 02                	je     8048e69 <_ZN4ListD1Ev+0x1f>
+ 8048e67:	eb e7                	jmp    8048e50 <_ZN4ListD1Ev+0x6>
+ 8048e69:	90                   	nop
+ 8048e6a:	c9                   	leave
+ 8048e6b:	c3                   	ret
+
+08048e6c <_ZN4List6AppendEPv>:
+ 8048e6c:	55                   	push   %ebp
+ 8048e6d:	89 e5                	mov    %esp,%ebp
+ 8048e6f:	53                   	push   %ebx
+ 8048e70:	83 ec 14             	sub    $0x14,%esp
+ 8048e73:	83 ec 0c             	sub    $0xc,%esp
+ 8048e76:	6a 0c                	push   $0xc
+ 8048e78:	e8 43 fb ff ff       	call   80489c0 <_Znwj@plt>
+ 8048e7d:	83 c4 10             	add    $0x10,%esp
+ 8048e80:	89 c3                	mov    %eax,%ebx
+ 8048e82:	83 ec 04             	sub    $0x4,%esp
+ 8048e85:	6a 00                	push   $0x0
+ 8048e87:	ff 75 0c             	pushl  0xc(%ebp)
+ 8048e8a:	53                   	push   %ebx
+ 8048e8b:	e8 7c ff ff ff       	call   8048e0c <_ZN11ListElementC1EPvi>
+ 8048e90:	83 c4 10             	add    $0x10,%esp
+ 8048e93:	89 5d f4             	mov    %ebx,-0xc(%ebp)
+ 8048e96:	83 ec 0c             	sub    $0xc,%esp
+ 8048e99:	ff 75 08             	pushl  0x8(%ebp)
+ 8048e9c:	e8 01 01 00 00       	call   8048fa2 <_ZN4List7IsEmptyEv>
+ 8048ea1:	83 c4 10             	add    $0x10,%esp
+ 8048ea4:	84 c0                	test   %al,%al
+ 8048ea6:	74 13                	je     8048ebb <_ZN4List6AppendEPv+0x4f>
+ 8048ea8:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048eab:	8b 55 f4             	mov    -0xc(%ebp),%edx
+ 8048eae:	89 10                	mov    %edx,(%eax)
+ 8048eb0:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048eb3:	8b 55 f4             	mov    -0xc(%ebp),%edx
+ 8048eb6:	89 50 04             	mov    %edx,0x4(%eax)
+ 8048eb9:	eb 14                	jmp    8048ecf <_ZN4List6AppendEPv+0x63>
+ 8048ebb:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048ebe:	8b 40 04             	mov    0x4(%eax),%eax
+ 8048ec1:	8b 55 f4             	mov    -0xc(%ebp),%edx
+ 8048ec4:	89 10                	mov    %edx,(%eax)
+ 8048ec6:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048ec9:	8b 55 f4             	mov    -0xc(%ebp),%edx
+ 8048ecc:	89 50 04             	mov    %edx,0x4(%eax)
+ 8048ecf:	90                   	nop
+ 8048ed0:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+ 8048ed3:	c9                   	leave
+ 8048ed4:	c3                   	ret
+ 8048ed5:	90                   	nop
+
+08048ed6 <_ZN4List7PrependEPv>:
+ 8048ed6:	55                   	push   %ebp
+ 8048ed7:	89 e5                	mov    %esp,%ebp
+ 8048ed9:	53                   	push   %ebx
+ 8048eda:	83 ec 14             	sub    $0x14,%esp
+ 8048edd:	83 ec 0c             	sub    $0xc,%esp
+ 8048ee0:	6a 0c                	push   $0xc
+ 8048ee2:	e8 d9 fa ff ff       	call   80489c0 <_Znwj@plt>
+ 8048ee7:	83 c4 10             	add    $0x10,%esp
+ 8048eea:	89 c3                	mov    %eax,%ebx
+ 8048eec:	83 ec 04             	sub    $0x4,%esp
+ 8048eef:	6a 00                	push   $0x0
+ 8048ef1:	ff 75 0c             	pushl  0xc(%ebp)
+ 8048ef4:	53                   	push   %ebx
+ 8048ef5:	e8 12 ff ff ff       	call   8048e0c <_ZN11ListElementC1EPvi>
+ 8048efa:	83 c4 10             	add    $0x10,%esp
+ 8048efd:	89 5d f4             	mov    %ebx,-0xc(%ebp)
+ 8048f00:	83 ec 0c             	sub    $0xc,%esp
+ 8048f03:	ff 75 08             	pushl  0x8(%ebp)
+ 8048f06:	e8 97 00 00 00       	call   8048fa2 <_ZN4List7IsEmptyEv>
+ 8048f0b:	83 c4 10             	add    $0x10,%esp
+ 8048f0e:	84 c0                	test   %al,%al
+ 8048f10:	74 13                	je     8048f25 <_ZN4List7PrependEPv+0x4f>
+ 8048f12:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048f15:	8b 55 f4             	mov    -0xc(%ebp),%edx
+ 8048f18:	89 10                	mov    %edx,(%eax)
+ 8048f1a:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048f1d:	8b 55 f4             	mov    -0xc(%ebp),%edx
+ 8048f20:	89 50 04             	mov    %edx,0x4(%eax)
+ 8048f23:	eb 12                	jmp    8048f37 <_ZN4List7PrependEPv+0x61>
+ 8048f25:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048f28:	8b 10                	mov    (%eax),%edx
+ 8048f2a:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8048f2d:	89 10                	mov    %edx,(%eax)
+ 8048f2f:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048f32:	8b 55 f4             	mov    -0xc(%ebp),%edx
+ 8048f35:	89 10                	mov    %edx,(%eax)
+ 8048f37:	90                   	nop
+ 8048f38:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+ 8048f3b:	c9                   	leave
+ 8048f3c:	c3                   	ret
+ 8048f3d:	90                   	nop
+
+08048f3e <_ZN4List6RemoveEv>:
+ 8048f3e:	55                   	push   %ebp
+ 8048f3f:	89 e5                	mov    %esp,%ebp
+ 8048f41:	83 ec 08             	sub    $0x8,%esp
+ 8048f44:	83 ec 08             	sub    $0x8,%esp
+ 8048f47:	6a 00                	push   $0x0
+ 8048f49:	ff 75 08             	pushl  0x8(%ebp)
+ 8048f4c:	e8 31 01 00 00       	call   8049082 <_ZN4List12SortedRemoveEPi>
+ 8048f51:	83 c4 10             	add    $0x10,%esp
+ 8048f54:	c9                   	leave
+ 8048f55:	c3                   	ret
+
+08048f56 <_ZN4List6MapcarEPFviE>:
+ 8048f56:	55                   	push   %ebp
+ 8048f57:	89 e5                	mov    %esp,%ebp
+ 8048f59:	83 ec 18             	sub    $0x18,%esp
+ 8048f5c:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048f5f:	8b 00                	mov    (%eax),%eax
+ 8048f61:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 8048f64:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 8048f68:	74 35                	je     8048f9f <_ZN4List6MapcarEPFviE+0x49>
+ 8048f6a:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8048f6d:	8b 40 08             	mov    0x8(%eax),%eax
+ 8048f70:	50                   	push   %eax
+ 8048f71:	ff 75 0c             	pushl  0xc(%ebp)
+ 8048f74:	68 0c b3 04 08       	push   $0x804b30c
+ 8048f79:	6a 6c                	push   $0x6c
+ 8048f7b:	e8 b9 10 00 00       	call   804a039 <_Z5DEBUGcPKcz>
+ 8048f80:	83 c4 10             	add    $0x10,%esp
+ 8048f83:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8048f86:	8b 40 08             	mov    0x8(%eax),%eax
+ 8048f89:	83 ec 0c             	sub    $0xc,%esp
+ 8048f8c:	50                   	push   %eax
+ 8048f8d:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 8048f90:	ff d0                	call   *%eax
+ 8048f92:	83 c4 10             	add    $0x10,%esp
+ 8048f95:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8048f98:	8b 00                	mov    (%eax),%eax
+ 8048f9a:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 8048f9d:	eb c5                	jmp    8048f64 <_ZN4List6MapcarEPFviE+0xe>
+ 8048f9f:	90                   	nop
+ 8048fa0:	c9                   	leave
+ 8048fa1:	c3                   	ret
+
+08048fa2 <_ZN4List7IsEmptyEv>:
+ 8048fa2:	55                   	push   %ebp
+ 8048fa3:	89 e5                	mov    %esp,%ebp
+ 8048fa5:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048fa8:	8b 00                	mov    (%eax),%eax
+ 8048faa:	85 c0                	test   %eax,%eax
+ 8048fac:	75 07                	jne    8048fb5 <_ZN4List7IsEmptyEv+0x13>
+ 8048fae:	b8 01 00 00 00       	mov    $0x1,%eax
+ 8048fb3:	eb 05                	jmp    8048fba <_ZN4List7IsEmptyEv+0x18>
+ 8048fb5:	b8 00 00 00 00       	mov    $0x0,%eax
+ 8048fba:	5d                   	pop    %ebp
+ 8048fbb:	c3                   	ret
+
+08048fbc <_ZN4List12SortedInsertEPvi>:
+ 8048fbc:	55                   	push   %ebp
+ 8048fbd:	89 e5                	mov    %esp,%ebp
+ 8048fbf:	53                   	push   %ebx
+ 8048fc0:	83 ec 14             	sub    $0x14,%esp
+ 8048fc3:	83 ec 0c             	sub    $0xc,%esp
+ 8048fc6:	6a 0c                	push   $0xc
+ 8048fc8:	e8 f3 f9 ff ff       	call   80489c0 <_Znwj@plt>
+ 8048fcd:	83 c4 10             	add    $0x10,%esp
+ 8048fd0:	89 c3                	mov    %eax,%ebx
+ 8048fd2:	83 ec 04             	sub    $0x4,%esp
+ 8048fd5:	ff 75 10             	pushl  0x10(%ebp)
+ 8048fd8:	ff 75 0c             	pushl  0xc(%ebp)
+ 8048fdb:	53                   	push   %ebx
+ 8048fdc:	e8 2b fe ff ff       	call   8048e0c <_ZN11ListElementC1EPvi>
+ 8048fe1:	83 c4 10             	add    $0x10,%esp
+ 8048fe4:	89 5d f0             	mov    %ebx,-0x10(%ebp)
+ 8048fe7:	83 ec 0c             	sub    $0xc,%esp
+ 8048fea:	ff 75 08             	pushl  0x8(%ebp)
+ 8048fed:	e8 b0 ff ff ff       	call   8048fa2 <_ZN4List7IsEmptyEv>
+ 8048ff2:	83 c4 10             	add    $0x10,%esp
+ 8048ff5:	84 c0                	test   %al,%al
+ 8048ff7:	74 13                	je     804900c <_ZN4List12SortedInsertEPvi+0x50>
+ 8048ff9:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048ffc:	8b 55 f0             	mov    -0x10(%ebp),%edx
+ 8048fff:	89 10                	mov    %edx,(%eax)
+ 8049001:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049004:	8b 55 f0             	mov    -0x10(%ebp),%edx
+ 8049007:	89 50 04             	mov    %edx,0x4(%eax)
+ 804900a:	eb 71                	jmp    804907d <_ZN4List12SortedInsertEPvi+0xc1>
+ 804900c:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804900f:	8b 00                	mov    (%eax),%eax
+ 8049011:	8b 40 04             	mov    0x4(%eax),%eax
+ 8049014:	39 45 10             	cmp    %eax,0x10(%ebp)
+ 8049017:	7d 14                	jge    804902d <_ZN4List12SortedInsertEPvi+0x71>
+ 8049019:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804901c:	8b 10                	mov    (%eax),%edx
+ 804901e:	8b 45 f0             	mov    -0x10(%ebp),%eax
+ 8049021:	89 10                	mov    %edx,(%eax)
+ 8049023:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049026:	8b 55 f0             	mov    -0x10(%ebp),%edx
+ 8049029:	89 10                	mov    %edx,(%eax)
+ 804902b:	eb 50                	jmp    804907d <_ZN4List12SortedInsertEPvi+0xc1>
+ 804902d:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049030:	8b 00                	mov    (%eax),%eax
+ 8049032:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 8049035:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8049038:	8b 00                	mov    (%eax),%eax
+ 804903a:	85 c0                	test   %eax,%eax
+ 804903c:	74 2b                	je     8049069 <_ZN4List12SortedInsertEPvi+0xad>
+ 804903e:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8049041:	8b 00                	mov    (%eax),%eax
+ 8049043:	8b 40 04             	mov    0x4(%eax),%eax
+ 8049046:	39 45 10             	cmp    %eax,0x10(%ebp)
+ 8049049:	7d 14                	jge    804905f <_ZN4List12SortedInsertEPvi+0xa3>
+ 804904b:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804904e:	8b 10                	mov    (%eax),%edx
+ 8049050:	8b 45 f0             	mov    -0x10(%ebp),%eax
+ 8049053:	89 10                	mov    %edx,(%eax)
+ 8049055:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8049058:	8b 55 f0             	mov    -0x10(%ebp),%edx
+ 804905b:	89 10                	mov    %edx,(%eax)
+ 804905d:	eb 1e                	jmp    804907d <_ZN4List12SortedInsertEPvi+0xc1>
+ 804905f:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8049062:	8b 00                	mov    (%eax),%eax
+ 8049064:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 8049067:	eb cc                	jmp    8049035 <_ZN4List12SortedInsertEPvi+0x79>
+ 8049069:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804906c:	8b 40 04             	mov    0x4(%eax),%eax
+ 804906f:	8b 55 f0             	mov    -0x10(%ebp),%edx
+ 8049072:	89 10                	mov    %edx,(%eax)
+ 8049074:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049077:	8b 55 f0             	mov    -0x10(%ebp),%edx
+ 804907a:	89 50 04             	mov    %edx,0x4(%eax)
+ 804907d:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+ 8049080:	c9                   	leave
+ 8049081:	c3                   	ret
+
+08049082 <_ZN4List12SortedRemoveEPi>:
+ 8049082:	55                   	push   %ebp
+ 8049083:	89 e5                	mov    %esp,%ebp
+ 8049085:	83 ec 18             	sub    $0x18,%esp
+ 8049088:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804908b:	8b 00                	mov    (%eax),%eax
+ 804908d:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 8049090:	ff 75 08             	pushl  0x8(%ebp)
+ 8049093:	e8 0a ff ff ff       	call   8048fa2 <_ZN4List7IsEmptyEv>
+ 8049098:	83 c4 04             	add    $0x4,%esp
+ 804909b:	84 c0                	test   %al,%al
+ 804909d:	74 07                	je     80490a6 <_ZN4List12SortedRemoveEPi+0x24>
+ 804909f:	b8 00 00 00 00       	mov    $0x0,%eax
+ 80490a4:	eb 62                	jmp    8049108 <_ZN4List12SortedRemoveEPi+0x86>
+ 80490a6:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80490a9:	8b 00                	mov    (%eax),%eax
+ 80490ab:	8b 40 08             	mov    0x8(%eax),%eax
+ 80490ae:	89 45 f0             	mov    %eax,-0x10(%ebp)
+ 80490b1:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80490b4:	8b 10                	mov    (%eax),%edx
+ 80490b6:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80490b9:	8b 40 04             	mov    0x4(%eax),%eax
+ 80490bc:	39 c2                	cmp    %eax,%edx
+ 80490be:	75 15                	jne    80490d5 <_ZN4List12SortedRemoveEPi+0x53>
+ 80490c0:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80490c3:	c7 00 00 00 00 00    	movl   $0x0,(%eax)
+ 80490c9:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80490cc:	c7 40 04 00 00 00 00 	movl   $0x0,0x4(%eax)
+ 80490d3:	eb 0a                	jmp    80490df <_ZN4List12SortedRemoveEPi+0x5d>
+ 80490d5:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 80490d8:	8b 10                	mov    (%eax),%edx
+ 80490da:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80490dd:	89 10                	mov    %edx,(%eax)
+ 80490df:	83 7d 0c 00          	cmpl   $0x0,0xc(%ebp)
+ 80490e3:	74 0b                	je     80490f0 <_ZN4List12SortedRemoveEPi+0x6e>
+ 80490e5:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 80490e8:	8b 50 04             	mov    0x4(%eax),%edx
+ 80490eb:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 80490ee:	89 10                	mov    %edx,(%eax)
+ 80490f0:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 80490f3:	85 c0                	test   %eax,%eax
+ 80490f5:	74 0e                	je     8049105 <_ZN4List12SortedRemoveEPi+0x83>
+ 80490f7:	83 ec 08             	sub    $0x8,%esp
+ 80490fa:	6a 0c                	push   $0xc
+ 80490fc:	50                   	push   %eax
+ 80490fd:	e8 3e f9 ff ff       	call   8048a40 <_ZdlPvj@plt>
+ 8049102:	83 c4 10             	add    $0x10,%esp
+ 8049105:	8b 45 f0             	mov    -0x10(%ebp),%eax
+ 8049108:	c9                   	leave
+ 8049109:	c3                   	ret
+
+0804910a <_ZN9SchedulerC1Ev>:
+ 804910a:	55                   	push   %ebp
+ 804910b:	89 e5                	mov    %esp,%ebp
+ 804910d:	56                   	push   %esi
+ 804910e:	53                   	push   %ebx
+ 804910f:	83 ec 0c             	sub    $0xc,%esp
+ 8049112:	6a 08                	push   $0x8
+ 8049114:	e8 a7 f8 ff ff       	call   80489c0 <_Znwj@plt>
+ 8049119:	83 c4 10             	add    $0x10,%esp
+ 804911c:	89 c3                	mov    %eax,%ebx
+ 804911e:	83 ec 0c             	sub    $0xc,%esp
+ 8049121:	53                   	push   %ebx
+ 8049122:	e8 07 fd ff ff       	call   8048e2e <_ZN4ListC1Ev>
+ 8049127:	83 c4 10             	add    $0x10,%esp
+ 804912a:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804912d:	89 18                	mov    %ebx,(%eax)
+ 804912f:	eb 1b                	jmp    804914c <_ZN9SchedulerC1Ev+0x42>
+ 8049131:	89 c6                	mov    %eax,%esi
+ 8049133:	83 ec 08             	sub    $0x8,%esp
+ 8049136:	6a 08                	push   $0x8
+ 8049138:	53                   	push   %ebx
+ 8049139:	e8 02 f9 ff ff       	call   8048a40 <_ZdlPvj@plt>
+ 804913e:	83 c4 10             	add    $0x10,%esp
+ 8049141:	89 f0                	mov    %esi,%eax
+ 8049143:	83 ec 0c             	sub    $0xc,%esp
+ 8049146:	50                   	push   %eax
+ 8049147:	e8 54 fa ff ff       	call   8048ba0 <_Unwind_Resume@plt>
+ 804914c:	8d 65 f8             	lea    -0x8(%ebp),%esp
+ 804914f:	5b                   	pop    %ebx
+ 8049150:	5e                   	pop    %esi
+ 8049151:	5d                   	pop    %ebp
+ 8049152:	c3                   	ret
+ 8049153:	90                   	nop
+
+08049154 <_ZN9SchedulerD1Ev>:
+ 8049154:	55                   	push   %ebp
+ 8049155:	89 e5                	mov    %esp,%ebp
+ 8049157:	53                   	push   %ebx
+ 8049158:	83 ec 04             	sub    $0x4,%esp
+ 804915b:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804915e:	8b 18                	mov    (%eax),%ebx
+ 8049160:	85 db                	test   %ebx,%ebx
+ 8049162:	74 1a                	je     804917e <_ZN9SchedulerD1Ev+0x2a>
+ 8049164:	83 ec 0c             	sub    $0xc,%esp
+ 8049167:	53                   	push   %ebx
+ 8049168:	e8 dd fc ff ff       	call   8048e4a <_ZN4ListD1Ev>
+ 804916d:	83 c4 10             	add    $0x10,%esp
+ 8049170:	83 ec 08             	sub    $0x8,%esp
+ 8049173:	6a 08                	push   $0x8
+ 8049175:	53                   	push   %ebx
+ 8049176:	e8 c5 f8 ff ff       	call   8048a40 <_ZdlPvj@plt>
+ 804917b:	83 c4 10             	add    $0x10,%esp
+ 804917e:	90                   	nop
+ 804917f:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+ 8049182:	c9                   	leave
+ 8049183:	c3                   	ret
+
+08049184 <_ZN9Scheduler10ReadyToRunEP6Thread>:
+ 8049184:	55                   	push   %ebp
+ 8049185:	89 e5                	mov    %esp,%ebp
+ 8049187:	83 ec 08             	sub    $0x8,%esp
+ 804918a:	83 ec 0c             	sub    $0xc,%esp
+ 804918d:	ff 75 0c             	pushl  0xc(%ebp)
+ 8049190:	e8 71 01 00 00       	call   8049306 <_ZN6Thread7getNameEv>
+ 8049195:	83 c4 10             	add    $0x10,%esp
+ 8049198:	83 ec 04             	sub    $0x4,%esp
+ 804919b:	50                   	push   %eax
+ 804919c:	68 30 b3 04 08       	push   $0x804b330
+ 80491a1:	6a 74                	push   $0x74
+ 80491a3:	e8 91 0e 00 00       	call   804a039 <_Z5DEBUGcPKcz>
+ 80491a8:	83 c4 10             	add    $0x10,%esp
+ 80491ab:	83 ec 08             	sub    $0x8,%esp
+ 80491ae:	6a 02                	push   $0x2
+ 80491b0:	ff 75 0c             	pushl  0xc(%ebp)
+ 80491b3:	e8 3e 01 00 00       	call   80492f6 <_ZN6Thread9setStatusE12ThreadStatus>
+ 80491b8:	83 c4 10             	add    $0x10,%esp
+ 80491bb:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80491be:	8b 00                	mov    (%eax),%eax
+ 80491c0:	83 ec 08             	sub    $0x8,%esp
+ 80491c3:	ff 75 0c             	pushl  0xc(%ebp)
+ 80491c6:	50                   	push   %eax
+ 80491c7:	e8 a0 fc ff ff       	call   8048e6c <_ZN4List6AppendEPv>
+ 80491cc:	83 c4 10             	add    $0x10,%esp
+ 80491cf:	90                   	nop
+ 80491d0:	c9                   	leave
+ 80491d1:	c3                   	ret
+
+080491d2 <_ZN9Scheduler13FindNextToRunEv>:
+ 80491d2:	55                   	push   %ebp
+ 80491d3:	89 e5                	mov    %esp,%ebp
+ 80491d5:	83 ec 08             	sub    $0x8,%esp
+ 80491d8:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80491db:	8b 00                	mov    (%eax),%eax
+ 80491dd:	83 ec 0c             	sub    $0xc,%esp
+ 80491e0:	50                   	push   %eax
+ 80491e1:	e8 58 fd ff ff       	call   8048f3e <_ZN4List6RemoveEv>
+ 80491e6:	83 c4 10             	add    $0x10,%esp
+ 80491e9:	c9                   	leave
+ 80491ea:	c3                   	ret
+ 80491eb:	90                   	nop
+
+080491ec <_ZN9Scheduler3RunEP6Thread>:
+ 80491ec:	55                   	push   %ebp
+ 80491ed:	89 e5                	mov    %esp,%ebp
+ 80491ef:	53                   	push   %ebx
+ 80491f0:	83 ec 14             	sub    $0x14,%esp
+ 80491f3:	a1 e0 e0 04 08       	mov    0x804e0e0,%eax
+ 80491f8:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 80491fb:	83 ec 0c             	sub    $0xc,%esp
+ 80491fe:	ff 75 f4             	pushl  -0xc(%ebp)
+ 8049201:	e8 0a 0a 00 00       	call   8049c10 <_ZN6Thread13CheckOverflowEv>
+ 8049206:	83 c4 10             	add    $0x10,%esp
+ 8049209:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804920c:	a3 e0 e0 04 08       	mov    %eax,0x804e0e0
+ 8049211:	a1 e0 e0 04 08       	mov    0x804e0e0,%eax
+ 8049216:	83 ec 08             	sub    $0x8,%esp
+ 8049219:	6a 01                	push   $0x1
+ 804921b:	50                   	push   %eax
+ 804921c:	e8 d5 00 00 00       	call   80492f6 <_ZN6Thread9setStatusE12ThreadStatus>
+ 8049221:	83 c4 10             	add    $0x10,%esp
+ 8049224:	83 ec 0c             	sub    $0xc,%esp
+ 8049227:	ff 75 0c             	pushl  0xc(%ebp)
+ 804922a:	e8 d7 00 00 00       	call   8049306 <_ZN6Thread7getNameEv>
+ 804922f:	83 c4 10             	add    $0x10,%esp
+ 8049232:	89 c3                	mov    %eax,%ebx
+ 8049234:	83 ec 0c             	sub    $0xc,%esp
+ 8049237:	ff 75 f4             	pushl  -0xc(%ebp)
+ 804923a:	e8 c7 00 00 00       	call   8049306 <_ZN6Thread7getNameEv>
+ 804923f:	83 c4 10             	add    $0x10,%esp
+ 8049242:	53                   	push   %ebx
+ 8049243:	50                   	push   %eax
+ 8049244:	68 54 b3 04 08       	push   $0x804b354
+ 8049249:	6a 74                	push   $0x74
+ 804924b:	e8 e9 0d 00 00       	call   804a039 <_Z5DEBUGcPKcz>
+ 8049250:	83 c4 10             	add    $0x10,%esp
+ 8049253:	83 ec 08             	sub    $0x8,%esp
+ 8049256:	ff 75 0c             	pushl  0xc(%ebp)
+ 8049259:	ff 75 f4             	pushl  -0xc(%ebp)
+ 804925c:	e8 5d 1f 00 00       	call   804b1be <SWITCH>
+ 8049261:	83 c4 10             	add    $0x10,%esp
+ 8049264:	a1 e0 e0 04 08       	mov    0x804e0e0,%eax
+ 8049269:	83 ec 0c             	sub    $0xc,%esp
+ 804926c:	50                   	push   %eax
+ 804926d:	e8 94 00 00 00       	call   8049306 <_ZN6Thread7getNameEv>
+ 8049272:	83 c4 10             	add    $0x10,%esp
+ 8049275:	83 ec 04             	sub    $0x4,%esp
+ 8049278:	50                   	push   %eax
+ 8049279:	68 7f b3 04 08       	push   $0x804b37f
+ 804927e:	6a 74                	push   $0x74
+ 8049280:	e8 b4 0d 00 00       	call   804a039 <_Z5DEBUGcPKcz>
+ 8049285:	83 c4 10             	add    $0x10,%esp
+ 8049288:	a1 e4 e0 04 08       	mov    0x804e0e4,%eax
+ 804928d:	85 c0                	test   %eax,%eax
+ 804928f:	74 2e                	je     80492bf <_ZN9Scheduler3RunEP6Thread+0xd3>
+ 8049291:	8b 1d e4 e0 04 08    	mov    0x804e0e4,%ebx
+ 8049297:	85 db                	test   %ebx,%ebx
+ 8049299:	74 1a                	je     80492b5 <_ZN9Scheduler3RunEP6Thread+0xc9>
+ 804929b:	83 ec 0c             	sub    $0xc,%esp
+ 804929e:	53                   	push   %ebx
+ 804929f:	e8 72 08 00 00       	call   8049b16 <_ZN6ThreadD1Ev>
+ 80492a4:	83 c4 10             	add    $0x10,%esp
+ 80492a7:	83 ec 08             	sub    $0x8,%esp
+ 80492aa:	6a 58                	push   $0x58
+ 80492ac:	53                   	push   %ebx
+ 80492ad:	e8 8e f7 ff ff       	call   8048a40 <_ZdlPvj@plt>
+ 80492b2:	83 c4 10             	add    $0x10,%esp
+ 80492b5:	c7 05 e4 e0 04 08 00 	movl   $0x0,0x804e0e4
+ 80492bc:	00 00 00
+ 80492bf:	90                   	nop
+ 80492c0:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+ 80492c3:	c9                   	leave
+ 80492c4:	c3                   	ret
+ 80492c5:	90                   	nop
+
+080492c6 <_ZN9Scheduler5PrintEv>:
+ 80492c6:	55                   	push   %ebp
+ 80492c7:	89 e5                	mov    %esp,%ebp
+ 80492c9:	83 ec 08             	sub    $0x8,%esp
+ 80492cc:	83 ec 0c             	sub    $0xc,%esp
+ 80492cf:	68 93 b3 04 08       	push   $0x804b393
+ 80492d4:	e8 47 f8 ff ff       	call   8048b20 <puts@plt>
+ 80492d9:	83 c4 10             	add    $0x10,%esp
+ 80492dc:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80492df:	8b 00                	mov    (%eax),%eax
+ 80492e1:	83 ec 08             	sub    $0x8,%esp
+ 80492e4:	68 00 9f 04 08       	push   $0x8049f00
+ 80492e9:	50                   	push   %eax
+ 80492ea:	e8 67 fc ff ff       	call   8048f56 <_ZN4List6MapcarEPFviE>
+ 80492ef:	83 c4 10             	add    $0x10,%esp
+ 80492f2:	90                   	nop
+ 80492f3:	c9                   	leave
+ 80492f4:	c3                   	ret
+ 80492f5:	90                   	nop
+
+080492f6 <_ZN6Thread9setStatusE12ThreadStatus>:
+ 80492f6:	55                   	push   %ebp
+ 80492f7:	89 e5                	mov    %esp,%ebp
+ 80492f9:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80492fc:	8b 55 0c             	mov    0xc(%ebp),%edx
+ 80492ff:	89 50 50             	mov    %edx,0x50(%eax)
+ 8049302:	90                   	nop
+ 8049303:	5d                   	pop    %ebp
+ 8049304:	c3                   	ret
+ 8049305:	90                   	nop
+
+08049306 <_ZN6Thread7getNameEv>:
+ 8049306:	55                   	push   %ebp
+ 8049307:	89 e5                	mov    %esp,%ebp
+ 8049309:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804930c:	8b 40 54             	mov    0x54(%eax),%eax
+ 804930f:	5d                   	pop    %ebp
+ 8049310:	c3                   	ret
+ 8049311:	90                   	nop
+
+08049312 <_ZN9SemaphoreC1EPKci>:
+ 8049312:	55                   	push   %ebp
+ 8049313:	89 e5                	mov    %esp,%ebp
+ 8049315:	56                   	push   %esi
+ 8049316:	53                   	push   %ebx
+ 8049317:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804931a:	8b 55 0c             	mov    0xc(%ebp),%edx
+ 804931d:	89 10                	mov    %edx,(%eax)
+ 804931f:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049322:	8b 55 10             	mov    0x10(%ebp),%edx
+ 8049325:	89 50 04             	mov    %edx,0x4(%eax)
+ 8049328:	83 ec 0c             	sub    $0xc,%esp
+ 804932b:	6a 08                	push   $0x8
+ 804932d:	e8 8e f6 ff ff       	call   80489c0 <_Znwj@plt>
+ 8049332:	83 c4 10             	add    $0x10,%esp
+ 8049335:	89 c3                	mov    %eax,%ebx
+ 8049337:	83 ec 0c             	sub    $0xc,%esp
+ 804933a:	53                   	push   %ebx
+ 804933b:	e8 ee fa ff ff       	call   8048e2e <_ZN4ListC1Ev>
+ 8049340:	83 c4 10             	add    $0x10,%esp
+ 8049343:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049346:	89 58 08             	mov    %ebx,0x8(%eax)
+ 8049349:	eb 1b                	jmp    8049366 <_ZN9SemaphoreC1EPKci+0x54>
+ 804934b:	89 c6                	mov    %eax,%esi
+ 804934d:	83 ec 08             	sub    $0x8,%esp
+ 8049350:	6a 08                	push   $0x8
+ 8049352:	53                   	push   %ebx
+ 8049353:	e8 e8 f6 ff ff       	call   8048a40 <_ZdlPvj@plt>
+ 8049358:	83 c4 10             	add    $0x10,%esp
+ 804935b:	89 f0                	mov    %esi,%eax
+ 804935d:	83 ec 0c             	sub    $0xc,%esp
+ 8049360:	50                   	push   %eax
+ 8049361:	e8 3a f8 ff ff       	call   8048ba0 <_Unwind_Resume@plt>
+ 8049366:	8d 65 f8             	lea    -0x8(%ebp),%esp
+ 8049369:	5b                   	pop    %ebx
+ 804936a:	5e                   	pop    %esi
+ 804936b:	5d                   	pop    %ebp
+ 804936c:	c3                   	ret
+ 804936d:	90                   	nop
+
+0804936e <_ZN9SemaphoreD1Ev>:
+ 804936e:	55                   	push   %ebp
+ 804936f:	89 e5                	mov    %esp,%ebp
+ 8049371:	53                   	push   %ebx
+ 8049372:	83 ec 04             	sub    $0x4,%esp
+ 8049375:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049378:	8b 58 08             	mov    0x8(%eax),%ebx
+ 804937b:	85 db                	test   %ebx,%ebx
+ 804937d:	74 1a                	je     8049399 <_ZN9SemaphoreD1Ev+0x2b>
+ 804937f:	83 ec 0c             	sub    $0xc,%esp
+ 8049382:	53                   	push   %ebx
+ 8049383:	e8 c2 fa ff ff       	call   8048e4a <_ZN4ListD1Ev>
+ 8049388:	83 c4 10             	add    $0x10,%esp
+ 804938b:	83 ec 08             	sub    $0x8,%esp
+ 804938e:	6a 08                	push   $0x8
+ 8049390:	53                   	push   %ebx
+ 8049391:	e8 aa f6 ff ff       	call   8048a40 <_ZdlPvj@plt>
+ 8049396:	83 c4 10             	add    $0x10,%esp
+ 8049399:	90                   	nop
+ 804939a:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+ 804939d:	c9                   	leave
+ 804939e:	c3                   	ret
+ 804939f:	90                   	nop
+
+080493a0 <_ZN9Semaphore1PEv>:
+ 80493a0:	55                   	push   %ebp
+ 80493a1:	89 e5                	mov    %esp,%ebp
+ 80493a3:	83 ec 18             	sub    $0x18,%esp
+ 80493a6:	a1 ec e0 04 08       	mov    0x804e0ec,%eax
+ 80493ab:	83 ec 08             	sub    $0x8,%esp
+ 80493ae:	6a 00                	push   $0x0
+ 80493b0:	50                   	push   %eax
+ 80493b1:	e8 02 0f 00 00       	call   804a2b8 <_ZN9Interrupt8SetLevelE9IntStatus>
+ 80493b6:	83 c4 10             	add    $0x10,%esp
+ 80493b9:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 80493bc:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80493bf:	8b 40 04             	mov    0x4(%eax),%eax
+ 80493c2:	85 c0                	test   %eax,%eax
+ 80493c4:	75 2c                	jne    80493f2 <_ZN9Semaphore1PEv+0x52>
+ 80493c6:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80493c9:	8b 40 08             	mov    0x8(%eax),%eax
+ 80493cc:	8b 15 e0 e0 04 08    	mov    0x804e0e0,%edx
+ 80493d2:	83 ec 08             	sub    $0x8,%esp
+ 80493d5:	52                   	push   %edx
+ 80493d6:	50                   	push   %eax
+ 80493d7:	e8 90 fa ff ff       	call   8048e6c <_ZN4List6AppendEPv>
+ 80493dc:	83 c4 10             	add    $0x10,%esp
+ 80493df:	a1 e0 e0 04 08       	mov    0x804e0e0,%eax
+ 80493e4:	83 ec 0c             	sub    $0xc,%esp
+ 80493e7:	50                   	push   %eax
+ 80493e8:	e8 db 09 00 00       	call   8049dc8 <_ZN6Thread5SleepEv>
+ 80493ed:	83 c4 10             	add    $0x10,%esp
+ 80493f0:	eb ca                	jmp    80493bc <_ZN9Semaphore1PEv+0x1c>
+ 80493f2:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80493f5:	8b 40 04             	mov    0x4(%eax),%eax
+ 80493f8:	8d 50 ff             	lea    -0x1(%eax),%edx
+ 80493fb:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80493fe:	89 50 04             	mov    %edx,0x4(%eax)
+ 8049401:	a1 ec e0 04 08       	mov    0x804e0ec,%eax
+ 8049406:	83 ec 08             	sub    $0x8,%esp
+ 8049409:	ff 75 f4             	pushl  -0xc(%ebp)
+ 804940c:	50                   	push   %eax
+ 804940d:	e8 a6 0e 00 00       	call   804a2b8 <_ZN9Interrupt8SetLevelE9IntStatus>
+ 8049412:	83 c4 10             	add    $0x10,%esp
+ 8049415:	90                   	nop
+ 8049416:	c9                   	leave
+ 8049417:	c3                   	ret
+
+08049418 <_ZN9Semaphore1VEv>:
+ 8049418:	55                   	push   %ebp
+ 8049419:	89 e5                	mov    %esp,%ebp
+ 804941b:	83 ec 18             	sub    $0x18,%esp
+ 804941e:	a1 ec e0 04 08       	mov    0x804e0ec,%eax
+ 8049423:	83 ec 08             	sub    $0x8,%esp
+ 8049426:	6a 00                	push   $0x0
+ 8049428:	50                   	push   %eax
+ 8049429:	e8 8a 0e 00 00       	call   804a2b8 <_ZN9Interrupt8SetLevelE9IntStatus>
+ 804942e:	83 c4 10             	add    $0x10,%esp
+ 8049431:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 8049434:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049437:	8b 40 08             	mov    0x8(%eax),%eax
+ 804943a:	83 ec 0c             	sub    $0xc,%esp
+ 804943d:	50                   	push   %eax
+ 804943e:	e8 fb fa ff ff       	call   8048f3e <_ZN4List6RemoveEv>
+ 8049443:	83 c4 10             	add    $0x10,%esp
+ 8049446:	89 45 f0             	mov    %eax,-0x10(%ebp)
+ 8049449:	83 7d f0 00          	cmpl   $0x0,-0x10(%ebp)
+ 804944d:	74 14                	je     8049463 <_ZN9Semaphore1VEv+0x4b>
+ 804944f:	a1 e8 e0 04 08       	mov    0x804e0e8,%eax
+ 8049454:	83 ec 08             	sub    $0x8,%esp
+ 8049457:	ff 75 f0             	pushl  -0x10(%ebp)
+ 804945a:	50                   	push   %eax
+ 804945b:	e8 24 fd ff ff       	call   8049184 <_ZN9Scheduler10ReadyToRunEP6Thread>
+ 8049460:	83 c4 10             	add    $0x10,%esp
+ 8049463:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049466:	8b 40 04             	mov    0x4(%eax),%eax
+ 8049469:	8d 50 01             	lea    0x1(%eax),%edx
+ 804946c:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804946f:	89 50 04             	mov    %edx,0x4(%eax)
+ 8049472:	a1 ec e0 04 08       	mov    0x804e0ec,%eax
+ 8049477:	83 ec 08             	sub    $0x8,%esp
+ 804947a:	ff 75 f4             	pushl  -0xc(%ebp)
+ 804947d:	50                   	push   %eax
+ 804947e:	e8 35 0e 00 00       	call   804a2b8 <_ZN9Interrupt8SetLevelE9IntStatus>
+ 8049483:	83 c4 10             	add    $0x10,%esp
+ 8049486:	90                   	nop
+ 8049487:	c9                   	leave
+ 8049488:	c3                   	ret
+ 8049489:	90                   	nop
+
+0804948a <_ZN4LockC1EPKc>:
+ 804948a:	55                   	push   %ebp
+ 804948b:	89 e5                	mov    %esp,%ebp
+ 804948d:	90                   	nop
+ 804948e:	5d                   	pop    %ebp
+ 804948f:	c3                   	ret
+
+08049490 <_ZN4LockD1Ev>:
+ 8049490:	55                   	push   %ebp
+ 8049491:	89 e5                	mov    %esp,%ebp
+ 8049493:	90                   	nop
+ 8049494:	5d                   	pop    %ebp
+ 8049495:	c3                   	ret
+
+08049496 <_ZN4Lock7AcquireEv>:
+ 8049496:	55                   	push   %ebp
+ 8049497:	89 e5                	mov    %esp,%ebp
+ 8049499:	90                   	nop
+ 804949a:	5d                   	pop    %ebp
+ 804949b:	c3                   	ret
+
+0804949c <_ZN4Lock7ReleaseEv>:
+ 804949c:	55                   	push   %ebp
+ 804949d:	89 e5                	mov    %esp,%ebp
+ 804949f:	90                   	nop
+ 80494a0:	5d                   	pop    %ebp
+ 80494a1:	c3                   	ret
+
+080494a2 <_ZN9ConditionC1EPKc>:
+ 80494a2:	55                   	push   %ebp
+ 80494a3:	89 e5                	mov    %esp,%ebp
+ 80494a5:	90                   	nop
+ 80494a6:	5d                   	pop    %ebp
+ 80494a7:	c3                   	ret
+
+080494a8 <_ZN9ConditionD1Ev>:
+ 80494a8:	55                   	push   %ebp
+ 80494a9:	89 e5                	mov    %esp,%ebp
+ 80494ab:	90                   	nop
+ 80494ac:	5d                   	pop    %ebp
+ 80494ad:	c3                   	ret
+
+080494ae <_ZN9Condition4WaitEP4Lock>:
+ 80494ae:	55                   	push   %ebp
+ 80494af:	89 e5                	mov    %esp,%ebp
+ 80494b1:	83 ec 08             	sub    $0x8,%esp
+ 80494b4:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 80494b9:	68 a8 b3 04 08       	push   $0x804b3a8
+ 80494be:	6a 6e                	push   $0x6e
+ 80494c0:	68 bc b3 04 08       	push   $0x804b3bc
+ 80494c5:	50                   	push   %eax
+ 80494c6:	e8 65 f5 ff ff       	call   8048a30 <fprintf@plt>
+ 80494cb:	83 c4 10             	add    $0x10,%esp
+ 80494ce:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 80494d3:	83 ec 0c             	sub    $0xc,%esp
+ 80494d6:	50                   	push   %eax
+ 80494d7:	e8 a4 f5 ff ff       	call   8048a80 <fflush@plt>
+ 80494dc:	83 c4 10             	add    $0x10,%esp
+ 80494df:	e8 e1 1a 00 00       	call   804afc5 <_Z5Abortv>
+ 80494e4:	90                   	nop
+ 80494e5:	c9                   	leave
+ 80494e6:	c3                   	ret
+ 80494e7:	90                   	nop
+
+080494e8 <_ZN9Condition6SignalEP4Lock>:
+ 80494e8:	55                   	push   %ebp
+ 80494e9:	89 e5                	mov    %esp,%ebp
+ 80494eb:	90                   	nop
+ 80494ec:	5d                   	pop    %ebp
+ 80494ed:	c3                   	ret
+
+080494ee <_ZN9Condition9BroadcastEP4Lock>:
+ 80494ee:	55                   	push   %ebp
+ 80494ef:	89 e5                	mov    %esp,%ebp
+ 80494f1:	90                   	nop
+ 80494f2:	5d                   	pop    %ebp
+ 80494f3:	c3                   	ret
+
+080494f4 <_ZN9SynchListC1Ev>:
+ 80494f4:	55                   	push   %ebp
+ 80494f5:	89 e5                	mov    %esp,%ebp
+ 80494f7:	56                   	push   %esi
+ 80494f8:	53                   	push   %ebx
+ 80494f9:	83 ec 0c             	sub    $0xc,%esp
+ 80494fc:	6a 08                	push   $0x8
+ 80494fe:	e8 bd f4 ff ff       	call   80489c0 <_Znwj@plt>
+ 8049503:	83 c4 10             	add    $0x10,%esp
+ 8049506:	89 c3                	mov    %eax,%ebx
+ 8049508:	83 ec 0c             	sub    $0xc,%esp
+ 804950b:	53                   	push   %ebx
+ 804950c:	e8 1d f9 ff ff       	call   8048e2e <_ZN4ListC1Ev>
+ 8049511:	83 c4 10             	add    $0x10,%esp
+ 8049514:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049517:	89 18                	mov    %ebx,(%eax)
+ 8049519:	83 ec 0c             	sub    $0xc,%esp
+ 804951c:	6a 04                	push   $0x4
+ 804951e:	e8 9d f4 ff ff       	call   80489c0 <_Znwj@plt>
+ 8049523:	83 c4 10             	add    $0x10,%esp
+ 8049526:	89 c3                	mov    %eax,%ebx
+ 8049528:	83 ec 08             	sub    $0x8,%esp
+ 804952b:	68 e4 b3 04 08       	push   $0x804b3e4
+ 8049530:	53                   	push   %ebx
+ 8049531:	e8 54 ff ff ff       	call   804948a <_ZN4LockC1EPKc>
+ 8049536:	83 c4 10             	add    $0x10,%esp
+ 8049539:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804953c:	89 58 04             	mov    %ebx,0x4(%eax)
+ 804953f:	83 ec 0c             	sub    $0xc,%esp
+ 8049542:	6a 04                	push   $0x4
+ 8049544:	e8 77 f4 ff ff       	call   80489c0 <_Znwj@plt>
+ 8049549:	83 c4 10             	add    $0x10,%esp
+ 804954c:	89 c3                	mov    %eax,%ebx
+ 804954e:	83 ec 08             	sub    $0x8,%esp
+ 8049551:	68 ee b3 04 08       	push   $0x804b3ee
+ 8049556:	53                   	push   %ebx
+ 8049557:	e8 46 ff ff ff       	call   80494a2 <_ZN9ConditionC1EPKc>
+ 804955c:	83 c4 10             	add    $0x10,%esp
+ 804955f:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049562:	89 58 08             	mov    %ebx,0x8(%eax)
+ 8049565:	eb 51                	jmp    80495b8 <_ZN9SynchListC1Ev+0xc4>
+ 8049567:	89 c6                	mov    %eax,%esi
+ 8049569:	83 ec 08             	sub    $0x8,%esp
+ 804956c:	6a 08                	push   $0x8
+ 804956e:	53                   	push   %ebx
+ 804956f:	e8 cc f4 ff ff       	call   8048a40 <_ZdlPvj@plt>
+ 8049574:	83 c4 10             	add    $0x10,%esp
+ 8049577:	89 f0                	mov    %esi,%eax
+ 8049579:	83 ec 0c             	sub    $0xc,%esp
+ 804957c:	50                   	push   %eax
+ 804957d:	e8 1e f6 ff ff       	call   8048ba0 <_Unwind_Resume@plt>
+ 8049582:	89 c6                	mov    %eax,%esi
+ 8049584:	83 ec 08             	sub    $0x8,%esp
+ 8049587:	6a 04                	push   $0x4
+ 8049589:	53                   	push   %ebx
+ 804958a:	e8 b1 f4 ff ff       	call   8048a40 <_ZdlPvj@plt>
+ 804958f:	83 c4 10             	add    $0x10,%esp
+ 8049592:	89 f0                	mov    %esi,%eax
+ 8049594:	83 ec 0c             	sub    $0xc,%esp
+ 8049597:	50                   	push   %eax
+ 8049598:	e8 03 f6 ff ff       	call   8048ba0 <_Unwind_Resume@plt>
+ 804959d:	89 c6                	mov    %eax,%esi
+ 804959f:	83 ec 08             	sub    $0x8,%esp
+ 80495a2:	6a 04                	push   $0x4
+ 80495a4:	53                   	push   %ebx
+ 80495a5:	e8 96 f4 ff ff       	call   8048a40 <_ZdlPvj@plt>
+ 80495aa:	83 c4 10             	add    $0x10,%esp
+ 80495ad:	89 f0                	mov    %esi,%eax
+ 80495af:	83 ec 0c             	sub    $0xc,%esp
+ 80495b2:	50                   	push   %eax
+ 80495b3:	e8 e8 f5 ff ff       	call   8048ba0 <_Unwind_Resume@plt>
+ 80495b8:	8d 65 f8             	lea    -0x8(%ebp),%esp
+ 80495bb:	5b                   	pop    %ebx
+ 80495bc:	5e                   	pop    %esi
+ 80495bd:	5d                   	pop    %ebp
+ 80495be:	c3                   	ret
+ 80495bf:	90                   	nop
+
+080495c0 <_ZN9SynchListD1Ev>:
+ 80495c0:	55                   	push   %ebp
+ 80495c1:	89 e5                	mov    %esp,%ebp
+ 80495c3:	53                   	push   %ebx
+ 80495c4:	83 ec 04             	sub    $0x4,%esp
+ 80495c7:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80495ca:	8b 18                	mov    (%eax),%ebx
+ 80495cc:	85 db                	test   %ebx,%ebx
+ 80495ce:	74 1a                	je     80495ea <_ZN9SynchListD1Ev+0x2a>
+ 80495d0:	83 ec 0c             	sub    $0xc,%esp
+ 80495d3:	53                   	push   %ebx
+ 80495d4:	e8 71 f8 ff ff       	call   8048e4a <_ZN4ListD1Ev>
+ 80495d9:	83 c4 10             	add    $0x10,%esp
+ 80495dc:	83 ec 08             	sub    $0x8,%esp
+ 80495df:	6a 08                	push   $0x8
+ 80495e1:	53                   	push   %ebx
+ 80495e2:	e8 59 f4 ff ff       	call   8048a40 <_ZdlPvj@plt>
+ 80495e7:	83 c4 10             	add    $0x10,%esp
+ 80495ea:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80495ed:	8b 58 04             	mov    0x4(%eax),%ebx
+ 80495f0:	85 db                	test   %ebx,%ebx
+ 80495f2:	74 1a                	je     804960e <_ZN9SynchListD1Ev+0x4e>
+ 80495f4:	83 ec 0c             	sub    $0xc,%esp
+ 80495f7:	53                   	push   %ebx
+ 80495f8:	e8 93 fe ff ff       	call   8049490 <_ZN4LockD1Ev>
+ 80495fd:	83 c4 10             	add    $0x10,%esp
+ 8049600:	83 ec 08             	sub    $0x8,%esp
+ 8049603:	6a 04                	push   $0x4
+ 8049605:	53                   	push   %ebx
+ 8049606:	e8 35 f4 ff ff       	call   8048a40 <_ZdlPvj@plt>
+ 804960b:	83 c4 10             	add    $0x10,%esp
+ 804960e:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049611:	8b 58 08             	mov    0x8(%eax),%ebx
+ 8049614:	85 db                	test   %ebx,%ebx
+ 8049616:	74 1a                	je     8049632 <_ZN9SynchListD1Ev+0x72>
+ 8049618:	83 ec 0c             	sub    $0xc,%esp
+ 804961b:	53                   	push   %ebx
+ 804961c:	e8 87 fe ff ff       	call   80494a8 <_ZN9ConditionD1Ev>
+ 8049621:	83 c4 10             	add    $0x10,%esp
+ 8049624:	83 ec 08             	sub    $0x8,%esp
+ 8049627:	6a 04                	push   $0x4
+ 8049629:	53                   	push   %ebx
+ 804962a:	e8 11 f4 ff ff       	call   8048a40 <_ZdlPvj@plt>
+ 804962f:	83 c4 10             	add    $0x10,%esp
+ 8049632:	90                   	nop
+ 8049633:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+ 8049636:	c9                   	leave
+ 8049637:	c3                   	ret
+
+08049638 <_ZN9SynchList6AppendEPv>:
+ 8049638:	55                   	push   %ebp
+ 8049639:	89 e5                	mov    %esp,%ebp
+ 804963b:	83 ec 08             	sub    $0x8,%esp
+ 804963e:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049641:	8b 40 04             	mov    0x4(%eax),%eax
+ 8049644:	83 ec 0c             	sub    $0xc,%esp
+ 8049647:	50                   	push   %eax
+ 8049648:	e8 49 fe ff ff       	call   8049496 <_ZN4Lock7AcquireEv>
+ 804964d:	83 c4 10             	add    $0x10,%esp
+ 8049650:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049653:	8b 00                	mov    (%eax),%eax
+ 8049655:	83 ec 08             	sub    $0x8,%esp
+ 8049658:	ff 75 0c             	pushl  0xc(%ebp)
+ 804965b:	50                   	push   %eax
+ 804965c:	e8 0b f8 ff ff       	call   8048e6c <_ZN4List6AppendEPv>
+ 8049661:	83 c4 10             	add    $0x10,%esp
+ 8049664:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049667:	8b 40 08             	mov    0x8(%eax),%eax
+ 804966a:	8b 55 08             	mov    0x8(%ebp),%edx
+ 804966d:	8b 52 04             	mov    0x4(%edx),%edx
+ 8049670:	83 ec 08             	sub    $0x8,%esp
+ 8049673:	52                   	push   %edx
+ 8049674:	50                   	push   %eax
+ 8049675:	e8 6e fe ff ff       	call   80494e8 <_ZN9Condition6SignalEP4Lock>
+ 804967a:	83 c4 10             	add    $0x10,%esp
+ 804967d:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049680:	8b 40 04             	mov    0x4(%eax),%eax
+ 8049683:	83 ec 0c             	sub    $0xc,%esp
+ 8049686:	50                   	push   %eax
+ 8049687:	e8 10 fe ff ff       	call   804949c <_ZN4Lock7ReleaseEv>
+ 804968c:	83 c4 10             	add    $0x10,%esp
+ 804968f:	90                   	nop
+ 8049690:	c9                   	leave
+ 8049691:	c3                   	ret
+
+08049692 <_ZN9SynchList6RemoveEv>:
+ 8049692:	55                   	push   %ebp
+ 8049693:	89 e5                	mov    %esp,%ebp
+ 8049695:	83 ec 18             	sub    $0x18,%esp
+ 8049698:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804969b:	8b 40 04             	mov    0x4(%eax),%eax
+ 804969e:	83 ec 0c             	sub    $0xc,%esp
+ 80496a1:	50                   	push   %eax
+ 80496a2:	e8 ef fd ff ff       	call   8049496 <_ZN4Lock7AcquireEv>
+ 80496a7:	83 c4 10             	add    $0x10,%esp
+ 80496aa:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80496ad:	8b 00                	mov    (%eax),%eax
+ 80496af:	83 ec 0c             	sub    $0xc,%esp
+ 80496b2:	50                   	push   %eax
+ 80496b3:	e8 ea f8 ff ff       	call   8048fa2 <_ZN4List7IsEmptyEv>
+ 80496b8:	83 c4 10             	add    $0x10,%esp
+ 80496bb:	84 c0                	test   %al,%al
+ 80496bd:	74 1b                	je     80496da <_ZN9SynchList6RemoveEv+0x48>
+ 80496bf:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80496c2:	8b 40 08             	mov    0x8(%eax),%eax
+ 80496c5:	8b 55 08             	mov    0x8(%ebp),%edx
+ 80496c8:	8b 52 04             	mov    0x4(%edx),%edx
+ 80496cb:	83 ec 08             	sub    $0x8,%esp
+ 80496ce:	52                   	push   %edx
+ 80496cf:	50                   	push   %eax
+ 80496d0:	e8 d9 fd ff ff       	call   80494ae <_ZN9Condition4WaitEP4Lock>
+ 80496d5:	83 c4 10             	add    $0x10,%esp
+ 80496d8:	eb d0                	jmp    80496aa <_ZN9SynchList6RemoveEv+0x18>
+ 80496da:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80496dd:	8b 00                	mov    (%eax),%eax
+ 80496df:	83 ec 0c             	sub    $0xc,%esp
+ 80496e2:	50                   	push   %eax
+ 80496e3:	e8 56 f8 ff ff       	call   8048f3e <_ZN4List6RemoveEv>
+ 80496e8:	83 c4 10             	add    $0x10,%esp
+ 80496eb:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 80496ee:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 80496f2:	75 30                	jne    8049724 <_ZN9SynchList6RemoveEv+0x92>
+ 80496f4:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 80496f9:	68 fe b3 04 08       	push   $0x804b3fe
+ 80496fe:	6a 4f                	push   $0x4f
+ 8049700:	68 18 b4 04 08       	push   $0x804b418
+ 8049705:	50                   	push   %eax
+ 8049706:	e8 25 f3 ff ff       	call   8048a30 <fprintf@plt>
+ 804970b:	83 c4 10             	add    $0x10,%esp
+ 804970e:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 8049713:	83 ec 0c             	sub    $0xc,%esp
+ 8049716:	50                   	push   %eax
+ 8049717:	e8 64 f3 ff ff       	call   8048a80 <fflush@plt>
+ 804971c:	83 c4 10             	add    $0x10,%esp
+ 804971f:	e8 a1 18 00 00       	call   804afc5 <_Z5Abortv>
+ 8049724:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049727:	8b 40 04             	mov    0x4(%eax),%eax
+ 804972a:	83 ec 0c             	sub    $0xc,%esp
+ 804972d:	50                   	push   %eax
+ 804972e:	e8 69 fd ff ff       	call   804949c <_ZN4Lock7ReleaseEv>
+ 8049733:	83 c4 10             	add    $0x10,%esp
+ 8049736:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8049739:	c9                   	leave
+ 804973a:	c3                   	ret
+ 804973b:	90                   	nop
+
+0804973c <_ZN9SynchList6MapcarEPFviE>:
+ 804973c:	55                   	push   %ebp
+ 804973d:	89 e5                	mov    %esp,%ebp
+ 804973f:	83 ec 08             	sub    $0x8,%esp
+ 8049742:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049745:	8b 40 04             	mov    0x4(%eax),%eax
+ 8049748:	83 ec 0c             	sub    $0xc,%esp
+ 804974b:	50                   	push   %eax
+ 804974c:	e8 45 fd ff ff       	call   8049496 <_ZN4Lock7AcquireEv>
+ 8049751:	83 c4 10             	add    $0x10,%esp
+ 8049754:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049757:	8b 00                	mov    (%eax),%eax
+ 8049759:	83 ec 08             	sub    $0x8,%esp
+ 804975c:	ff 75 0c             	pushl  0xc(%ebp)
+ 804975f:	50                   	push   %eax
+ 8049760:	e8 f1 f7 ff ff       	call   8048f56 <_ZN4List6MapcarEPFviE>
+ 8049765:	83 c4 10             	add    $0x10,%esp
+ 8049768:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804976b:	8b 40 04             	mov    0x4(%eax),%eax
+ 804976e:	83 ec 0c             	sub    $0xc,%esp
+ 8049771:	50                   	push   %eax
+ 8049772:	e8 25 fd ff ff       	call   804949c <_ZN4Lock7ReleaseEv>
+ 8049777:	83 c4 10             	add    $0x10,%esp
+ 804977a:	90                   	nop
+ 804977b:	c9                   	leave
+ 804977c:	c3                   	ret
+
+0804977d <_ZL21TimerInterruptHandleri>:
+ 804977d:	55                   	push   %ebp
+ 804977e:	89 e5                	mov    %esp,%ebp
+ 8049780:	83 ec 08             	sub    $0x8,%esp
+ 8049783:	a1 ec e0 04 08       	mov    0x804e0ec,%eax
+ 8049788:	83 ec 0c             	sub    $0xc,%esp
+ 804978b:	50                   	push   %eax
+ 804978c:	e8 47 03 00 00       	call   8049ad8 <_ZN9Interrupt9getStatusEv>
+ 8049791:	83 c4 10             	add    $0x10,%esp
+ 8049794:	85 c0                	test   %eax,%eax
+ 8049796:	0f 95 c0             	setne  %al
+ 8049799:	84 c0                	test   %al,%al
+ 804979b:	74 11                	je     80497ae <_ZL21TimerInterruptHandleri+0x31>
+ 804979d:	a1 ec e0 04 08       	mov    0x804e0ec,%eax
+ 80497a2:	83 ec 0c             	sub    $0xc,%esp
+ 80497a5:	50                   	push   %eax
+ 80497a6:	e8 9f 0c 00 00       	call   804a44a <_ZN9Interrupt13YieldOnReturnEv>
+ 80497ab:	83 c4 10             	add    $0x10,%esp
+ 80497ae:	90                   	nop
+ 80497af:	c9                   	leave
+ 80497b0:	c3                   	ret
+
+080497b1 <_Z10InitializeiPPc>:
+ 80497b1:	55                   	push   %ebp
+ 80497b2:	89 e5                	mov    %esp,%ebp
+ 80497b4:	56                   	push   %esi
+ 80497b5:	53                   	push   %ebx
+ 80497b6:	83 ec 10             	sub    $0x10,%esp
+ 80497b9:	c7 45 f0 40 b4 04 08 	movl   $0x804b440,-0x10(%ebp)
+ 80497c0:	c6 45 ef 00          	movb   $0x0,-0x11(%ebp)
+ 80497c4:	83 6d 08 01          	subl   $0x1,0x8(%ebp)
+ 80497c8:	83 45 0c 04          	addl   $0x4,0xc(%ebp)
+ 80497cc:	83 7d 08 00          	cmpl   $0x0,0x8(%ebp)
+ 80497d0:	0f 8e d4 00 00 00    	jle    80498aa <_Z10InitializeiPPc+0xf9>
+ 80497d6:	c7 45 f4 01 00 00 00 	movl   $0x1,-0xc(%ebp)
+ 80497dd:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 80497e0:	8b 00                	mov    (%eax),%eax
+ 80497e2:	83 ec 08             	sub    $0x8,%esp
+ 80497e5:	68 41 b4 04 08       	push   $0x804b441
+ 80497ea:	50                   	push   %eax
+ 80497eb:	e8 60 f2 ff ff       	call   8048a50 <strcmp@plt>
+ 80497f0:	83 c4 10             	add    $0x10,%esp
+ 80497f3:	85 c0                	test   %eax,%eax
+ 80497f5:	75 24                	jne    804981b <_Z10InitializeiPPc+0x6a>
+ 80497f7:	83 7d 08 01          	cmpl   $0x1,0x8(%ebp)
+ 80497fb:	75 0c                	jne    8049809 <_Z10InitializeiPPc+0x58>
+ 80497fd:	c7 45 f0 44 b4 04 08 	movl   $0x804b444,-0x10(%ebp)
+ 8049804:	e9 8d 00 00 00       	jmp    8049896 <_Z10InitializeiPPc+0xe5>
+ 8049809:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804980c:	8b 40 04             	mov    0x4(%eax),%eax
+ 804980f:	89 45 f0             	mov    %eax,-0x10(%ebp)
+ 8049812:	c7 45 f4 02 00 00 00 	movl   $0x2,-0xc(%ebp)
+ 8049819:	eb 7b                	jmp    8049896 <_Z10InitializeiPPc+0xe5>
+ 804981b:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804981e:	8b 00                	mov    (%eax),%eax
+ 8049820:	83 ec 08             	sub    $0x8,%esp
+ 8049823:	68 46 b4 04 08       	push   $0x804b446
+ 8049828:	50                   	push   %eax
+ 8049829:	e8 22 f2 ff ff       	call   8048a50 <strcmp@plt>
+ 804982e:	83 c4 10             	add    $0x10,%esp
+ 8049831:	85 c0                	test   %eax,%eax
+ 8049833:	75 61                	jne    8049896 <_Z10InitializeiPPc+0xe5>
+ 8049835:	83 7d 08 01          	cmpl   $0x1,0x8(%ebp)
+ 8049839:	7f 30                	jg     804986b <_Z10InitializeiPPc+0xba>
+ 804983b:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 8049840:	68 4a b4 04 08       	push   $0x804b44a
+ 8049845:	6a 69                	push   $0x69
+ 8049847:	68 60 b4 04 08       	push   $0x804b460
+ 804984c:	50                   	push   %eax
+ 804984d:	e8 de f1 ff ff       	call   8048a30 <fprintf@plt>
+ 8049852:	83 c4 10             	add    $0x10,%esp
+ 8049855:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804985a:	83 ec 0c             	sub    $0xc,%esp
+ 804985d:	50                   	push   %eax
+ 804985e:	e8 1d f2 ff ff       	call   8048a80 <fflush@plt>
+ 8049863:	83 c4 10             	add    $0x10,%esp
+ 8049866:	e8 5a 17 00 00       	call   804afc5 <_Z5Abortv>
+ 804986b:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804986e:	83 c0 04             	add    $0x4,%eax
+ 8049871:	8b 00                	mov    (%eax),%eax
+ 8049873:	83 ec 0c             	sub    $0xc,%esp
+ 8049876:	50                   	push   %eax
+ 8049877:	e8 c4 f2 ff ff       	call   8048b40 <atoi@plt>
+ 804987c:	83 c4 10             	add    $0x10,%esp
+ 804987f:	83 ec 0c             	sub    $0xc,%esp
+ 8049882:	50                   	push   %eax
+ 8049883:	e8 59 17 00 00       	call   804afe1 <_Z10RandomInitj>
+ 8049888:	83 c4 10             	add    $0x10,%esp
+ 804988b:	c6 45 ef 01          	movb   $0x1,-0x11(%ebp)
+ 804988f:	c7 45 f4 02 00 00 00 	movl   $0x2,-0xc(%ebp)
+ 8049896:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8049899:	29 45 08             	sub    %eax,0x8(%ebp)
+ 804989c:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804989f:	c1 e0 02             	shl    $0x2,%eax
+ 80498a2:	01 45 0c             	add    %eax,0xc(%ebp)
+ 80498a5:	e9 22 ff ff ff       	jmp    80497cc <_Z10InitializeiPPc+0x1b>
+ 80498aa:	83 ec 0c             	sub    $0xc,%esp
+ 80498ad:	ff 75 f0             	pushl  -0x10(%ebp)
+ 80498b0:	e8 1b 07 00 00       	call   8049fd0 <_Z9DebugInitPc>
+ 80498b5:	83 c4 10             	add    $0x10,%esp
+ 80498b8:	83 ec 0c             	sub    $0xc,%esp
+ 80498bb:	6a 2c                	push   $0x2c
+ 80498bd:	e8 fe f0 ff ff       	call   80489c0 <_Znwj@plt>
+ 80498c2:	83 c4 10             	add    $0x10,%esp
+ 80498c5:	89 c3                	mov    %eax,%ebx
+ 80498c7:	83 ec 0c             	sub    $0xc,%esp
+ 80498ca:	53                   	push   %ebx
+ 80498cb:	e8 e6 0f 00 00       	call   804a8b6 <_ZN10StatisticsC1Ev>
+ 80498d0:	83 c4 10             	add    $0x10,%esp
+ 80498d3:	89 1d f0 e0 04 08    	mov    %ebx,0x804e0f0
+ 80498d9:	83 ec 0c             	sub    $0xc,%esp
+ 80498dc:	6a 10                	push   $0x10
+ 80498de:	e8 dd f0 ff ff       	call   80489c0 <_Znwj@plt>
+ 80498e3:	83 c4 10             	add    $0x10,%esp
+ 80498e6:	89 c3                	mov    %eax,%ebx
+ 80498e8:	83 ec 0c             	sub    $0xc,%esp
+ 80498eb:	53                   	push   %ebx
+ 80498ec:	e8 b5 08 00 00       	call   804a1a6 <_ZN9InterruptC1Ev>
+ 80498f1:	83 c4 10             	add    $0x10,%esp
+ 80498f4:	89 1d ec e0 04 08    	mov    %ebx,0x804e0ec
+ 80498fa:	83 ec 0c             	sub    $0xc,%esp
+ 80498fd:	6a 04                	push   $0x4
+ 80498ff:	e8 bc f0 ff ff       	call   80489c0 <_Znwj@plt>
+ 8049904:	83 c4 10             	add    $0x10,%esp
+ 8049907:	89 c3                	mov    %eax,%ebx
+ 8049909:	83 ec 0c             	sub    $0xc,%esp
+ 804990c:	53                   	push   %ebx
+ 804990d:	e8 f8 f7 ff ff       	call   804910a <_ZN9SchedulerC1Ev>
+ 8049912:	83 c4 10             	add    $0x10,%esp
+ 8049915:	89 1d e8 e0 04 08    	mov    %ebx,0x804e0e8
+ 804991b:	80 7d ef 00          	cmpb   $0x0,-0x11(%ebp)
+ 804991f:	74 2a                	je     804994b <_Z10InitializeiPPc+0x19a>
+ 8049921:	83 ec 0c             	sub    $0xc,%esp
+ 8049924:	6a 0c                	push   $0xc
+ 8049926:	e8 95 f0 ff ff       	call   80489c0 <_Znwj@plt>
+ 804992b:	83 c4 10             	add    $0x10,%esp
+ 804992e:	89 c3                	mov    %eax,%ebx
+ 8049930:	0f b6 45 ef          	movzbl -0x11(%ebp),%eax
+ 8049934:	50                   	push   %eax
+ 8049935:	6a 00                	push   $0x0
+ 8049937:	68 7d 97 04 08       	push   $0x804977d
+ 804993c:	53                   	push   %ebx
+ 804993d:	e8 84 17 00 00       	call   804b0c6 <_ZN5TimerC1EPFviEib>
+ 8049942:	83 c4 10             	add    $0x10,%esp
+ 8049945:	89 1d f4 e0 04 08    	mov    %ebx,0x804e0f4
+ 804994b:	c7 05 e4 e0 04 08 00 	movl   $0x0,0x804e0e4
+ 8049952:	00 00 00
+ 8049955:	83 ec 0c             	sub    $0xc,%esp
+ 8049958:	6a 58                	push   $0x58
+ 804995a:	e8 61 f0 ff ff       	call   80489c0 <_Znwj@plt>
+ 804995f:	83 c4 10             	add    $0x10,%esp
+ 8049962:	89 c3                	mov    %eax,%ebx
+ 8049964:	83 ec 08             	sub    $0x8,%esp
+ 8049967:	68 86 b4 04 08       	push   $0x804b486
+ 804996c:	53                   	push   %ebx
+ 804996d:	e8 78 01 00 00       	call   8049aea <_ZN6ThreadC1EPKc>
+ 8049972:	83 c4 10             	add    $0x10,%esp
+ 8049975:	89 1d e0 e0 04 08    	mov    %ebx,0x804e0e0
+ 804997b:	a1 e0 e0 04 08       	mov    0x804e0e0,%eax
+ 8049980:	83 ec 08             	sub    $0x8,%esp
+ 8049983:	6a 01                	push   $0x1
+ 8049985:	50                   	push   %eax
+ 8049986:	e8 6b f9 ff ff       	call   80492f6 <_ZN6Thread9setStatusE12ThreadStatus>
+ 804998b:	83 c4 10             	add    $0x10,%esp
+ 804998e:	a1 ec e0 04 08       	mov    0x804e0ec,%eax
+ 8049993:	83 ec 0c             	sub    $0xc,%esp
+ 8049996:	50                   	push   %eax
+ 8049997:	e8 a2 09 00 00       	call   804a33e <_ZN9Interrupt6EnableEv>
+ 804999c:	83 c4 10             	add    $0x10,%esp
+ 804999f:	83 ec 0c             	sub    $0xc,%esp
+ 80499a2:	68 42 9a 04 08       	push   $0x8049a42
+ 80499a7:	e8 e8 15 00 00       	call   804af94 <_Z15CallOnUserAbortPFvvE>
+ 80499ac:	83 c4 10             	add    $0x10,%esp
+ 80499af:	e9 87 00 00 00       	jmp    8049a3b <_Z10InitializeiPPc+0x28a>
+ 80499b4:	89 c6                	mov    %eax,%esi
+ 80499b6:	83 ec 08             	sub    $0x8,%esp
+ 80499b9:	6a 2c                	push   $0x2c
+ 80499bb:	53                   	push   %ebx
+ 80499bc:	e8 7f f0 ff ff       	call   8048a40 <_ZdlPvj@plt>
+ 80499c1:	83 c4 10             	add    $0x10,%esp
+ 80499c4:	89 f0                	mov    %esi,%eax
+ 80499c6:	83 ec 0c             	sub    $0xc,%esp
+ 80499c9:	50                   	push   %eax
+ 80499ca:	e8 d1 f1 ff ff       	call   8048ba0 <_Unwind_Resume@plt>
+ 80499cf:	89 c6                	mov    %eax,%esi
+ 80499d1:	83 ec 08             	sub    $0x8,%esp
+ 80499d4:	6a 10                	push   $0x10
+ 80499d6:	53                   	push   %ebx
+ 80499d7:	e8 64 f0 ff ff       	call   8048a40 <_ZdlPvj@plt>
+ 80499dc:	83 c4 10             	add    $0x10,%esp
+ 80499df:	89 f0                	mov    %esi,%eax
+ 80499e1:	83 ec 0c             	sub    $0xc,%esp
+ 80499e4:	50                   	push   %eax
+ 80499e5:	e8 b6 f1 ff ff       	call   8048ba0 <_Unwind_Resume@plt>
+ 80499ea:	89 c6                	mov    %eax,%esi
+ 80499ec:	83 ec 08             	sub    $0x8,%esp
+ 80499ef:	6a 04                	push   $0x4
+ 80499f1:	53                   	push   %ebx
+ 80499f2:	e8 49 f0 ff ff       	call   8048a40 <_ZdlPvj@plt>
+ 80499f7:	83 c4 10             	add    $0x10,%esp
+ 80499fa:	89 f0                	mov    %esi,%eax
+ 80499fc:	83 ec 0c             	sub    $0xc,%esp
+ 80499ff:	50                   	push   %eax
+ 8049a00:	e8 9b f1 ff ff       	call   8048ba0 <_Unwind_Resume@plt>
+ 8049a05:	89 c6                	mov    %eax,%esi
+ 8049a07:	83 ec 08             	sub    $0x8,%esp
+ 8049a0a:	6a 0c                	push   $0xc
+ 8049a0c:	53                   	push   %ebx
+ 8049a0d:	e8 2e f0 ff ff       	call   8048a40 <_ZdlPvj@plt>
+ 8049a12:	83 c4 10             	add    $0x10,%esp
+ 8049a15:	89 f0                	mov    %esi,%eax
+ 8049a17:	83 ec 0c             	sub    $0xc,%esp
+ 8049a1a:	50                   	push   %eax
+ 8049a1b:	e8 80 f1 ff ff       	call   8048ba0 <_Unwind_Resume@plt>
+ 8049a20:	89 c6                	mov    %eax,%esi
+ 8049a22:	83 ec 08             	sub    $0x8,%esp
+ 8049a25:	6a 58                	push   $0x58
+ 8049a27:	53                   	push   %ebx
+ 8049a28:	e8 13 f0 ff ff       	call   8048a40 <_ZdlPvj@plt>
+ 8049a2d:	83 c4 10             	add    $0x10,%esp
+ 8049a30:	89 f0                	mov    %esi,%eax
+ 8049a32:	83 ec 0c             	sub    $0xc,%esp
+ 8049a35:	50                   	push   %eax
+ 8049a36:	e8 65 f1 ff ff       	call   8048ba0 <_Unwind_Resume@plt>
+ 8049a3b:	8d 65 f8             	lea    -0x8(%ebp),%esp
+ 8049a3e:	5b                   	pop    %ebx
+ 8049a3f:	5e                   	pop    %esi
+ 8049a40:	5d                   	pop    %ebp
+ 8049a41:	c3                   	ret
+
+08049a42 <_Z7Cleanupv>:
+ 8049a42:	55                   	push   %ebp
+ 8049a43:	89 e5                	mov    %esp,%ebp
+ 8049a45:	53                   	push   %ebx
+ 8049a46:	83 ec 04             	sub    $0x4,%esp
+ 8049a49:	83 ec 0c             	sub    $0xc,%esp
+ 8049a4c:	68 8b b4 04 08       	push   $0x804b48b
+ 8049a51:	e8 ca f0 ff ff       	call   8048b20 <puts@plt>
+ 8049a56:	83 c4 10             	add    $0x10,%esp
+ 8049a59:	8b 1d f4 e0 04 08    	mov    0x804e0f4,%ebx
+ 8049a5f:	85 db                	test   %ebx,%ebx
+ 8049a61:	74 1a                	je     8049a7d <_Z7Cleanupv+0x3b>
+ 8049a63:	83 ec 0c             	sub    $0xc,%esp
+ 8049a66:	53                   	push   %ebx
+ 8049a67:	e8 78 00 00 00       	call   8049ae4 <_ZN5TimerD1Ev>
+ 8049a6c:	83 c4 10             	add    $0x10,%esp
+ 8049a6f:	83 ec 08             	sub    $0x8,%esp
+ 8049a72:	6a 0c                	push   $0xc
+ 8049a74:	53                   	push   %ebx
+ 8049a75:	e8 c6 ef ff ff       	call   8048a40 <_ZdlPvj@plt>
+ 8049a7a:	83 c4 10             	add    $0x10,%esp
+ 8049a7d:	8b 1d e8 e0 04 08    	mov    0x804e0e8,%ebx
+ 8049a83:	85 db                	test   %ebx,%ebx
+ 8049a85:	74 1a                	je     8049aa1 <_Z7Cleanupv+0x5f>
+ 8049a87:	83 ec 0c             	sub    $0xc,%esp
+ 8049a8a:	53                   	push   %ebx
+ 8049a8b:	e8 c4 f6 ff ff       	call   8049154 <_ZN9SchedulerD1Ev>
+ 8049a90:	83 c4 10             	add    $0x10,%esp
+ 8049a93:	83 ec 08             	sub    $0x8,%esp
+ 8049a96:	6a 04                	push   $0x4
+ 8049a98:	53                   	push   %ebx
+ 8049a99:	e8 a2 ef ff ff       	call   8048a40 <_ZdlPvj@plt>
+ 8049a9e:	83 c4 10             	add    $0x10,%esp
+ 8049aa1:	8b 1d ec e0 04 08    	mov    0x804e0ec,%ebx
+ 8049aa7:	85 db                	test   %ebx,%ebx
+ 8049aa9:	74 1a                	je     8049ac5 <_Z7Cleanupv+0x83>
+ 8049aab:	83 ec 0c             	sub    $0xc,%esp
+ 8049aae:	53                   	push   %ebx
+ 8049aaf:	e8 5e 07 00 00       	call   804a212 <_ZN9InterruptD1Ev>
+ 8049ab4:	83 c4 10             	add    $0x10,%esp
+ 8049ab7:	83 ec 08             	sub    $0x8,%esp
+ 8049aba:	6a 10                	push   $0x10
+ 8049abc:	53                   	push   %ebx
+ 8049abd:	e8 7e ef ff ff       	call   8048a40 <_ZdlPvj@plt>
+ 8049ac2:	83 c4 10             	add    $0x10,%esp
+ 8049ac5:	83 ec 0c             	sub    $0xc,%esp
+ 8049ac8:	6a 00                	push   $0x0
+ 8049aca:	e8 01 15 00 00       	call   804afd0 <_Z4Exiti>
+ 8049acf:	83 c4 10             	add    $0x10,%esp
+ 8049ad2:	90                   	nop
+ 8049ad3:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+ 8049ad6:	c9                   	leave
+ 8049ad7:	c3                   	ret
+
+08049ad8 <_ZN9Interrupt9getStatusEv>:
+ 8049ad8:	55                   	push   %ebp
+ 8049ad9:	89 e5                	mov    %esp,%ebp
+ 8049adb:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049ade:	8b 40 0c             	mov    0xc(%eax),%eax
+ 8049ae1:	5d                   	pop    %ebp
+ 8049ae2:	c3                   	ret
+ 8049ae3:	90                   	nop
+
+08049ae4 <_ZN5TimerD1Ev>:
+ 8049ae4:	55                   	push   %ebp
+ 8049ae5:	89 e5                	mov    %esp,%ebp
+ 8049ae7:	90                   	nop
+ 8049ae8:	5d                   	pop    %ebp
+ 8049ae9:	c3                   	ret
+
+08049aea <_ZN6ThreadC1EPKc>:
+ 8049aea:	55                   	push   %ebp
+ 8049aeb:	89 e5                	mov    %esp,%ebp
+ 8049aed:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049af0:	8b 55 0c             	mov    0xc(%ebp),%edx
+ 8049af3:	89 50 54             	mov    %edx,0x54(%eax)
+ 8049af6:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049af9:	c7 00 00 00 00 00    	movl   $0x0,(%eax)
+ 8049aff:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049b02:	c7 40 4c 00 00 00 00 	movl   $0x0,0x4c(%eax)
+ 8049b09:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049b0c:	c7 40 50 00 00 00 00 	movl   $0x0,0x50(%eax)
+ 8049b13:	90                   	nop
+ 8049b14:	5d                   	pop    %ebp
+ 8049b15:	c3                   	ret
+
+08049b16 <_ZN6ThreadD1Ev>:
+ 8049b16:	55                   	push   %ebp
+ 8049b17:	89 e5                	mov    %esp,%ebp
+ 8049b19:	83 ec 08             	sub    $0x8,%esp
+ 8049b1c:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049b1f:	8b 40 54             	mov    0x54(%eax),%eax
+ 8049b22:	83 ec 04             	sub    $0x4,%esp
+ 8049b25:	50                   	push   %eax
+ 8049b26:	68 a1 b4 04 08       	push   $0x804b4a1
+ 8049b2b:	6a 74                	push   $0x74
+ 8049b2d:	e8 07 05 00 00       	call   804a039 <_Z5DEBUGcPKcz>
+ 8049b32:	83 c4 10             	add    $0x10,%esp
+ 8049b35:	a1 e0 e0 04 08       	mov    0x804e0e0,%eax
+ 8049b3a:	39 45 08             	cmp    %eax,0x8(%ebp)
+ 8049b3d:	75 30                	jne    8049b6f <_ZN6ThreadD1Ev+0x59>
+ 8049b3f:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 8049b44:	68 b7 b4 04 08       	push   $0x804b4b7
+ 8049b49:	6a 3e                	push   $0x3e
+ 8049b4b:	68 cc b4 04 08       	push   $0x804b4cc
+ 8049b50:	50                   	push   %eax
+ 8049b51:	e8 da ee ff ff       	call   8048a30 <fprintf@plt>
+ 8049b56:	83 c4 10             	add    $0x10,%esp
+ 8049b59:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 8049b5e:	83 ec 0c             	sub    $0xc,%esp
+ 8049b61:	50                   	push   %eax
+ 8049b62:	e8 19 ef ff ff       	call   8048a80 <fflush@plt>
+ 8049b67:	83 c4 10             	add    $0x10,%esp
+ 8049b6a:	e8 56 14 00 00       	call   804afc5 <_Z5Abortv>
+ 8049b6f:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049b72:	8b 40 4c             	mov    0x4c(%eax),%eax
+ 8049b75:	85 c0                	test   %eax,%eax
+ 8049b77:	74 17                	je     8049b90 <_ZN6ThreadD1Ev+0x7a>
+ 8049b79:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049b7c:	8b 40 4c             	mov    0x4c(%eax),%eax
+ 8049b7f:	83 ec 08             	sub    $0x8,%esp
+ 8049b82:	68 00 40 00 00       	push   $0x4000
+ 8049b87:	50                   	push   %eax
+ 8049b88:	e8 aa 14 00 00       	call   804b037 <_Z19DeallocBoundedArrayPci>
+ 8049b8d:	83 c4 10             	add    $0x10,%esp
+ 8049b90:	90                   	nop
+ 8049b91:	c9                   	leave
+ 8049b92:	c3                   	ret
+ 8049b93:	90                   	nop
+
+08049b94 <_ZN6Thread4ForkEPFviEi>:
+ 8049b94:	55                   	push   %ebp
+ 8049b95:	89 e5                	mov    %esp,%ebp
+ 8049b97:	83 ec 18             	sub    $0x18,%esp
+ 8049b9a:	8b 55 0c             	mov    0xc(%ebp),%edx
+ 8049b9d:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049ba0:	8b 40 54             	mov    0x54(%eax),%eax
+ 8049ba3:	83 ec 0c             	sub    $0xc,%esp
+ 8049ba6:	ff 75 10             	pushl  0x10(%ebp)
+ 8049ba9:	52                   	push   %edx
+ 8049baa:	50                   	push   %eax
+ 8049bab:	68 f4 b4 04 08       	push   $0x804b4f4
+ 8049bb0:	6a 74                	push   $0x74
+ 8049bb2:	e8 82 04 00 00       	call   804a039 <_Z5DEBUGcPKcz>
+ 8049bb7:	83 c4 20             	add    $0x20,%esp
+ 8049bba:	83 ec 04             	sub    $0x4,%esp
+ 8049bbd:	ff 75 10             	pushl  0x10(%ebp)
+ 8049bc0:	ff 75 0c             	pushl  0xc(%ebp)
+ 8049bc3:	ff 75 08             	pushl  0x8(%ebp)
+ 8049bc6:	e8 53 03 00 00       	call   8049f1e <_ZN6Thread13StackAllocateEPFviEi>
+ 8049bcb:	83 c4 10             	add    $0x10,%esp
+ 8049bce:	a1 ec e0 04 08       	mov    0x804e0ec,%eax
+ 8049bd3:	83 ec 08             	sub    $0x8,%esp
+ 8049bd6:	6a 00                	push   $0x0
+ 8049bd8:	50                   	push   %eax
+ 8049bd9:	e8 da 06 00 00       	call   804a2b8 <_ZN9Interrupt8SetLevelE9IntStatus>
+ 8049bde:	83 c4 10             	add    $0x10,%esp
+ 8049be1:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 8049be4:	a1 e8 e0 04 08       	mov    0x804e0e8,%eax
+ 8049be9:	83 ec 08             	sub    $0x8,%esp
+ 8049bec:	ff 75 08             	pushl  0x8(%ebp)
+ 8049bef:	50                   	push   %eax
+ 8049bf0:	e8 8f f5 ff ff       	call   8049184 <_ZN9Scheduler10ReadyToRunEP6Thread>
+ 8049bf5:	83 c4 10             	add    $0x10,%esp
+ 8049bf8:	a1 ec e0 04 08       	mov    0x804e0ec,%eax
+ 8049bfd:	83 ec 08             	sub    $0x8,%esp
+ 8049c00:	ff 75 f4             	pushl  -0xc(%ebp)
+ 8049c03:	50                   	push   %eax
+ 8049c04:	e8 af 06 00 00       	call   804a2b8 <_ZN9Interrupt8SetLevelE9IntStatus>
+ 8049c09:	83 c4 10             	add    $0x10,%esp
+ 8049c0c:	90                   	nop
+ 8049c0d:	c9                   	leave
+ 8049c0e:	c3                   	ret
+ 8049c0f:	90                   	nop
+
+08049c10 <_ZN6Thread13CheckOverflowEv>:
+ 8049c10:	55                   	push   %ebp
+ 8049c11:	89 e5                	mov    %esp,%ebp
+ 8049c13:	83 ec 08             	sub    $0x8,%esp
+ 8049c16:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049c19:	8b 40 4c             	mov    0x4c(%eax),%eax
+ 8049c1c:	85 c0                	test   %eax,%eax
+ 8049c1e:	74 3f                	je     8049c5f <_ZN6Thread13CheckOverflowEv+0x4f>
+ 8049c20:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049c23:	8b 40 4c             	mov    0x4c(%eax),%eax
+ 8049c26:	8b 00                	mov    (%eax),%eax
+ 8049c28:	3d ef be ad de       	cmp    $0xdeadbeef,%eax
+ 8049c2d:	74 30                	je     8049c5f <_ZN6Thread13CheckOverflowEv+0x4f>
+ 8049c2f:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 8049c34:	68 b7 b4 04 08       	push   $0x804b4b7
+ 8049c39:	6a 7b                	push   $0x7b
+ 8049c3b:	68 cc b4 04 08       	push   $0x804b4cc
+ 8049c40:	50                   	push   %eax
+ 8049c41:	e8 ea ed ff ff       	call   8048a30 <fprintf@plt>
+ 8049c46:	83 c4 10             	add    $0x10,%esp
+ 8049c49:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 8049c4e:	83 ec 0c             	sub    $0xc,%esp
+ 8049c51:	50                   	push   %eax
+ 8049c52:	e8 29 ee ff ff       	call   8048a80 <fflush@plt>
+ 8049c57:	83 c4 10             	add    $0x10,%esp
+ 8049c5a:	e8 66 13 00 00       	call   804afc5 <_Z5Abortv>
+ 8049c5f:	90                   	nop
+ 8049c60:	c9                   	leave
+ 8049c61:	c3                   	ret
+
+08049c62 <_ZN6Thread6FinishEv>:
+ 8049c62:	55                   	push   %ebp
+ 8049c63:	89 e5                	mov    %esp,%ebp
+ 8049c65:	83 ec 08             	sub    $0x8,%esp
+ 8049c68:	a1 ec e0 04 08       	mov    0x804e0ec,%eax
+ 8049c6d:	83 ec 08             	sub    $0x8,%esp
+ 8049c70:	6a 00                	push   $0x0
+ 8049c72:	50                   	push   %eax
+ 8049c73:	e8 40 06 00 00       	call   804a2b8 <_ZN9Interrupt8SetLevelE9IntStatus>
+ 8049c78:	83 c4 10             	add    $0x10,%esp
+ 8049c7b:	a1 e0 e0 04 08       	mov    0x804e0e0,%eax
+ 8049c80:	39 45 08             	cmp    %eax,0x8(%ebp)
+ 8049c83:	74 33                	je     8049cb8 <_ZN6Thread6FinishEv+0x56>
+ 8049c85:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 8049c8a:	68 b7 b4 04 08       	push   $0x804b4b7
+ 8049c8f:	68 93 00 00 00       	push   $0x93
+ 8049c94:	68 cc b4 04 08       	push   $0x804b4cc
+ 8049c99:	50                   	push   %eax
+ 8049c9a:	e8 91 ed ff ff       	call   8048a30 <fprintf@plt>
+ 8049c9f:	83 c4 10             	add    $0x10,%esp
+ 8049ca2:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 8049ca7:	83 ec 0c             	sub    $0xc,%esp
+ 8049caa:	50                   	push   %eax
+ 8049cab:	e8 d0 ed ff ff       	call   8048a80 <fflush@plt>
+ 8049cb0:	83 c4 10             	add    $0x10,%esp
+ 8049cb3:	e8 0d 13 00 00       	call   804afc5 <_Z5Abortv>
+ 8049cb8:	83 ec 0c             	sub    $0xc,%esp
+ 8049cbb:	ff 75 08             	pushl  0x8(%ebp)
+ 8049cbe:	e8 43 f6 ff ff       	call   8049306 <_ZN6Thread7getNameEv>
+ 8049cc3:	83 c4 10             	add    $0x10,%esp
+ 8049cc6:	83 ec 04             	sub    $0x4,%esp
+ 8049cc9:	50                   	push   %eax
+ 8049cca:	68 24 b5 04 08       	push   $0x804b524
+ 8049ccf:	6a 74                	push   $0x74
+ 8049cd1:	e8 63 03 00 00       	call   804a039 <_Z5DEBUGcPKcz>
+ 8049cd6:	83 c4 10             	add    $0x10,%esp
+ 8049cd9:	a1 e0 e0 04 08       	mov    0x804e0e0,%eax
+ 8049cde:	a3 e4 e0 04 08       	mov    %eax,0x804e0e4
+ 8049ce3:	83 ec 0c             	sub    $0xc,%esp
+ 8049ce6:	ff 75 08             	pushl  0x8(%ebp)
+ 8049ce9:	e8 da 00 00 00       	call   8049dc8 <_ZN6Thread5SleepEv>
+ 8049cee:	83 c4 10             	add    $0x10,%esp
+ 8049cf1:	90                   	nop
+ 8049cf2:	c9                   	leave
+ 8049cf3:	c3                   	ret
+
+08049cf4 <_ZN6Thread5YieldEv>:
+ 8049cf4:	55                   	push   %ebp
+ 8049cf5:	89 e5                	mov    %esp,%ebp
+ 8049cf7:	83 ec 18             	sub    $0x18,%esp
+ 8049cfa:	a1 ec e0 04 08       	mov    0x804e0ec,%eax
+ 8049cff:	83 ec 08             	sub    $0x8,%esp
+ 8049d02:	6a 00                	push   $0x0
+ 8049d04:	50                   	push   %eax
+ 8049d05:	e8 ae 05 00 00       	call   804a2b8 <_ZN9Interrupt8SetLevelE9IntStatus>
+ 8049d0a:	83 c4 10             	add    $0x10,%esp
+ 8049d0d:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 8049d10:	a1 e0 e0 04 08       	mov    0x804e0e0,%eax
+ 8049d15:	39 45 08             	cmp    %eax,0x8(%ebp)
+ 8049d18:	74 33                	je     8049d4d <_ZN6Thread5YieldEv+0x59>
+ 8049d1a:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 8049d1f:	68 b7 b4 04 08       	push   $0x804b4b7
+ 8049d24:	68 b4 00 00 00       	push   $0xb4
+ 8049d29:	68 cc b4 04 08       	push   $0x804b4cc
+ 8049d2e:	50                   	push   %eax
+ 8049d2f:	e8 fc ec ff ff       	call   8048a30 <fprintf@plt>
+ 8049d34:	83 c4 10             	add    $0x10,%esp
+ 8049d37:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 8049d3c:	83 ec 0c             	sub    $0xc,%esp
+ 8049d3f:	50                   	push   %eax
+ 8049d40:	e8 3b ed ff ff       	call   8048a80 <fflush@plt>
+ 8049d45:	83 c4 10             	add    $0x10,%esp
+ 8049d48:	e8 78 12 00 00       	call   804afc5 <_Z5Abortv>
+ 8049d4d:	83 ec 0c             	sub    $0xc,%esp
+ 8049d50:	ff 75 08             	pushl  0x8(%ebp)
+ 8049d53:	e8 ae f5 ff ff       	call   8049306 <_ZN6Thread7getNameEv>
+ 8049d58:	83 c4 10             	add    $0x10,%esp
+ 8049d5b:	83 ec 04             	sub    $0x4,%esp
+ 8049d5e:	50                   	push   %eax
+ 8049d5f:	68 3b b5 04 08       	push   $0x804b53b
+ 8049d64:	6a 74                	push   $0x74
+ 8049d66:	e8 ce 02 00 00       	call   804a039 <_Z5DEBUGcPKcz>
+ 8049d6b:	83 c4 10             	add    $0x10,%esp
+ 8049d6e:	a1 e8 e0 04 08       	mov    0x804e0e8,%eax
+ 8049d73:	83 ec 0c             	sub    $0xc,%esp
+ 8049d76:	50                   	push   %eax
+ 8049d77:	e8 56 f4 ff ff       	call   80491d2 <_ZN9Scheduler13FindNextToRunEv>
+ 8049d7c:	83 c4 10             	add    $0x10,%esp
+ 8049d7f:	89 45 f0             	mov    %eax,-0x10(%ebp)
+ 8049d82:	83 7d f0 00          	cmpl   $0x0,-0x10(%ebp)
+ 8049d86:	74 28                	je     8049db0 <_ZN6Thread5YieldEv+0xbc>
+ 8049d88:	a1 e8 e0 04 08       	mov    0x804e0e8,%eax
+ 8049d8d:	83 ec 08             	sub    $0x8,%esp
+ 8049d90:	ff 75 08             	pushl  0x8(%ebp)
+ 8049d93:	50                   	push   %eax
+ 8049d94:	e8 eb f3 ff ff       	call   8049184 <_ZN9Scheduler10ReadyToRunEP6Thread>
+ 8049d99:	83 c4 10             	add    $0x10,%esp
+ 8049d9c:	a1 e8 e0 04 08       	mov    0x804e0e8,%eax
+ 8049da1:	83 ec 08             	sub    $0x8,%esp
+ 8049da4:	ff 75 f0             	pushl  -0x10(%ebp)
+ 8049da7:	50                   	push   %eax
+ 8049da8:	e8 3f f4 ff ff       	call   80491ec <_ZN9Scheduler3RunEP6Thread>
+ 8049dad:	83 c4 10             	add    $0x10,%esp
+ 8049db0:	a1 ec e0 04 08       	mov    0x804e0ec,%eax
+ 8049db5:	83 ec 08             	sub    $0x8,%esp
+ 8049db8:	ff 75 f4             	pushl  -0xc(%ebp)
+ 8049dbb:	50                   	push   %eax
+ 8049dbc:	e8 f7 04 00 00       	call   804a2b8 <_ZN9Interrupt8SetLevelE9IntStatus>
+ 8049dc1:	83 c4 10             	add    $0x10,%esp
+ 8049dc4:	90                   	nop
+ 8049dc5:	c9                   	leave
+ 8049dc6:	c3                   	ret
+ 8049dc7:	90                   	nop
+
+08049dc8 <_ZN6Thread5SleepEv>:
+ 8049dc8:	55                   	push   %ebp
+ 8049dc9:	89 e5                	mov    %esp,%ebp
+ 8049dcb:	83 ec 18             	sub    $0x18,%esp
+ 8049dce:	a1 e0 e0 04 08       	mov    0x804e0e0,%eax
+ 8049dd3:	39 45 08             	cmp    %eax,0x8(%ebp)
+ 8049dd6:	74 33                	je     8049e0b <_ZN6Thread5SleepEv+0x43>
+ 8049dd8:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 8049ddd:	68 b7 b4 04 08       	push   $0x804b4b7
+ 8049de2:	68 d8 00 00 00       	push   $0xd8
+ 8049de7:	68 cc b4 04 08       	push   $0x804b4cc
+ 8049dec:	50                   	push   %eax
+ 8049ded:	e8 3e ec ff ff       	call   8048a30 <fprintf@plt>
+ 8049df2:	83 c4 10             	add    $0x10,%esp
+ 8049df5:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 8049dfa:	83 ec 0c             	sub    $0xc,%esp
+ 8049dfd:	50                   	push   %eax
+ 8049dfe:	e8 7d ec ff ff       	call   8048a80 <fflush@plt>
+ 8049e03:	83 c4 10             	add    $0x10,%esp
+ 8049e06:	e8 ba 11 00 00       	call   804afc5 <_Z5Abortv>
+ 8049e0b:	a1 ec e0 04 08       	mov    0x804e0ec,%eax
+ 8049e10:	83 ec 0c             	sub    $0xc,%esp
+ 8049e13:	50                   	push   %eax
+ 8049e14:	e8 ad 01 00 00       	call   8049fc6 <_ZN9Interrupt8getLevelEv>
+ 8049e19:	83 c4 10             	add    $0x10,%esp
+ 8049e1c:	85 c0                	test   %eax,%eax
+ 8049e1e:	0f 95 c0             	setne  %al
+ 8049e21:	84 c0                	test   %al,%al
+ 8049e23:	74 33                	je     8049e58 <_ZN6Thread5SleepEv+0x90>
+ 8049e25:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 8049e2a:	68 b7 b4 04 08       	push   $0x804b4b7
+ 8049e2f:	68 d9 00 00 00       	push   $0xd9
+ 8049e34:	68 cc b4 04 08       	push   $0x804b4cc
+ 8049e39:	50                   	push   %eax
+ 8049e3a:	e8 f1 eb ff ff       	call   8048a30 <fprintf@plt>
+ 8049e3f:	83 c4 10             	add    $0x10,%esp
+ 8049e42:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 8049e47:	83 ec 0c             	sub    $0xc,%esp
+ 8049e4a:	50                   	push   %eax
+ 8049e4b:	e8 30 ec ff ff       	call   8048a80 <fflush@plt>
+ 8049e50:	83 c4 10             	add    $0x10,%esp
+ 8049e53:	e8 6d 11 00 00       	call   804afc5 <_Z5Abortv>
+ 8049e58:	83 ec 0c             	sub    $0xc,%esp
+ 8049e5b:	ff 75 08             	pushl  0x8(%ebp)
+ 8049e5e:	e8 a3 f4 ff ff       	call   8049306 <_ZN6Thread7getNameEv>
+ 8049e63:	83 c4 10             	add    $0x10,%esp
+ 8049e66:	83 ec 04             	sub    $0x4,%esp
+ 8049e69:	50                   	push   %eax
+ 8049e6a:	68 51 b5 04 08       	push   $0x804b551
+ 8049e6f:	6a 74                	push   $0x74
+ 8049e71:	e8 c3 01 00 00       	call   804a039 <_Z5DEBUGcPKcz>
+ 8049e76:	83 c4 10             	add    $0x10,%esp
+ 8049e79:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049e7c:	c7 40 50 03 00 00 00 	movl   $0x3,0x50(%eax)
+ 8049e83:	a1 e8 e0 04 08       	mov    0x804e0e8,%eax
+ 8049e88:	83 ec 0c             	sub    $0xc,%esp
+ 8049e8b:	50                   	push   %eax
+ 8049e8c:	e8 41 f3 ff ff       	call   80491d2 <_ZN9Scheduler13FindNextToRunEv>
+ 8049e91:	83 c4 10             	add    $0x10,%esp
+ 8049e94:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 8049e97:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 8049e9b:	0f 94 c0             	sete   %al
+ 8049e9e:	84 c0                	test   %al,%al
+ 8049ea0:	74 13                	je     8049eb5 <_ZN6Thread5SleepEv+0xed>
+ 8049ea2:	a1 ec e0 04 08       	mov    0x804e0ec,%eax
+ 8049ea7:	83 ec 0c             	sub    $0xc,%esp
+ 8049eaa:	50                   	push   %eax
+ 8049eab:	e8 ec 05 00 00       	call   804a49c <_ZN9Interrupt4IdleEv>
+ 8049eb0:	83 c4 10             	add    $0x10,%esp
+ 8049eb3:	eb ce                	jmp    8049e83 <_ZN6Thread5SleepEv+0xbb>
+ 8049eb5:	a1 e8 e0 04 08       	mov    0x804e0e8,%eax
+ 8049eba:	83 ec 08             	sub    $0x8,%esp
+ 8049ebd:	ff 75 f4             	pushl  -0xc(%ebp)
+ 8049ec0:	50                   	push   %eax
+ 8049ec1:	e8 26 f3 ff ff       	call   80491ec <_ZN9Scheduler3RunEP6Thread>
+ 8049ec6:	83 c4 10             	add    $0x10,%esp
+ 8049ec9:	90                   	nop
+ 8049eca:	c9                   	leave
+ 8049ecb:	c3                   	ret
+
+08049ecc <_ZL12ThreadFinishv>:
+ 8049ecc:	55                   	push   %ebp
+ 8049ecd:	89 e5                	mov    %esp,%ebp
+ 8049ecf:	83 ec 08             	sub    $0x8,%esp
+ 8049ed2:	a1 e0 e0 04 08       	mov    0x804e0e0,%eax
+ 8049ed7:	83 ec 0c             	sub    $0xc,%esp
+ 8049eda:	50                   	push   %eax
+ 8049edb:	e8 82 fd ff ff       	call   8049c62 <_ZN6Thread6FinishEv>
+ 8049ee0:	83 c4 10             	add    $0x10,%esp
+ 8049ee3:	90                   	nop
+ 8049ee4:	c9                   	leave
+ 8049ee5:	c3                   	ret
+
+08049ee6 <_ZL15InterruptEnablev>:
+ 8049ee6:	55                   	push   %ebp
+ 8049ee7:	89 e5                	mov    %esp,%ebp
+ 8049ee9:	83 ec 08             	sub    $0x8,%esp
+ 8049eec:	a1 ec e0 04 08       	mov    0x804e0ec,%eax
+ 8049ef1:	83 ec 0c             	sub    $0xc,%esp
+ 8049ef4:	50                   	push   %eax
+ 8049ef5:	e8 44 04 00 00       	call   804a33e <_ZN9Interrupt6EnableEv>
+ 8049efa:	83 c4 10             	add    $0x10,%esp
+ 8049efd:	90                   	nop
+ 8049efe:	c9                   	leave
+ 8049eff:	c3                   	ret
+
+08049f00 <_Z11ThreadPrinti>:
+ 8049f00:	55                   	push   %ebp
+ 8049f01:	89 e5                	mov    %esp,%ebp
+ 8049f03:	83 ec 18             	sub    $0x18,%esp
+ 8049f06:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049f09:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 8049f0c:	83 ec 0c             	sub    $0xc,%esp
+ 8049f0f:	ff 75 f4             	pushl  -0xc(%ebp)
+ 8049f12:	e8 8f 00 00 00       	call   8049fa6 <_ZN6Thread5PrintEv>
+ 8049f17:	83 c4 10             	add    $0x10,%esp
+ 8049f1a:	90                   	nop
+ 8049f1b:	c9                   	leave
+ 8049f1c:	c3                   	ret
+ 8049f1d:	90                   	nop
+
+08049f1e <_ZN6Thread13StackAllocateEPFviEi>:
+ 8049f1e:	55                   	push   %ebp
+ 8049f1f:	89 e5                	mov    %esp,%ebp
+ 8049f21:	83 ec 08             	sub    $0x8,%esp
+ 8049f24:	83 ec 0c             	sub    $0xc,%esp
+ 8049f27:	68 00 40 00 00       	push   $0x4000
+ 8049f2c:	e8 d4 10 00 00       	call   804b005 <_Z17AllocBoundedArrayi>
+ 8049f31:	83 c4 10             	add    $0x10,%esp
+ 8049f34:	8b 55 08             	mov    0x8(%ebp),%edx
+ 8049f37:	89 42 4c             	mov    %eax,0x4c(%edx)
+ 8049f3a:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049f3d:	8b 40 4c             	mov    0x4c(%eax),%eax
+ 8049f40:	8d 90 f0 3f 00 00    	lea    0x3ff0(%eax),%edx
+ 8049f46:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049f49:	89 10                	mov    %edx,(%eax)
+ 8049f4b:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049f4e:	8b 00                	mov    (%eax),%eax
+ 8049f50:	8d 50 fc             	lea    -0x4(%eax),%edx
+ 8049f53:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049f56:	89 10                	mov    %edx,(%eax)
+ 8049f58:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049f5b:	8b 00                	mov    (%eax),%eax
+ 8049f5d:	ba b0 b1 04 08       	mov    $0x804b1b0,%edx
+ 8049f62:	89 10                	mov    %edx,(%eax)
+ 8049f64:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049f67:	8b 40 4c             	mov    0x4c(%eax),%eax
+ 8049f6a:	c7 00 ef be ad de    	movl   $0xdeadbeef,(%eax)
+ 8049f70:	ba b0 b1 04 08       	mov    $0x804b1b0,%edx
+ 8049f75:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049f78:	89 50 20             	mov    %edx,0x20(%eax)
+ 8049f7b:	ba e6 9e 04 08       	mov    $0x8049ee6,%edx
+ 8049f80:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049f83:	89 50 0c             	mov    %edx,0xc(%eax)
+ 8049f86:	8b 55 0c             	mov    0xc(%ebp),%edx
+ 8049f89:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049f8c:	89 50 18             	mov    %edx,0x18(%eax)
+ 8049f8f:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049f92:	8b 55 10             	mov    0x10(%ebp),%edx
+ 8049f95:	89 50 10             	mov    %edx,0x10(%eax)
+ 8049f98:	ba cc 9e 04 08       	mov    $0x8049ecc,%edx
+ 8049f9d:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049fa0:	89 50 1c             	mov    %edx,0x1c(%eax)
+ 8049fa3:	90                   	nop
+ 8049fa4:	c9                   	leave
+ 8049fa5:	c3                   	ret
+
+08049fa6 <_ZN6Thread5PrintEv>:
+ 8049fa6:	55                   	push   %ebp
+ 8049fa7:	89 e5                	mov    %esp,%ebp
+ 8049fa9:	83 ec 08             	sub    $0x8,%esp
+ 8049fac:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049faf:	8b 40 54             	mov    0x54(%eax),%eax
+ 8049fb2:	83 ec 08             	sub    $0x8,%esp
+ 8049fb5:	50                   	push   %eax
+ 8049fb6:	68 9c b4 04 08       	push   $0x804b49c
+ 8049fbb:	e8 50 eb ff ff       	call   8048b10 <printf@plt>
+ 8049fc0:	83 c4 10             	add    $0x10,%esp
+ 8049fc3:	90                   	nop
+ 8049fc4:	c9                   	leave
+ 8049fc5:	c3                   	ret
+
+08049fc6 <_ZN9Interrupt8getLevelEv>:
+ 8049fc6:	55                   	push   %ebp
+ 8049fc7:	89 e5                	mov    %esp,%ebp
+ 8049fc9:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049fcc:	8b 00                	mov    (%eax),%eax
+ 8049fce:	5d                   	pop    %ebp
+ 8049fcf:	c3                   	ret
+
+08049fd0 <_Z9DebugInitPc>:
+ 8049fd0:	55                   	push   %ebp
+ 8049fd1:	89 e5                	mov    %esp,%ebp
+ 8049fd3:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049fd6:	a3 f8 e0 04 08       	mov    %eax,0x804e0f8
+ 8049fdb:	90                   	nop
+ 8049fdc:	5d                   	pop    %ebp
+ 8049fdd:	c3                   	ret
+
+08049fde <_Z14DebugIsEnabledc>:
+ 8049fde:	55                   	push   %ebp
+ 8049fdf:	89 e5                	mov    %esp,%ebp
+ 8049fe1:	83 ec 18             	sub    $0x18,%esp
+ 8049fe4:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049fe7:	88 45 f4             	mov    %al,-0xc(%ebp)
+ 8049fea:	a1 f8 e0 04 08       	mov    0x804e0f8,%eax
+ 8049fef:	85 c0                	test   %eax,%eax
+ 8049ff1:	74 3f                	je     804a032 <_Z14DebugIsEnabledc+0x54>
+ 8049ff3:	0f be 55 f4          	movsbl -0xc(%ebp),%edx
+ 8049ff7:	a1 f8 e0 04 08       	mov    0x804e0f8,%eax
+ 8049ffc:	83 ec 08             	sub    $0x8,%esp
+ 8049fff:	52                   	push   %edx
+ 804a000:	50                   	push   %eax
+ 804a001:	e8 9a ea ff ff       	call   8048aa0 <strchr@plt>
+ 804a006:	83 c4 10             	add    $0x10,%esp
+ 804a009:	85 c0                	test   %eax,%eax
+ 804a00b:	75 17                	jne    804a024 <_Z14DebugIsEnabledc+0x46>
+ 804a00d:	a1 f8 e0 04 08       	mov    0x804e0f8,%eax
+ 804a012:	83 ec 08             	sub    $0x8,%esp
+ 804a015:	6a 2b                	push   $0x2b
+ 804a017:	50                   	push   %eax
+ 804a018:	e8 83 ea ff ff       	call   8048aa0 <strchr@plt>
+ 804a01d:	83 c4 10             	add    $0x10,%esp
+ 804a020:	85 c0                	test   %eax,%eax
+ 804a022:	74 07                	je     804a02b <_Z14DebugIsEnabledc+0x4d>
+ 804a024:	b8 01 00 00 00       	mov    $0x1,%eax
+ 804a029:	eb 0c                	jmp    804a037 <_Z14DebugIsEnabledc+0x59>
+ 804a02b:	b8 00 00 00 00       	mov    $0x0,%eax
+ 804a030:	eb 05                	jmp    804a037 <_Z14DebugIsEnabledc+0x59>
+ 804a032:	b8 00 00 00 00       	mov    $0x0,%eax
+ 804a037:	c9                   	leave
+ 804a038:	c3                   	ret
+
+0804a039 <_Z5DEBUGcPKcz>:
+ 804a039:	55                   	push   %ebp
+ 804a03a:	89 e5                	mov    %esp,%ebp
+ 804a03c:	83 ec 28             	sub    $0x28,%esp
+ 804a03f:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a042:	88 45 e4             	mov    %al,-0x1c(%ebp)
+ 804a045:	0f be 45 e4          	movsbl -0x1c(%ebp),%eax
+ 804a049:	83 ec 0c             	sub    $0xc,%esp
+ 804a04c:	50                   	push   %eax
+ 804a04d:	e8 8c ff ff ff       	call   8049fde <_Z14DebugIsEnabledc>
+ 804a052:	83 c4 10             	add    $0x10,%esp
+ 804a055:	84 c0                	test   %al,%al
+ 804a057:	74 2e                	je     804a087 <_Z5DEBUGcPKcz+0x4e>
+ 804a059:	8d 45 10             	lea    0x10(%ebp),%eax
+ 804a05c:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 804a05f:	a1 d0 e0 04 08       	mov    0x804e0d0,%eax
+ 804a064:	83 ec 04             	sub    $0x4,%esp
+ 804a067:	ff 75 f4             	pushl  -0xc(%ebp)
+ 804a06a:	ff 75 0c             	pushl  0xc(%ebp)
+ 804a06d:	50                   	push   %eax
+ 804a06e:	e8 3d eb ff ff       	call   8048bb0 <vfprintf@plt>
+ 804a073:	83 c4 10             	add    $0x10,%esp
+ 804a076:	a1 d0 e0 04 08       	mov    0x804e0d0,%eax
+ 804a07b:	83 ec 0c             	sub    $0xc,%esp
+ 804a07e:	50                   	push   %eax
+ 804a07f:	e8 fc e9 ff ff       	call   8048a80 <fflush@plt>
+ 804a084:	83 c4 10             	add    $0x10,%esp
+ 804a087:	90                   	nop
+ 804a088:	c9                   	leave
+ 804a089:	c3                   	ret
+
+0804a08a <_Z12SimpleThreadi>:
+ 804a08a:	55                   	push   %ebp
+ 804a08b:	89 e5                	mov    %esp,%ebp
+ 804a08d:	83 ec 18             	sub    $0x18,%esp
+ 804a090:	c7 45 f4 00 00 00 00 	movl   $0x0,-0xc(%ebp)
+ 804a097:	83 7d f4 04          	cmpl   $0x4,-0xc(%ebp)
+ 804a09b:	7f 2d                	jg     804a0ca <_Z12SimpleThreadi+0x40>
+ 804a09d:	83 ec 04             	sub    $0x4,%esp
+ 804a0a0:	ff 75 f4             	pushl  -0xc(%ebp)
+ 804a0a3:	ff 75 08             	pushl  0x8(%ebp)
+ 804a0a6:	68 68 b5 04 08       	push   $0x804b568
+ 804a0ab:	e8 60 ea ff ff       	call   8048b10 <printf@plt>
+ 804a0b0:	83 c4 10             	add    $0x10,%esp
+ 804a0b3:	a1 e0 e0 04 08       	mov    0x804e0e0,%eax
+ 804a0b8:	83 ec 0c             	sub    $0xc,%esp
+ 804a0bb:	50                   	push   %eax
+ 804a0bc:	e8 33 fc ff ff       	call   8049cf4 <_ZN6Thread5YieldEv>
+ 804a0c1:	83 c4 10             	add    $0x10,%esp
+ 804a0c4:	83 45 f4 01          	addl   $0x1,-0xc(%ebp)
+ 804a0c8:	eb cd                	jmp    804a097 <_Z12SimpleThreadi+0xd>
+ 804a0ca:	90                   	nop
+ 804a0cb:	c9                   	leave
+ 804a0cc:	c3                   	ret
+
+0804a0cd <_Z11ThreadTest1v>:
+ 804a0cd:	55                   	push   %ebp
+ 804a0ce:	89 e5                	mov    %esp,%ebp
+ 804a0d0:	56                   	push   %esi
+ 804a0d1:	53                   	push   %ebx
+ 804a0d2:	83 ec 10             	sub    $0x10,%esp
+ 804a0d5:	83 ec 08             	sub    $0x8,%esp
+ 804a0d8:	68 87 b5 04 08       	push   $0x804b587
+ 804a0dd:	6a 74                	push   $0x74
+ 804a0df:	e8 55 ff ff ff       	call   804a039 <_Z5DEBUGcPKcz>
+ 804a0e4:	83 c4 10             	add    $0x10,%esp
+ 804a0e7:	83 ec 0c             	sub    $0xc,%esp
+ 804a0ea:	6a 58                	push   $0x58
+ 804a0ec:	e8 cf e8 ff ff       	call   80489c0 <_Znwj@plt>
+ 804a0f1:	83 c4 10             	add    $0x10,%esp
+ 804a0f4:	89 c3                	mov    %eax,%ebx
+ 804a0f6:	83 ec 08             	sub    $0x8,%esp
+ 804a0f9:	68 9c b5 04 08       	push   $0x804b59c
+ 804a0fe:	53                   	push   %ebx
+ 804a0ff:	e8 e6 f9 ff ff       	call   8049aea <_ZN6ThreadC1EPKc>
+ 804a104:	83 c4 10             	add    $0x10,%esp
+ 804a107:	89 5d f4             	mov    %ebx,-0xc(%ebp)
+ 804a10a:	83 ec 04             	sub    $0x4,%esp
+ 804a10d:	6a 01                	push   $0x1
+ 804a10f:	68 8a a0 04 08       	push   $0x804a08a
+ 804a114:	ff 75 f4             	pushl  -0xc(%ebp)
+ 804a117:	e8 78 fa ff ff       	call   8049b94 <_ZN6Thread4ForkEPFviEi>
+ 804a11c:	83 c4 10             	add    $0x10,%esp
+ 804a11f:	83 ec 0c             	sub    $0xc,%esp
+ 804a122:	6a 00                	push   $0x0
+ 804a124:	e8 61 ff ff ff       	call   804a08a <_Z12SimpleThreadi>
+ 804a129:	83 c4 10             	add    $0x10,%esp
+ 804a12c:	eb 1b                	jmp    804a149 <_Z11ThreadTest1v+0x7c>
+ 804a12e:	89 c6                	mov    %eax,%esi
+ 804a130:	83 ec 08             	sub    $0x8,%esp
+ 804a133:	6a 58                	push   $0x58
+ 804a135:	53                   	push   %ebx
+ 804a136:	e8 05 e9 ff ff       	call   8048a40 <_ZdlPvj@plt>
+ 804a13b:	83 c4 10             	add    $0x10,%esp
+ 804a13e:	89 f0                	mov    %esi,%eax
+ 804a140:	83 ec 0c             	sub    $0xc,%esp
+ 804a143:	50                   	push   %eax
+ 804a144:	e8 57 ea ff ff       	call   8048ba0 <_Unwind_Resume@plt>
+ 804a149:	8d 65 f8             	lea    -0x8(%ebp),%esp
+ 804a14c:	5b                   	pop    %ebx
+ 804a14d:	5e                   	pop    %esi
+ 804a14e:	5d                   	pop    %ebp
+ 804a14f:	c3                   	ret
+
+0804a150 <_Z10ThreadTestv>:
+ 804a150:	55                   	push   %ebp
+ 804a151:	89 e5                	mov    %esp,%ebp
+ 804a153:	83 ec 08             	sub    $0x8,%esp
+ 804a156:	a1 ac e0 04 08       	mov    0x804e0ac,%eax
+ 804a15b:	83 f8 01             	cmp    $0x1,%eax
+ 804a15e:	75 07                	jne    804a167 <_Z10ThreadTestv+0x17>
+ 804a160:	e8 68 ff ff ff       	call   804a0cd <_Z11ThreadTest1v>
+ 804a165:	eb 11                	jmp    804a178 <_Z10ThreadTestv+0x28>
+ 804a167:	83 ec 0c             	sub    $0xc,%esp
+ 804a16a:	68 aa b5 04 08       	push   $0x804b5aa
+ 804a16f:	e8 ac e9 ff ff       	call   8048b20 <puts@plt>
+ 804a174:	83 c4 10             	add    $0x10,%esp
+ 804a177:	90                   	nop
+ 804a178:	90                   	nop
+ 804a179:	c9                   	leave
+ 804a17a:	c3                   	ret
+ 804a17b:	90                   	nop
+
+0804a17c <_ZN16PendingInterruptC1EPFviEii7IntType>:
+ 804a17c:	55                   	push   %ebp
+ 804a17d:	89 e5                	mov    %esp,%ebp
+ 804a17f:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a182:	8b 55 0c             	mov    0xc(%ebp),%edx
+ 804a185:	89 10                	mov    %edx,(%eax)
+ 804a187:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a18a:	8b 55 10             	mov    0x10(%ebp),%edx
+ 804a18d:	89 50 04             	mov    %edx,0x4(%eax)
+ 804a190:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a193:	8b 55 14             	mov    0x14(%ebp),%edx
+ 804a196:	89 50 08             	mov    %edx,0x8(%eax)
+ 804a199:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a19c:	8b 55 18             	mov    0x18(%ebp),%edx
+ 804a19f:	89 50 0c             	mov    %edx,0xc(%eax)
+ 804a1a2:	90                   	nop
+ 804a1a3:	5d                   	pop    %ebp
+ 804a1a4:	c3                   	ret
+ 804a1a5:	90                   	nop
+
+0804a1a6 <_ZN9InterruptC1Ev>:
+ 804a1a6:	55                   	push   %ebp
+ 804a1a7:	89 e5                	mov    %esp,%ebp
+ 804a1a9:	56                   	push   %esi
+ 804a1aa:	53                   	push   %ebx
+ 804a1ab:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a1ae:	c7 00 00 00 00 00    	movl   $0x0,(%eax)
+ 804a1b4:	83 ec 0c             	sub    $0xc,%esp
+ 804a1b7:	6a 08                	push   $0x8
+ 804a1b9:	e8 02 e8 ff ff       	call   80489c0 <_Znwj@plt>
+ 804a1be:	83 c4 10             	add    $0x10,%esp
+ 804a1c1:	89 c3                	mov    %eax,%ebx
+ 804a1c3:	83 ec 0c             	sub    $0xc,%esp
+ 804a1c6:	53                   	push   %ebx
+ 804a1c7:	e8 62 ec ff ff       	call   8048e2e <_ZN4ListC1Ev>
+ 804a1cc:	83 c4 10             	add    $0x10,%esp
+ 804a1cf:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a1d2:	89 58 04             	mov    %ebx,0x4(%eax)
+ 804a1d5:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a1d8:	c6 40 08 00          	movb   $0x0,0x8(%eax)
+ 804a1dc:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a1df:	c6 40 09 00          	movb   $0x0,0x9(%eax)
+ 804a1e3:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a1e6:	c7 40 0c 01 00 00 00 	movl   $0x1,0xc(%eax)
+ 804a1ed:	eb 1b                	jmp    804a20a <_ZN9InterruptC1Ev+0x64>
+ 804a1ef:	89 c6                	mov    %eax,%esi
+ 804a1f1:	83 ec 08             	sub    $0x8,%esp
+ 804a1f4:	6a 08                	push   $0x8
+ 804a1f6:	53                   	push   %ebx
+ 804a1f7:	e8 44 e8 ff ff       	call   8048a40 <_ZdlPvj@plt>
+ 804a1fc:	83 c4 10             	add    $0x10,%esp
+ 804a1ff:	89 f0                	mov    %esi,%eax
+ 804a201:	83 ec 0c             	sub    $0xc,%esp
+ 804a204:	50                   	push   %eax
+ 804a205:	e8 96 e9 ff ff       	call   8048ba0 <_Unwind_Resume@plt>
+ 804a20a:	8d 65 f8             	lea    -0x8(%ebp),%esp
+ 804a20d:	5b                   	pop    %ebx
+ 804a20e:	5e                   	pop    %esi
+ 804a20f:	5d                   	pop    %ebp
+ 804a210:	c3                   	ret
+ 804a211:	90                   	nop
+
+0804a212 <_ZN9InterruptD1Ev>:
+ 804a212:	55                   	push   %ebp
+ 804a213:	89 e5                	mov    %esp,%ebp
+ 804a215:	53                   	push   %ebx
+ 804a216:	83 ec 04             	sub    $0x4,%esp
+ 804a219:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a21c:	8b 40 04             	mov    0x4(%eax),%eax
+ 804a21f:	83 ec 0c             	sub    $0xc,%esp
+ 804a222:	50                   	push   %eax
+ 804a223:	e8 7a ed ff ff       	call   8048fa2 <_ZN4List7IsEmptyEv>
+ 804a228:	83 c4 10             	add    $0x10,%esp
+ 804a22b:	83 f0 01             	xor    $0x1,%eax
+ 804a22e:	84 c0                	test   %al,%al
+ 804a230:	74 26                	je     804a258 <_ZN9InterruptD1Ev+0x46>
+ 804a232:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a235:	8b 40 04             	mov    0x4(%eax),%eax
+ 804a238:	83 ec 0c             	sub    $0xc,%esp
+ 804a23b:	50                   	push   %eax
+ 804a23c:	e8 fd ec ff ff       	call   8048f3e <_ZN4List6RemoveEv>
+ 804a241:	83 c4 10             	add    $0x10,%esp
+ 804a244:	85 c0                	test   %eax,%eax
+ 804a246:	74 d1                	je     804a219 <_ZN9InterruptD1Ev+0x7>
+ 804a248:	83 ec 08             	sub    $0x8,%esp
+ 804a24b:	6a 10                	push   $0x10
+ 804a24d:	50                   	push   %eax
+ 804a24e:	e8 ed e7 ff ff       	call   8048a40 <_ZdlPvj@plt>
+ 804a253:	83 c4 10             	add    $0x10,%esp
+ 804a256:	eb c1                	jmp    804a219 <_ZN9InterruptD1Ev+0x7>
+ 804a258:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a25b:	8b 58 04             	mov    0x4(%eax),%ebx
+ 804a25e:	85 db                	test   %ebx,%ebx
+ 804a260:	74 1a                	je     804a27c <_ZN9InterruptD1Ev+0x6a>
+ 804a262:	83 ec 0c             	sub    $0xc,%esp
+ 804a265:	53                   	push   %ebx
+ 804a266:	e8 df eb ff ff       	call   8048e4a <_ZN4ListD1Ev>
+ 804a26b:	83 c4 10             	add    $0x10,%esp
+ 804a26e:	83 ec 08             	sub    $0x8,%esp
+ 804a271:	6a 08                	push   $0x8
+ 804a273:	53                   	push   %ebx
+ 804a274:	e8 c7 e7 ff ff       	call   8048a40 <_ZdlPvj@plt>
+ 804a279:	83 c4 10             	add    $0x10,%esp
+ 804a27c:	90                   	nop
+ 804a27d:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+ 804a280:	c9                   	leave
+ 804a281:	c3                   	ret
+
+0804a282 <_ZN9Interrupt11ChangeLevelE9IntStatusS0_>:
+ 804a282:	55                   	push   %ebp
+ 804a283:	89 e5                	mov    %esp,%ebp
+ 804a285:	83 ec 08             	sub    $0x8,%esp
+ 804a288:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a28b:	8b 55 10             	mov    0x10(%ebp),%edx
+ 804a28e:	89 10                	mov    %edx,(%eax)
+ 804a290:	8b 45 10             	mov    0x10(%ebp),%eax
+ 804a293:	8b 14 85 b0 e0 04 08 	mov    0x804e0b0(,%eax,4),%edx
+ 804a29a:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804a29d:	8b 04 85 b0 e0 04 08 	mov    0x804e0b0(,%eax,4),%eax
+ 804a2a4:	52                   	push   %edx
+ 804a2a5:	50                   	push   %eax
+ 804a2a6:	68 07 b6 04 08       	push   $0x804b607
+ 804a2ab:	6a 69                	push   $0x69
+ 804a2ad:	e8 87 fd ff ff       	call   804a039 <_Z5DEBUGcPKcz>
+ 804a2b2:	83 c4 10             	add    $0x10,%esp
+ 804a2b5:	90                   	nop
+ 804a2b6:	c9                   	leave
+ 804a2b7:	c3                   	ret
+
+0804a2b8 <_ZN9Interrupt8SetLevelE9IntStatus>:
+ 804a2b8:	55                   	push   %ebp
+ 804a2b9:	89 e5                	mov    %esp,%ebp
+ 804a2bb:	83 ec 18             	sub    $0x18,%esp
+ 804a2be:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a2c1:	8b 00                	mov    (%eax),%eax
+ 804a2c3:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 804a2c6:	83 7d 0c 00          	cmpl   $0x0,0xc(%ebp)
+ 804a2ca:	74 3e                	je     804a30a <_ZN9Interrupt8SetLevelE9IntStatus+0x52>
+ 804a2cc:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a2cf:	0f b6 40 08          	movzbl 0x8(%eax),%eax
+ 804a2d3:	0f b6 c0             	movzbl %al,%eax
+ 804a2d6:	85 c0                	test   %eax,%eax
+ 804a2d8:	74 30                	je     804a30a <_ZN9Interrupt8SetLevelE9IntStatus+0x52>
+ 804a2da:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804a2df:	68 1e b6 04 08       	push   $0x804b61e
+ 804a2e4:	6a 77                	push   $0x77
+ 804a2e6:	68 38 b6 04 08       	push   $0x804b638
+ 804a2eb:	50                   	push   %eax
+ 804a2ec:	e8 3f e7 ff ff       	call   8048a30 <fprintf@plt>
+ 804a2f1:	83 c4 10             	add    $0x10,%esp
+ 804a2f4:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804a2f9:	83 ec 0c             	sub    $0xc,%esp
+ 804a2fc:	50                   	push   %eax
+ 804a2fd:	e8 7e e7 ff ff       	call   8048a80 <fflush@plt>
+ 804a302:	83 c4 10             	add    $0x10,%esp
+ 804a305:	e8 bb 0c 00 00       	call   804afc5 <_Z5Abortv>
+ 804a30a:	83 ec 04             	sub    $0x4,%esp
+ 804a30d:	ff 75 0c             	pushl  0xc(%ebp)
+ 804a310:	ff 75 f4             	pushl  -0xc(%ebp)
+ 804a313:	ff 75 08             	pushl  0x8(%ebp)
+ 804a316:	e8 67 ff ff ff       	call   804a282 <_ZN9Interrupt11ChangeLevelE9IntStatusS0_>
+ 804a31b:	83 c4 10             	add    $0x10,%esp
+ 804a31e:	83 7d 0c 01          	cmpl   $0x1,0xc(%ebp)
+ 804a322:	75 14                	jne    804a338 <_ZN9Interrupt8SetLevelE9IntStatus+0x80>
+ 804a324:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 804a328:	75 0e                	jne    804a338 <_ZN9Interrupt8SetLevelE9IntStatus+0x80>
+ 804a32a:	83 ec 0c             	sub    $0xc,%esp
+ 804a32d:	ff 75 08             	pushl  0x8(%ebp)
+ 804a330:	e8 23 00 00 00       	call   804a358 <_ZN9Interrupt7OneTickEv>
+ 804a335:	83 c4 10             	add    $0x10,%esp
+ 804a338:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804a33b:	c9                   	leave
+ 804a33c:	c3                   	ret
+ 804a33d:	90                   	nop
+
+0804a33e <_ZN9Interrupt6EnableEv>:
+ 804a33e:	55                   	push   %ebp
+ 804a33f:	89 e5                	mov    %esp,%ebp
+ 804a341:	83 ec 08             	sub    $0x8,%esp
+ 804a344:	83 ec 08             	sub    $0x8,%esp
+ 804a347:	6a 01                	push   $0x1
+ 804a349:	ff 75 08             	pushl  0x8(%ebp)
+ 804a34c:	e8 67 ff ff ff       	call   804a2b8 <_ZN9Interrupt8SetLevelE9IntStatus>
+ 804a351:	83 c4 10             	add    $0x10,%esp
+ 804a354:	90                   	nop
+ 804a355:	c9                   	leave
+ 804a356:	c3                   	ret
+ 804a357:	90                   	nop
+
+0804a358 <_ZN9Interrupt7OneTickEv>:
+ 804a358:	55                   	push   %ebp
+ 804a359:	89 e5                	mov    %esp,%ebp
+ 804a35b:	83 ec 18             	sub    $0x18,%esp
+ 804a35e:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a361:	8b 40 0c             	mov    0xc(%eax),%eax
+ 804a364:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 804a367:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a36a:	8b 40 0c             	mov    0xc(%eax),%eax
+ 804a36d:	83 f8 01             	cmp    $0x1,%eax
+ 804a370:	75 26                	jne    804a398 <_ZN9Interrupt7OneTickEv+0x40>
+ 804a372:	a1 f0 e0 04 08       	mov    0x804e0f0,%eax
+ 804a377:	8b 10                	mov    (%eax),%edx
+ 804a379:	a1 f0 e0 04 08       	mov    0x804e0f0,%eax
+ 804a37e:	83 c2 0a             	add    $0xa,%edx
+ 804a381:	89 10                	mov    %edx,(%eax)
+ 804a383:	a1 f0 e0 04 08       	mov    0x804e0f0,%eax
+ 804a388:	8b 50 08             	mov    0x8(%eax),%edx
+ 804a38b:	a1 f0 e0 04 08       	mov    0x804e0f0,%eax
+ 804a390:	83 c2 0a             	add    $0xa,%edx
+ 804a393:	89 50 08             	mov    %edx,0x8(%eax)
+ 804a396:	eb 24                	jmp    804a3bc <_ZN9Interrupt7OneTickEv+0x64>
+ 804a398:	a1 f0 e0 04 08       	mov    0x804e0f0,%eax
+ 804a39d:	8b 10                	mov    (%eax),%edx
+ 804a39f:	a1 f0 e0 04 08       	mov    0x804e0f0,%eax
+ 804a3a4:	83 c2 01             	add    $0x1,%edx
+ 804a3a7:	89 10                	mov    %edx,(%eax)
+ 804a3a9:	a1 f0 e0 04 08       	mov    0x804e0f0,%eax
+ 804a3ae:	8b 50 0c             	mov    0xc(%eax),%edx
+ 804a3b1:	a1 f0 e0 04 08       	mov    0x804e0f0,%eax
+ 804a3b6:	83 c2 01             	add    $0x1,%edx
+ 804a3b9:	89 50 0c             	mov    %edx,0xc(%eax)
+ 804a3bc:	a1 f0 e0 04 08       	mov    0x804e0f0,%eax
+ 804a3c1:	8b 00                	mov    (%eax),%eax
+ 804a3c3:	83 ec 04             	sub    $0x4,%esp
+ 804a3c6:	50                   	push   %eax
+ 804a3c7:	68 5e b6 04 08       	push   $0x804b65e
+ 804a3cc:	6a 69                	push   $0x69
+ 804a3ce:	e8 66 fc ff ff       	call   804a039 <_Z5DEBUGcPKcz>
+ 804a3d3:	83 c4 10             	add    $0x10,%esp
+ 804a3d6:	83 ec 04             	sub    $0x4,%esp
+ 804a3d9:	6a 00                	push   $0x0
+ 804a3db:	6a 01                	push   $0x1
+ 804a3dd:	ff 75 08             	pushl  0x8(%ebp)
+ 804a3e0:	e8 9d fe ff ff       	call   804a282 <_ZN9Interrupt11ChangeLevelE9IntStatusS0_>
+ 804a3e5:	83 c4 10             	add    $0x10,%esp
+ 804a3e8:	83 ec 08             	sub    $0x8,%esp
+ 804a3eb:	6a 00                	push   $0x0
+ 804a3ed:	ff 75 08             	pushl  0x8(%ebp)
+ 804a3f0:	e8 2d 02 00 00       	call   804a622 <_ZN9Interrupt10CheckIfDueEb>
+ 804a3f5:	83 c4 10             	add    $0x10,%esp
+ 804a3f8:	84 c0                	test   %al,%al
+ 804a3fa:	74 02                	je     804a3fe <_ZN9Interrupt7OneTickEv+0xa6>
+ 804a3fc:	eb ea                	jmp    804a3e8 <_ZN9Interrupt7OneTickEv+0x90>
+ 804a3fe:	83 ec 04             	sub    $0x4,%esp
+ 804a401:	6a 01                	push   $0x1
+ 804a403:	6a 00                	push   $0x0
+ 804a405:	ff 75 08             	pushl  0x8(%ebp)
+ 804a408:	e8 75 fe ff ff       	call   804a282 <_ZN9Interrupt11ChangeLevelE9IntStatusS0_>
+ 804a40d:	83 c4 10             	add    $0x10,%esp
+ 804a410:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a413:	0f b6 40 09          	movzbl 0x9(%eax),%eax
+ 804a417:	84 c0                	test   %al,%al
+ 804a419:	74 2b                	je     804a446 <_ZN9Interrupt7OneTickEv+0xee>
+ 804a41b:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a41e:	c6 40 09 00          	movb   $0x0,0x9(%eax)
+ 804a422:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a425:	c7 40 0c 01 00 00 00 	movl   $0x1,0xc(%eax)
+ 804a42c:	a1 e0 e0 04 08       	mov    0x804e0e0,%eax
+ 804a431:	83 ec 0c             	sub    $0xc,%esp
+ 804a434:	50                   	push   %eax
+ 804a435:	e8 ba f8 ff ff       	call   8049cf4 <_ZN6Thread5YieldEv>
+ 804a43a:	83 c4 10             	add    $0x10,%esp
+ 804a43d:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a440:	8b 55 f4             	mov    -0xc(%ebp),%edx
+ 804a443:	89 50 0c             	mov    %edx,0xc(%eax)
+ 804a446:	90                   	nop
+ 804a447:	c9                   	leave
+ 804a448:	c3                   	ret
+ 804a449:	90                   	nop
+
+0804a44a <_ZN9Interrupt13YieldOnReturnEv>:
+ 804a44a:	55                   	push   %ebp
+ 804a44b:	89 e5                	mov    %esp,%ebp
+ 804a44d:	83 ec 08             	sub    $0x8,%esp
+ 804a450:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a453:	0f b6 40 08          	movzbl 0x8(%eax),%eax
+ 804a457:	0f b6 c0             	movzbl %al,%eax
+ 804a45a:	83 f8 01             	cmp    $0x1,%eax
+ 804a45d:	74 33                	je     804a492 <_ZN9Interrupt13YieldOnReturnEv+0x48>
+ 804a45f:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804a464:	68 1e b6 04 08       	push   $0x804b61e
+ 804a469:	68 c3 00 00 00       	push   $0xc3
+ 804a46e:	68 38 b6 04 08       	push   $0x804b638
+ 804a473:	50                   	push   %eax
+ 804a474:	e8 b7 e5 ff ff       	call   8048a30 <fprintf@plt>
+ 804a479:	83 c4 10             	add    $0x10,%esp
+ 804a47c:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804a481:	83 ec 0c             	sub    $0xc,%esp
+ 804a484:	50                   	push   %eax
+ 804a485:	e8 f6 e5 ff ff       	call   8048a80 <fflush@plt>
+ 804a48a:	83 c4 10             	add    $0x10,%esp
+ 804a48d:	e8 33 0b 00 00       	call   804afc5 <_Z5Abortv>
+ 804a492:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a495:	c6 40 09 01          	movb   $0x1,0x9(%eax)
+ 804a499:	90                   	nop
+ 804a49a:	c9                   	leave
+ 804a49b:	c3                   	ret
+
+0804a49c <_ZN9Interrupt4IdleEv>:
+ 804a49c:	55                   	push   %ebp
+ 804a49d:	89 e5                	mov    %esp,%ebp
+ 804a49f:	83 ec 08             	sub    $0x8,%esp
+ 804a4a2:	83 ec 08             	sub    $0x8,%esp
+ 804a4a5:	68 70 b6 04 08       	push   $0x804b670
+ 804a4aa:	6a 69                	push   $0x69
+ 804a4ac:	e8 88 fb ff ff       	call   804a039 <_Z5DEBUGcPKcz>
+ 804a4b1:	83 c4 10             	add    $0x10,%esp
+ 804a4b4:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a4b7:	c7 40 0c 00 00 00 00 	movl   $0x0,0xc(%eax)
+ 804a4be:	83 ec 08             	sub    $0x8,%esp
+ 804a4c1:	6a 01                	push   $0x1
+ 804a4c3:	ff 75 08             	pushl  0x8(%ebp)
+ 804a4c6:	e8 57 01 00 00       	call   804a622 <_ZN9Interrupt10CheckIfDueEb>
+ 804a4cb:	83 c4 10             	add    $0x10,%esp
+ 804a4ce:	84 c0                	test   %al,%al
+ 804a4d0:	74 29                	je     804a4fb <_ZN9Interrupt4IdleEv+0x5f>
+ 804a4d2:	83 ec 08             	sub    $0x8,%esp
+ 804a4d5:	6a 00                	push   $0x0
+ 804a4d7:	ff 75 08             	pushl  0x8(%ebp)
+ 804a4da:	e8 43 01 00 00       	call   804a622 <_ZN9Interrupt10CheckIfDueEb>
+ 804a4df:	83 c4 10             	add    $0x10,%esp
+ 804a4e2:	84 c0                	test   %al,%al
+ 804a4e4:	74 02                	je     804a4e8 <_ZN9Interrupt4IdleEv+0x4c>
+ 804a4e6:	eb ea                	jmp    804a4d2 <_ZN9Interrupt4IdleEv+0x36>
+ 804a4e8:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a4eb:	c6 40 09 00          	movb   $0x0,0x9(%eax)
+ 804a4ef:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a4f2:	c7 40 0c 01 00 00 00 	movl   $0x1,0xc(%eax)
+ 804a4f9:	eb 40                	jmp    804a53b <_ZN9Interrupt4IdleEv+0x9f>
+ 804a4fb:	83 ec 08             	sub    $0x8,%esp
+ 804a4fe:	68 9c b6 04 08       	push   $0x804b69c
+ 804a503:	6a 69                	push   $0x69
+ 804a505:	e8 2f fb ff ff       	call   804a039 <_Z5DEBUGcPKcz>
+ 804a50a:	83 c4 10             	add    $0x10,%esp
+ 804a50d:	83 ec 0c             	sub    $0xc,%esp
+ 804a510:	68 c4 b6 04 08       	push   $0x804b6c4
+ 804a515:	e8 06 e6 ff ff       	call   8048b20 <puts@plt>
+ 804a51a:	83 c4 10             	add    $0x10,%esp
+ 804a51d:	83 ec 0c             	sub    $0xc,%esp
+ 804a520:	68 00 b7 04 08       	push   $0x804b700
+ 804a525:	e8 f6 e5 ff ff       	call   8048b20 <puts@plt>
+ 804a52a:	83 c4 10             	add    $0x10,%esp
+ 804a52d:	83 ec 0c             	sub    $0xc,%esp
+ 804a530:	ff 75 08             	pushl  0x8(%ebp)
+ 804a533:	e8 06 00 00 00       	call   804a53e <_ZN9Interrupt4HaltEv>
+ 804a538:	83 c4 10             	add    $0x10,%esp
+ 804a53b:	c9                   	leave
+ 804a53c:	c3                   	ret
+ 804a53d:	90                   	nop
+
+0804a53e <_ZN9Interrupt4HaltEv>:
+ 804a53e:	55                   	push   %ebp
+ 804a53f:	89 e5                	mov    %esp,%ebp
+ 804a541:	83 ec 08             	sub    $0x8,%esp
+ 804a544:	83 ec 0c             	sub    $0xc,%esp
+ 804a547:	68 20 b7 04 08       	push   $0x804b720
+ 804a54c:	e8 cf e5 ff ff       	call   8048b20 <puts@plt>
+ 804a551:	83 c4 10             	add    $0x10,%esp
+ 804a554:	a1 f0 e0 04 08       	mov    0x804e0f0,%eax
+ 804a559:	83 ec 0c             	sub    $0xc,%esp
+ 804a55c:	50                   	push   %eax
+ 804a55d:	e8 d6 03 00 00       	call   804a938 <_ZN10Statistics5PrintEv>
+ 804a562:	83 c4 10             	add    $0x10,%esp
+ 804a565:	e8 d8 f4 ff ff       	call   8049a42 <_Z7Cleanupv>
+ 804a56a:	90                   	nop
+ 804a56b:	c9                   	leave
+ 804a56c:	c3                   	ret
+ 804a56d:	90                   	nop
+
+0804a56e <_ZN9Interrupt8ScheduleEPFviEii7IntType>:
+ 804a56e:	55                   	push   %ebp
+ 804a56f:	89 e5                	mov    %esp,%ebp
+ 804a571:	53                   	push   %ebx
+ 804a572:	83 ec 14             	sub    $0x14,%esp
+ 804a575:	a1 f0 e0 04 08       	mov    0x804e0f0,%eax
+ 804a57a:	8b 10                	mov    (%eax),%edx
+ 804a57c:	8b 45 14             	mov    0x14(%ebp),%eax
+ 804a57f:	01 d0                	add    %edx,%eax
+ 804a581:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 804a584:	83 ec 0c             	sub    $0xc,%esp
+ 804a587:	6a 10                	push   $0x10
+ 804a589:	e8 32 e4 ff ff       	call   80489c0 <_Znwj@plt>
+ 804a58e:	83 c4 10             	add    $0x10,%esp
+ 804a591:	89 c3                	mov    %eax,%ebx
+ 804a593:	83 ec 0c             	sub    $0xc,%esp
+ 804a596:	ff 75 18             	pushl  0x18(%ebp)
+ 804a599:	ff 75 f4             	pushl  -0xc(%ebp)
+ 804a59c:	ff 75 10             	pushl  0x10(%ebp)
+ 804a59f:	ff 75 0c             	pushl  0xc(%ebp)
+ 804a5a2:	53                   	push   %ebx
+ 804a5a3:	e8 d4 fb ff ff       	call   804a17c <_ZN16PendingInterruptC1EPFviEii7IntType>
+ 804a5a8:	83 c4 20             	add    $0x20,%esp
+ 804a5ab:	89 5d f0             	mov    %ebx,-0x10(%ebp)
+ 804a5ae:	8b 45 18             	mov    0x18(%ebp),%eax
+ 804a5b1:	8b 04 85 b8 e0 04 08 	mov    0x804e0b8(,%eax,4),%eax
+ 804a5b8:	ff 75 f4             	pushl  -0xc(%ebp)
+ 804a5bb:	50                   	push   %eax
+ 804a5bc:	68 34 b7 04 08       	push   $0x804b734
+ 804a5c1:	6a 69                	push   $0x69
+ 804a5c3:	e8 71 fa ff ff       	call   804a039 <_Z5DEBUGcPKcz>
+ 804a5c8:	83 c4 10             	add    $0x10,%esp
+ 804a5cb:	83 7d 14 00          	cmpl   $0x0,0x14(%ebp)
+ 804a5cf:	7f 33                	jg     804a604 <_ZN9Interrupt8ScheduleEPFviEii7IntType+0x96>
+ 804a5d1:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804a5d6:	68 1e b6 04 08       	push   $0x804b61e
+ 804a5db:	68 10 01 00 00       	push   $0x110
+ 804a5e0:	68 38 b6 04 08       	push   $0x804b638
+ 804a5e5:	50                   	push   %eax
+ 804a5e6:	e8 45 e4 ff ff       	call   8048a30 <fprintf@plt>
+ 804a5eb:	83 c4 10             	add    $0x10,%esp
+ 804a5ee:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804a5f3:	83 ec 0c             	sub    $0xc,%esp
+ 804a5f6:	50                   	push   %eax
+ 804a5f7:	e8 84 e4 ff ff       	call   8048a80 <fflush@plt>
+ 804a5fc:	83 c4 10             	add    $0x10,%esp
+ 804a5ff:	e8 c1 09 00 00       	call   804afc5 <_Z5Abortv>
+ 804a604:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a607:	8b 40 04             	mov    0x4(%eax),%eax
+ 804a60a:	83 ec 04             	sub    $0x4,%esp
+ 804a60d:	ff 75 f4             	pushl  -0xc(%ebp)
+ 804a610:	ff 75 f0             	pushl  -0x10(%ebp)
+ 804a613:	50                   	push   %eax
+ 804a614:	e8 a3 e9 ff ff       	call   8048fbc <_ZN4List12SortedInsertEPvi>
+ 804a619:	83 c4 10             	add    $0x10,%esp
+ 804a61c:	90                   	nop
+ 804a61d:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+ 804a620:	c9                   	leave
+ 804a621:	c3                   	ret
+
+0804a622 <_ZN9Interrupt10CheckIfDueEb>:
+ 804a622:	55                   	push   %ebp
+ 804a623:	89 e5                	mov    %esp,%ebp
+ 804a625:	83 ec 28             	sub    $0x28,%esp
+ 804a628:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804a62b:	88 45 e4             	mov    %al,-0x1c(%ebp)
+ 804a62e:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a631:	8b 40 0c             	mov    0xc(%eax),%eax
+ 804a634:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 804a637:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a63a:	8b 00                	mov    (%eax),%eax
+ 804a63c:	85 c0                	test   %eax,%eax
+ 804a63e:	74 33                	je     804a673 <_ZN9Interrupt10CheckIfDueEb+0x51>
+ 804a640:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804a645:	68 1e b6 04 08       	push   $0x804b61e
+ 804a64a:	68 28 01 00 00       	push   $0x128
+ 804a64f:	68 38 b6 04 08       	push   $0x804b638
+ 804a654:	50                   	push   %eax
+ 804a655:	e8 d6 e3 ff ff       	call   8048a30 <fprintf@plt>
+ 804a65a:	83 c4 10             	add    $0x10,%esp
+ 804a65d:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804a662:	83 ec 0c             	sub    $0xc,%esp
+ 804a665:	50                   	push   %eax
+ 804a666:	e8 15 e4 ff ff       	call   8048a80 <fflush@plt>
+ 804a66b:	83 c4 10             	add    $0x10,%esp
+ 804a66e:	e8 52 09 00 00       	call   804afc5 <_Z5Abortv>
+ 804a673:	83 ec 0c             	sub    $0xc,%esp
+ 804a676:	6a 69                	push   $0x69
+ 804a678:	e8 61 f9 ff ff       	call   8049fde <_Z14DebugIsEnabledc>
+ 804a67d:	83 c4 10             	add    $0x10,%esp
+ 804a680:	84 c0                	test   %al,%al
+ 804a682:	74 0e                	je     804a692 <_ZN9Interrupt10CheckIfDueEb+0x70>
+ 804a684:	83 ec 0c             	sub    $0xc,%esp
+ 804a687:	ff 75 08             	pushl  0x8(%ebp)
+ 804a68a:	e8 9f 01 00 00       	call   804a82e <_ZN9Interrupt9DumpStateEv>
+ 804a68f:	83 c4 10             	add    $0x10,%esp
+ 804a692:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a695:	8b 40 04             	mov    0x4(%eax),%eax
+ 804a698:	83 ec 08             	sub    $0x8,%esp
+ 804a69b:	8d 55 ec             	lea    -0x14(%ebp),%edx
+ 804a69e:	52                   	push   %edx
+ 804a69f:	50                   	push   %eax
+ 804a6a0:	e8 dd e9 ff ff       	call   8049082 <_ZN4List12SortedRemoveEPi>
+ 804a6a5:	83 c4 10             	add    $0x10,%esp
+ 804a6a8:	89 45 f0             	mov    %eax,-0x10(%ebp)
+ 804a6ab:	83 7d f0 00          	cmpl   $0x0,-0x10(%ebp)
+ 804a6af:	75 0a                	jne    804a6bb <_ZN9Interrupt10CheckIfDueEb+0x99>
+ 804a6b1:	b8 00 00 00 00       	mov    $0x0,%eax
+ 804a6b6:	e9 3c 01 00 00       	jmp    804a7f7 <_ZN9Interrupt10CheckIfDueEb+0x1d5>
+ 804a6bb:	80 7d e4 00          	cmpb   $0x0,-0x1c(%ebp)
+ 804a6bf:	74 38                	je     804a6f9 <_ZN9Interrupt10CheckIfDueEb+0xd7>
+ 804a6c1:	a1 f0 e0 04 08       	mov    0x804e0f0,%eax
+ 804a6c6:	8b 10                	mov    (%eax),%edx
+ 804a6c8:	8b 45 ec             	mov    -0x14(%ebp),%eax
+ 804a6cb:	39 c2                	cmp    %eax,%edx
+ 804a6cd:	7d 2a                	jge    804a6f9 <_ZN9Interrupt10CheckIfDueEb+0xd7>
+ 804a6cf:	a1 f0 e0 04 08       	mov    0x804e0f0,%eax
+ 804a6d4:	8b 50 04             	mov    0x4(%eax),%edx
+ 804a6d7:	8b 4d ec             	mov    -0x14(%ebp),%ecx
+ 804a6da:	a1 f0 e0 04 08       	mov    0x804e0f0,%eax
+ 804a6df:	8b 00                	mov    (%eax),%eax
+ 804a6e1:	29 c1                	sub    %eax,%ecx
+ 804a6e3:	a1 f0 e0 04 08       	mov    0x804e0f0,%eax
+ 804a6e8:	01 ca                	add    %ecx,%edx
+ 804a6ea:	89 50 04             	mov    %edx,0x4(%eax)
+ 804a6ed:	a1 f0 e0 04 08       	mov    0x804e0f0,%eax
+ 804a6f2:	8b 55 ec             	mov    -0x14(%ebp),%edx
+ 804a6f5:	89 10                	mov    %edx,(%eax)
+ 804a6f7:	eb 31                	jmp    804a72a <_ZN9Interrupt10CheckIfDueEb+0x108>
+ 804a6f9:	a1 f0 e0 04 08       	mov    0x804e0f0,%eax
+ 804a6fe:	8b 10                	mov    (%eax),%edx
+ 804a700:	8b 45 ec             	mov    -0x14(%ebp),%eax
+ 804a703:	39 c2                	cmp    %eax,%edx
+ 804a705:	7d 23                	jge    804a72a <_ZN9Interrupt10CheckIfDueEb+0x108>
+ 804a707:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a70a:	8b 40 04             	mov    0x4(%eax),%eax
+ 804a70d:	8b 55 ec             	mov    -0x14(%ebp),%edx
+ 804a710:	83 ec 04             	sub    $0x4,%esp
+ 804a713:	52                   	push   %edx
+ 804a714:	ff 75 f0             	pushl  -0x10(%ebp)
+ 804a717:	50                   	push   %eax
+ 804a718:	e8 9f e8 ff ff       	call   8048fbc <_ZN4List12SortedInsertEPvi>
+ 804a71d:	83 c4 10             	add    $0x10,%esp
+ 804a720:	b8 00 00 00 00       	mov    $0x0,%eax
+ 804a725:	e9 cd 00 00 00       	jmp    804a7f7 <_ZN9Interrupt10CheckIfDueEb+0x1d5>
+ 804a72a:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a72d:	8b 40 0c             	mov    0xc(%eax),%eax
+ 804a730:	85 c0                	test   %eax,%eax
+ 804a732:	75 27                	jne    804a75b <_ZN9Interrupt10CheckIfDueEb+0x139>
+ 804a734:	8b 45 f0             	mov    -0x10(%ebp),%eax
+ 804a737:	8b 40 0c             	mov    0xc(%eax),%eax
+ 804a73a:	85 c0                	test   %eax,%eax
+ 804a73c:	75 1d                	jne    804a75b <_ZN9Interrupt10CheckIfDueEb+0x139>
+ 804a73e:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a741:	8b 40 04             	mov    0x4(%eax),%eax
+ 804a744:	83 ec 0c             	sub    $0xc,%esp
+ 804a747:	50                   	push   %eax
+ 804a748:	e8 55 e8 ff ff       	call   8048fa2 <_ZN4List7IsEmptyEv>
+ 804a74d:	83 c4 10             	add    $0x10,%esp
+ 804a750:	84 c0                	test   %al,%al
+ 804a752:	74 07                	je     804a75b <_ZN9Interrupt10CheckIfDueEb+0x139>
+ 804a754:	b8 01 00 00 00       	mov    $0x1,%eax
+ 804a759:	eb 05                	jmp    804a760 <_ZN9Interrupt10CheckIfDueEb+0x13e>
+ 804a75b:	b8 00 00 00 00       	mov    $0x0,%eax
+ 804a760:	84 c0                	test   %al,%al
+ 804a762:	74 20                	je     804a784 <_ZN9Interrupt10CheckIfDueEb+0x162>
+ 804a764:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a767:	8b 40 04             	mov    0x4(%eax),%eax
+ 804a76a:	8b 55 ec             	mov    -0x14(%ebp),%edx
+ 804a76d:	83 ec 04             	sub    $0x4,%esp
+ 804a770:	52                   	push   %edx
+ 804a771:	ff 75 f0             	pushl  -0x10(%ebp)
+ 804a774:	50                   	push   %eax
+ 804a775:	e8 42 e8 ff ff       	call   8048fbc <_ZN4List12SortedInsertEPvi>
+ 804a77a:	83 c4 10             	add    $0x10,%esp
+ 804a77d:	b8 00 00 00 00       	mov    $0x0,%eax
+ 804a782:	eb 73                	jmp    804a7f7 <_ZN9Interrupt10CheckIfDueEb+0x1d5>
+ 804a784:	8b 45 f0             	mov    -0x10(%ebp),%eax
+ 804a787:	8b 50 08             	mov    0x8(%eax),%edx
+ 804a78a:	8b 45 f0             	mov    -0x10(%ebp),%eax
+ 804a78d:	8b 40 0c             	mov    0xc(%eax),%eax
+ 804a790:	8b 04 85 b8 e0 04 08 	mov    0x804e0b8(,%eax,4),%eax
+ 804a797:	52                   	push   %edx
+ 804a798:	50                   	push   %eax
+ 804a799:	68 68 b7 04 08       	push   $0x804b768
+ 804a79e:	6a 69                	push   $0x69
+ 804a7a0:	e8 94 f8 ff ff       	call   804a039 <_Z5DEBUGcPKcz>
+ 804a7a5:	83 c4 10             	add    $0x10,%esp
+ 804a7a8:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a7ab:	c6 40 08 01          	movb   $0x1,0x8(%eax)
+ 804a7af:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a7b2:	c7 40 0c 01 00 00 00 	movl   $0x1,0xc(%eax)
+ 804a7b9:	8b 45 f0             	mov    -0x10(%ebp),%eax
+ 804a7bc:	8b 00                	mov    (%eax),%eax
+ 804a7be:	8b 55 f0             	mov    -0x10(%ebp),%edx
+ 804a7c1:	8b 52 04             	mov    0x4(%edx),%edx
+ 804a7c4:	83 ec 0c             	sub    $0xc,%esp
+ 804a7c7:	52                   	push   %edx
+ 804a7c8:	ff d0                	call   *%eax
+ 804a7ca:	83 c4 10             	add    $0x10,%esp
+ 804a7cd:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a7d0:	8b 55 f4             	mov    -0xc(%ebp),%edx
+ 804a7d3:	89 50 0c             	mov    %edx,0xc(%eax)
+ 804a7d6:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a7d9:	c6 40 08 00          	movb   $0x0,0x8(%eax)
+ 804a7dd:	8b 45 f0             	mov    -0x10(%ebp),%eax
+ 804a7e0:	85 c0                	test   %eax,%eax
+ 804a7e2:	74 0e                	je     804a7f2 <_ZN9Interrupt10CheckIfDueEb+0x1d0>
+ 804a7e4:	83 ec 08             	sub    $0x8,%esp
+ 804a7e7:	6a 10                	push   $0x10
+ 804a7e9:	50                   	push   %eax
+ 804a7ea:	e8 51 e2 ff ff       	call   8048a40 <_ZdlPvj@plt>
+ 804a7ef:	83 c4 10             	add    $0x10,%esp
+ 804a7f2:	b8 01 00 00 00       	mov    $0x1,%eax
+ 804a7f7:	c9                   	leave
+ 804a7f8:	c3                   	ret
+
+0804a7f9 <_ZL12PrintPendingi>:
+ 804a7f9:	55                   	push   %ebp
+ 804a7fa:	89 e5                	mov    %esp,%ebp
+ 804a7fc:	83 ec 18             	sub    $0x18,%esp
+ 804a7ff:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a802:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 804a805:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804a808:	8b 50 08             	mov    0x8(%eax),%edx
+ 804a80b:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804a80e:	8b 40 0c             	mov    0xc(%eax),%eax
+ 804a811:	8b 04 85 b8 e0 04 08 	mov    0x804e0b8(,%eax,4),%eax
+ 804a818:	83 ec 04             	sub    $0x4,%esp
+ 804a81b:	52                   	push   %edx
+ 804a81c:	50                   	push   %eax
+ 804a81d:	68 9c b7 04 08       	push   $0x804b79c
+ 804a822:	e8 e9 e2 ff ff       	call   8048b10 <printf@plt>
+ 804a827:	83 c4 10             	add    $0x10,%esp
+ 804a82a:	90                   	nop
+ 804a82b:	c9                   	leave
+ 804a82c:	c3                   	ret
+ 804a82d:	90                   	nop
+
+0804a82e <_ZN9Interrupt9DumpStateEv>:
+ 804a82e:	55                   	push   %ebp
+ 804a82f:	89 e5                	mov    %esp,%ebp
+ 804a831:	83 ec 08             	sub    $0x8,%esp
+ 804a834:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a837:	8b 00                	mov    (%eax),%eax
+ 804a839:	8b 14 85 b0 e0 04 08 	mov    0x804e0b0(,%eax,4),%edx
+ 804a840:	a1 f0 e0 04 08       	mov    0x804e0f0,%eax
+ 804a845:	8b 00                	mov    (%eax),%eax
+ 804a847:	83 ec 04             	sub    $0x4,%esp
+ 804a84a:	52                   	push   %edx
+ 804a84b:	50                   	push   %eax
+ 804a84c:	68 c3 b7 04 08       	push   $0x804b7c3
+ 804a851:	e8 ba e2 ff ff       	call   8048b10 <printf@plt>
+ 804a856:	83 c4 10             	add    $0x10,%esp
+ 804a859:	83 ec 0c             	sub    $0xc,%esp
+ 804a85c:	68 dc b7 04 08       	push   $0x804b7dc
+ 804a861:	e8 ba e2 ff ff       	call   8048b20 <puts@plt>
+ 804a866:	83 c4 10             	add    $0x10,%esp
+ 804a869:	a1 d0 e0 04 08       	mov    0x804e0d0,%eax
+ 804a86e:	83 ec 0c             	sub    $0xc,%esp
+ 804a871:	50                   	push   %eax
+ 804a872:	e8 09 e2 ff ff       	call   8048a80 <fflush@plt>
+ 804a877:	83 c4 10             	add    $0x10,%esp
+ 804a87a:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a87d:	8b 40 04             	mov    0x4(%eax),%eax
+ 804a880:	83 ec 08             	sub    $0x8,%esp
+ 804a883:	68 f9 a7 04 08       	push   $0x804a7f9
+ 804a888:	50                   	push   %eax
+ 804a889:	e8 c8 e6 ff ff       	call   8048f56 <_ZN4List6MapcarEPFviE>
+ 804a88e:	83 c4 10             	add    $0x10,%esp
+ 804a891:	83 ec 0c             	sub    $0xc,%esp
+ 804a894:	68 f0 b7 04 08       	push   $0x804b7f0
+ 804a899:	e8 82 e2 ff ff       	call   8048b20 <puts@plt>
+ 804a89e:	83 c4 10             	add    $0x10,%esp
+ 804a8a1:	a1 d0 e0 04 08       	mov    0x804e0d0,%eax
+ 804a8a6:	83 ec 0c             	sub    $0xc,%esp
+ 804a8a9:	50                   	push   %eax
+ 804a8aa:	e8 d1 e1 ff ff       	call   8048a80 <fflush@plt>
+ 804a8af:	83 c4 10             	add    $0x10,%esp
+ 804a8b2:	90                   	nop
+ 804a8b3:	c9                   	leave
+ 804a8b4:	c3                   	ret
+ 804a8b5:	90                   	nop
+
+0804a8b6 <_ZN10StatisticsC1Ev>:
+ 804a8b6:	55                   	push   %ebp
+ 804a8b7:	89 e5                	mov    %esp,%ebp
+ 804a8b9:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a8bc:	c7 40 0c 00 00 00 00 	movl   $0x0,0xc(%eax)
+ 804a8c3:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a8c6:	8b 50 0c             	mov    0xc(%eax),%edx
+ 804a8c9:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a8cc:	89 50 08             	mov    %edx,0x8(%eax)
+ 804a8cf:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a8d2:	8b 50 08             	mov    0x8(%eax),%edx
+ 804a8d5:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a8d8:	89 50 04             	mov    %edx,0x4(%eax)
+ 804a8db:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a8de:	8b 50 04             	mov    0x4(%eax),%edx
+ 804a8e1:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a8e4:	89 10                	mov    %edx,(%eax)
+ 804a8e6:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a8e9:	c7 40 14 00 00 00 00 	movl   $0x0,0x14(%eax)
+ 804a8f0:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a8f3:	8b 50 14             	mov    0x14(%eax),%edx
+ 804a8f6:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a8f9:	89 50 10             	mov    %edx,0x10(%eax)
+ 804a8fc:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a8ff:	c7 40 1c 00 00 00 00 	movl   $0x0,0x1c(%eax)
+ 804a906:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a909:	8b 50 1c             	mov    0x1c(%eax),%edx
+ 804a90c:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a90f:	89 50 18             	mov    %edx,0x18(%eax)
+ 804a912:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a915:	c7 40 28 00 00 00 00 	movl   $0x0,0x28(%eax)
+ 804a91c:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a91f:	8b 50 28             	mov    0x28(%eax),%edx
+ 804a922:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a925:	89 50 24             	mov    %edx,0x24(%eax)
+ 804a928:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a92b:	8b 50 24             	mov    0x24(%eax),%edx
+ 804a92e:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a931:	89 50 20             	mov    %edx,0x20(%eax)
+ 804a934:	90                   	nop
+ 804a935:	5d                   	pop    %ebp
+ 804a936:	c3                   	ret
+ 804a937:	90                   	nop
+
+0804a938 <_ZN10Statistics5PrintEv>:
+ 804a938:	55                   	push   %ebp
+ 804a939:	89 e5                	mov    %esp,%ebp
+ 804a93b:	53                   	push   %ebx
+ 804a93c:	83 ec 04             	sub    $0x4,%esp
+ 804a93f:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a942:	8b 58 0c             	mov    0xc(%eax),%ebx
+ 804a945:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a948:	8b 48 08             	mov    0x8(%eax),%ecx
+ 804a94b:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a94e:	8b 50 04             	mov    0x4(%eax),%edx
+ 804a951:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a954:	8b 00                	mov    (%eax),%eax
+ 804a956:	83 ec 0c             	sub    $0xc,%esp
+ 804a959:	53                   	push   %ebx
+ 804a95a:	51                   	push   %ecx
+ 804a95b:	52                   	push   %edx
+ 804a95c:	50                   	push   %eax
+ 804a95d:	68 0c b8 04 08       	push   $0x804b80c
+ 804a962:	e8 a9 e1 ff ff       	call   8048b10 <printf@plt>
+ 804a967:	83 c4 20             	add    $0x20,%esp
+ 804a96a:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a96d:	8b 50 14             	mov    0x14(%eax),%edx
+ 804a970:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a973:	8b 40 10             	mov    0x10(%eax),%eax
+ 804a976:	83 ec 04             	sub    $0x4,%esp
+ 804a979:	52                   	push   %edx
+ 804a97a:	50                   	push   %eax
+ 804a97b:	68 3c b8 04 08       	push   $0x804b83c
+ 804a980:	e8 8b e1 ff ff       	call   8048b10 <printf@plt>
+ 804a985:	83 c4 10             	add    $0x10,%esp
+ 804a988:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a98b:	8b 50 1c             	mov    0x1c(%eax),%edx
+ 804a98e:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a991:	8b 40 18             	mov    0x18(%eax),%eax
+ 804a994:	83 ec 04             	sub    $0x4,%esp
+ 804a997:	52                   	push   %edx
+ 804a998:	50                   	push   %eax
+ 804a999:	68 5c b8 04 08       	push   $0x804b85c
+ 804a99e:	e8 6d e1 ff ff       	call   8048b10 <printf@plt>
+ 804a9a3:	83 c4 10             	add    $0x10,%esp
+ 804a9a6:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a9a9:	8b 40 20             	mov    0x20(%eax),%eax
+ 804a9ac:	83 ec 08             	sub    $0x8,%esp
+ 804a9af:	50                   	push   %eax
+ 804a9b0:	68 7e b8 04 08       	push   $0x804b87e
+ 804a9b5:	e8 56 e1 ff ff       	call   8048b10 <printf@plt>
+ 804a9ba:	83 c4 10             	add    $0x10,%esp
+ 804a9bd:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a9c0:	8b 50 24             	mov    0x24(%eax),%edx
+ 804a9c3:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a9c6:	8b 40 28             	mov    0x28(%eax),%eax
+ 804a9c9:	83 ec 04             	sub    $0x4,%esp
+ 804a9cc:	52                   	push   %edx
+ 804a9cd:	50                   	push   %eax
+ 804a9ce:	68 94 b8 04 08       	push   $0x804b894
+ 804a9d3:	e8 38 e1 ff ff       	call   8048b10 <printf@plt>
+ 804a9d8:	83 c4 10             	add    $0x10,%esp
+ 804a9db:	90                   	nop
+ 804a9dc:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+ 804a9df:	c9                   	leave
+ 804a9e0:	c3                   	ret
+
+0804a9e1 <_Z8PollFilei>:
+ 804a9e1:	55                   	push   %ebp
+ 804a9e2:	89 e5                	mov    %esp,%ebp
+ 804a9e4:	83 ec 28             	sub    $0x28,%esp
+ 804a9e7:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a9ea:	ba 01 00 00 00       	mov    $0x1,%edx
+ 804a9ef:	89 c1                	mov    %eax,%ecx
+ 804a9f1:	d3 e2                	shl    %cl,%edx
+ 804a9f3:	89 d0                	mov    %edx,%eax
+ 804a9f5:	89 45 f0             	mov    %eax,-0x10(%ebp)
+ 804a9f8:	c7 45 ec 00 00 00 00 	movl   $0x0,-0x14(%ebp)
+ 804a9ff:	c7 45 e8 00 00 00 00 	movl   $0x0,-0x18(%ebp)
+ 804aa06:	c7 45 e0 00 00 00 00 	movl   $0x0,-0x20(%ebp)
+ 804aa0d:	a1 ec e0 04 08       	mov    0x804e0ec,%eax
+ 804aa12:	83 ec 0c             	sub    $0xc,%esp
+ 804aa15:	50                   	push   %eax
+ 804aa16:	e8 bd f0 ff ff       	call   8049ad8 <_ZN9Interrupt9getStatusEv>
+ 804aa1b:	83 c4 10             	add    $0x10,%esp
+ 804aa1e:	85 c0                	test   %eax,%eax
+ 804aa20:	0f 94 c0             	sete   %al
+ 804aa23:	84 c0                	test   %al,%al
+ 804aa25:	74 09                	je     804aa30 <_Z8PollFilei+0x4f>
+ 804aa27:	c7 45 e4 20 4e 00 00 	movl   $0x4e20,-0x1c(%ebp)
+ 804aa2e:	eb 07                	jmp    804aa37 <_Z8PollFilei+0x56>
+ 804aa30:	c7 45 e4 00 00 00 00 	movl   $0x0,-0x1c(%ebp)
+ 804aa37:	83 ec 0c             	sub    $0xc,%esp
+ 804aa3a:	8d 45 e0             	lea    -0x20(%ebp),%eax
+ 804aa3d:	50                   	push   %eax
+ 804aa3e:	8d 45 e8             	lea    -0x18(%ebp),%eax
+ 804aa41:	50                   	push   %eax
+ 804aa42:	8d 45 ec             	lea    -0x14(%ebp),%eax
+ 804aa45:	50                   	push   %eax
+ 804aa46:	8d 45 f0             	lea    -0x10(%ebp),%eax
+ 804aa49:	50                   	push   %eax
+ 804aa4a:	6a 20                	push   $0x20
+ 804aa4c:	e8 9f df ff ff       	call   80489f0 <select@plt>
+ 804aa51:	83 c4 20             	add    $0x20,%esp
+ 804aa54:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 804aa57:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 804aa5b:	74 39                	je     804aa96 <_Z8PollFilei+0xb5>
+ 804aa5d:	83 7d f4 01          	cmpl   $0x1,-0xc(%ebp)
+ 804aa61:	74 33                	je     804aa96 <_Z8PollFilei+0xb5>
+ 804aa63:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804aa68:	68 c0 b8 04 08       	push   $0x804b8c0
+ 804aa6d:	68 8c 00 00 00       	push   $0x8c
+ 804aa72:	68 d8 b8 04 08       	push   $0x804b8d8
+ 804aa77:	50                   	push   %eax
+ 804aa78:	e8 b3 df ff ff       	call   8048a30 <fprintf@plt>
+ 804aa7d:	83 c4 10             	add    $0x10,%esp
+ 804aa80:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804aa85:	83 ec 0c             	sub    $0xc,%esp
+ 804aa88:	50                   	push   %eax
+ 804aa89:	e8 f2 df ff ff       	call   8048a80 <fflush@plt>
+ 804aa8e:	83 c4 10             	add    $0x10,%esp
+ 804aa91:	e8 2f 05 00 00       	call   804afc5 <_Z5Abortv>
+ 804aa96:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 804aa9a:	75 07                	jne    804aaa3 <_Z8PollFilei+0xc2>
+ 804aa9c:	b8 00 00 00 00       	mov    $0x0,%eax
+ 804aaa1:	eb 05                	jmp    804aaa8 <_Z8PollFilei+0xc7>
+ 804aaa3:	b8 01 00 00 00       	mov    $0x1,%eax
+ 804aaa8:	c9                   	leave
+ 804aaa9:	c3                   	ret
+
+0804aaaa <_Z12OpenForWritePKc>:
+ 804aaaa:	55                   	push   %ebp
+ 804aaab:	89 e5                	mov    %esp,%ebp
+ 804aaad:	83 ec 18             	sub    $0x18,%esp
+ 804aab0:	83 ec 04             	sub    $0x4,%esp
+ 804aab3:	68 b6 01 00 00       	push   $0x1b6
+ 804aab8:	68 42 02 00 00       	push   $0x242
+ 804aabd:	ff 75 08             	pushl  0x8(%ebp)
+ 804aac0:	e8 eb de ff ff       	call   80489b0 <open@plt>
+ 804aac5:	83 c4 10             	add    $0x10,%esp
+ 804aac8:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 804aacb:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 804aacf:	79 33                	jns    804ab04 <_Z12OpenForWritePKc+0x5a>
+ 804aad1:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804aad6:	68 c0 b8 04 08       	push   $0x804b8c0
+ 804aadb:	68 9f 00 00 00       	push   $0x9f
+ 804aae0:	68 d8 b8 04 08       	push   $0x804b8d8
+ 804aae5:	50                   	push   %eax
+ 804aae6:	e8 45 df ff ff       	call   8048a30 <fprintf@plt>
+ 804aaeb:	83 c4 10             	add    $0x10,%esp
+ 804aaee:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804aaf3:	83 ec 0c             	sub    $0xc,%esp
+ 804aaf6:	50                   	push   %eax
+ 804aaf7:	e8 84 df ff ff       	call   8048a80 <fflush@plt>
+ 804aafc:	83 c4 10             	add    $0x10,%esp
+ 804aaff:	e8 c1 04 00 00       	call   804afc5 <_Z5Abortv>
+ 804ab04:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804ab07:	c9                   	leave
+ 804ab08:	c3                   	ret
+
+0804ab09 <_Z16OpenForReadWritePKcb>:
+ 804ab09:	55                   	push   %ebp
+ 804ab0a:	89 e5                	mov    %esp,%ebp
+ 804ab0c:	83 ec 28             	sub    $0x28,%esp
+ 804ab0f:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804ab12:	88 45 e4             	mov    %al,-0x1c(%ebp)
+ 804ab15:	83 ec 04             	sub    $0x4,%esp
+ 804ab18:	6a 00                	push   $0x0
+ 804ab1a:	6a 02                	push   $0x2
+ 804ab1c:	ff 75 08             	pushl  0x8(%ebp)
+ 804ab1f:	e8 8c de ff ff       	call   80489b0 <open@plt>
+ 804ab24:	83 c4 10             	add    $0x10,%esp
+ 804ab27:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 804ab2a:	80 7d e4 00          	cmpb   $0x0,-0x1c(%ebp)
+ 804ab2e:	74 39                	je     804ab69 <_Z16OpenForReadWritePKcb+0x60>
+ 804ab30:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 804ab34:	79 33                	jns    804ab69 <_Z16OpenForReadWritePKcb+0x60>
+ 804ab36:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804ab3b:	68 c0 b8 04 08       	push   $0x804b8c0
+ 804ab40:	68 b0 00 00 00       	push   $0xb0
+ 804ab45:	68 d8 b8 04 08       	push   $0x804b8d8
+ 804ab4a:	50                   	push   %eax
+ 804ab4b:	e8 e0 de ff ff       	call   8048a30 <fprintf@plt>
+ 804ab50:	83 c4 10             	add    $0x10,%esp
+ 804ab53:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804ab58:	83 ec 0c             	sub    $0xc,%esp
+ 804ab5b:	50                   	push   %eax
+ 804ab5c:	e8 1f df ff ff       	call   8048a80 <fflush@plt>
+ 804ab61:	83 c4 10             	add    $0x10,%esp
+ 804ab64:	e8 5c 04 00 00       	call   804afc5 <_Z5Abortv>
+ 804ab69:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804ab6c:	c9                   	leave
+ 804ab6d:	c3                   	ret
+
+0804ab6e <_Z4ReadiPci>:
+ 804ab6e:	55                   	push   %ebp
+ 804ab6f:	89 e5                	mov    %esp,%ebp
+ 804ab71:	83 ec 18             	sub    $0x18,%esp
+ 804ab74:	8b 45 10             	mov    0x10(%ebp),%eax
+ 804ab77:	83 ec 04             	sub    $0x4,%esp
+ 804ab7a:	50                   	push   %eax
+ 804ab7b:	ff 75 0c             	pushl  0xc(%ebp)
+ 804ab7e:	ff 75 08             	pushl  0x8(%ebp)
+ 804ab81:	e8 fa df ff ff       	call   8048b80 <read@plt>
+ 804ab86:	83 c4 10             	add    $0x10,%esp
+ 804ab89:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 804ab8c:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804ab8f:	3b 45 10             	cmp    0x10(%ebp),%eax
+ 804ab92:	74 33                	je     804abc7 <_Z4ReadiPci+0x59>
+ 804ab94:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804ab99:	68 c0 b8 04 08       	push   $0x804b8c0
+ 804ab9e:	68 bd 00 00 00       	push   $0xbd
+ 804aba3:	68 d8 b8 04 08       	push   $0x804b8d8
+ 804aba8:	50                   	push   %eax
+ 804aba9:	e8 82 de ff ff       	call   8048a30 <fprintf@plt>
+ 804abae:	83 c4 10             	add    $0x10,%esp
+ 804abb1:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804abb6:	83 ec 0c             	sub    $0xc,%esp
+ 804abb9:	50                   	push   %eax
+ 804abba:	e8 c1 de ff ff       	call   8048a80 <fflush@plt>
+ 804abbf:	83 c4 10             	add    $0x10,%esp
+ 804abc2:	e8 fe 03 00 00       	call   804afc5 <_Z5Abortv>
+ 804abc7:	90                   	nop
+ 804abc8:	c9                   	leave
+ 804abc9:	c3                   	ret
+
+0804abca <_Z11ReadPartialiPci>:
+ 804abca:	55                   	push   %ebp
+ 804abcb:	89 e5                	mov    %esp,%ebp
+ 804abcd:	83 ec 08             	sub    $0x8,%esp
+ 804abd0:	8b 45 10             	mov    0x10(%ebp),%eax
+ 804abd3:	83 ec 04             	sub    $0x4,%esp
+ 804abd6:	50                   	push   %eax
+ 804abd7:	ff 75 0c             	pushl  0xc(%ebp)
+ 804abda:	ff 75 08             	pushl  0x8(%ebp)
+ 804abdd:	e8 9e df ff ff       	call   8048b80 <read@plt>
+ 804abe2:	83 c4 10             	add    $0x10,%esp
+ 804abe5:	c9                   	leave
+ 804abe6:	c3                   	ret
+
+0804abe7 <_Z9WriteFileiPKci>:
+ 804abe7:	55                   	push   %ebp
+ 804abe8:	89 e5                	mov    %esp,%ebp
+ 804abea:	83 ec 18             	sub    $0x18,%esp
+ 804abed:	8b 45 10             	mov    0x10(%ebp),%eax
+ 804abf0:	83 ec 04             	sub    $0x4,%esp
+ 804abf3:	50                   	push   %eax
+ 804abf4:	ff 75 0c             	pushl  0xc(%ebp)
+ 804abf7:	ff 75 08             	pushl  0x8(%ebp)
+ 804abfa:	e8 21 de ff ff       	call   8048a20 <write@plt>
+ 804abff:	83 c4 10             	add    $0x10,%esp
+ 804ac02:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 804ac05:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804ac08:	3b 45 10             	cmp    0x10(%ebp),%eax
+ 804ac0b:	74 33                	je     804ac40 <_Z9WriteFileiPKci+0x59>
+ 804ac0d:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804ac12:	68 c0 b8 04 08       	push   $0x804b8c0
+ 804ac17:	68 d6 00 00 00       	push   $0xd6
+ 804ac1c:	68 d8 b8 04 08       	push   $0x804b8d8
+ 804ac21:	50                   	push   %eax
+ 804ac22:	e8 09 de ff ff       	call   8048a30 <fprintf@plt>
+ 804ac27:	83 c4 10             	add    $0x10,%esp
+ 804ac2a:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804ac2f:	83 ec 0c             	sub    $0xc,%esp
+ 804ac32:	50                   	push   %eax
+ 804ac33:	e8 48 de ff ff       	call   8048a80 <fflush@plt>
+ 804ac38:	83 c4 10             	add    $0x10,%esp
+ 804ac3b:	e8 85 03 00 00       	call   804afc5 <_Z5Abortv>
+ 804ac40:	90                   	nop
+ 804ac41:	c9                   	leave
+ 804ac42:	c3                   	ret
+
+0804ac43 <_Z5Lseekiii>:
+ 804ac43:	55                   	push   %ebp
+ 804ac44:	89 e5                	mov    %esp,%ebp
+ 804ac46:	83 ec 18             	sub    $0x18,%esp
+ 804ac49:	83 ec 04             	sub    $0x4,%esp
+ 804ac4c:	ff 75 10             	pushl  0x10(%ebp)
+ 804ac4f:	ff 75 0c             	pushl  0xc(%ebp)
+ 804ac52:	ff 75 08             	pushl  0x8(%ebp)
+ 804ac55:	e8 b6 dd ff ff       	call   8048a10 <lseek@plt>
+ 804ac5a:	83 c4 10             	add    $0x10,%esp
+ 804ac5d:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 804ac60:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 804ac64:	79 33                	jns    804ac99 <_Z5Lseekiii+0x56>
+ 804ac66:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804ac6b:	68 c0 b8 04 08       	push   $0x804b8c0
+ 804ac70:	68 e2 00 00 00       	push   $0xe2
+ 804ac75:	68 d8 b8 04 08       	push   $0x804b8d8
+ 804ac7a:	50                   	push   %eax
+ 804ac7b:	e8 b0 dd ff ff       	call   8048a30 <fprintf@plt>
+ 804ac80:	83 c4 10             	add    $0x10,%esp
+ 804ac83:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804ac88:	83 ec 0c             	sub    $0xc,%esp
+ 804ac8b:	50                   	push   %eax
+ 804ac8c:	e8 ef dd ff ff       	call   8048a80 <fflush@plt>
+ 804ac91:	83 c4 10             	add    $0x10,%esp
+ 804ac94:	e8 2c 03 00 00       	call   804afc5 <_Z5Abortv>
+ 804ac99:	90                   	nop
+ 804ac9a:	c9                   	leave
+ 804ac9b:	c3                   	ret
+
+0804ac9c <_Z4Telli>:
+ 804ac9c:	55                   	push   %ebp
+ 804ac9d:	89 e5                	mov    %esp,%ebp
+ 804ac9f:	83 ec 08             	sub    $0x8,%esp
+ 804aca2:	83 ec 04             	sub    $0x4,%esp
+ 804aca5:	6a 01                	push   $0x1
+ 804aca7:	6a 00                	push   $0x0
+ 804aca9:	ff 75 08             	pushl  0x8(%ebp)
+ 804acac:	e8 5f dd ff ff       	call   8048a10 <lseek@plt>
+ 804acb1:	83 c4 10             	add    $0x10,%esp
+ 804acb4:	c9                   	leave
+ 804acb5:	c3                   	ret
+
+0804acb6 <_Z5Closei>:
+ 804acb6:	55                   	push   %ebp
+ 804acb7:	89 e5                	mov    %esp,%ebp
+ 804acb9:	83 ec 18             	sub    $0x18,%esp
+ 804acbc:	83 ec 0c             	sub    $0xc,%esp
+ 804acbf:	ff 75 08             	pushl  0x8(%ebp)
+ 804acc2:	e8 a9 de ff ff       	call   8048b70 <close@plt>
+ 804acc7:	83 c4 10             	add    $0x10,%esp
+ 804acca:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 804accd:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 804acd1:	79 33                	jns    804ad06 <_Z5Closei+0x50>
+ 804acd3:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804acd8:	68 c0 b8 04 08       	push   $0x804b8c0
+ 804acdd:	68 fe 00 00 00       	push   $0xfe
+ 804ace2:	68 d8 b8 04 08       	push   $0x804b8d8
+ 804ace7:	50                   	push   %eax
+ 804ace8:	e8 43 dd ff ff       	call   8048a30 <fprintf@plt>
+ 804aced:	83 c4 10             	add    $0x10,%esp
+ 804acf0:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804acf5:	83 ec 0c             	sub    $0xc,%esp
+ 804acf8:	50                   	push   %eax
+ 804acf9:	e8 82 dd ff ff       	call   8048a80 <fflush@plt>
+ 804acfe:	83 c4 10             	add    $0x10,%esp
+ 804ad01:	e8 bf 02 00 00       	call   804afc5 <_Z5Abortv>
+ 804ad06:	90                   	nop
+ 804ad07:	c9                   	leave
+ 804ad08:	c3                   	ret
+
+0804ad09 <_Z6UnlinkPKc>:
+ 804ad09:	55                   	push   %ebp
+ 804ad0a:	89 e5                	mov    %esp,%ebp
+ 804ad0c:	83 ec 08             	sub    $0x8,%esp
+ 804ad0f:	83 ec 0c             	sub    $0xc,%esp
+ 804ad12:	ff 75 08             	pushl  0x8(%ebp)
+ 804ad15:	e8 a6 de ff ff       	call   8048bc0 <unlink@plt>
+ 804ad1a:	83 c4 10             	add    $0x10,%esp
+ 804ad1d:	85 c0                	test   %eax,%eax
+ 804ad1f:	0f 95 c0             	setne  %al
+ 804ad22:	c9                   	leave
+ 804ad23:	c3                   	ret
+
+0804ad24 <_Z10OpenSocketv>:
+ 804ad24:	55                   	push   %ebp
+ 804ad25:	89 e5                	mov    %esp,%ebp
+ 804ad27:	83 ec 18             	sub    $0x18,%esp
+ 804ad2a:	83 ec 04             	sub    $0x4,%esp
+ 804ad2d:	6a 00                	push   $0x0
+ 804ad2f:	6a 02                	push   $0x2
+ 804ad31:	6a 01                	push   $0x1
+ 804ad33:	e8 a8 dc ff ff       	call   80489e0 <socket@plt>
+ 804ad38:	83 c4 10             	add    $0x10,%esp
+ 804ad3b:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 804ad3e:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 804ad42:	79 33                	jns    804ad77 <_Z10OpenSocketv+0x53>
+ 804ad44:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804ad49:	68 c0 b8 04 08       	push   $0x804b8c0
+ 804ad4e:	68 19 01 00 00       	push   $0x119
+ 804ad53:	68 d8 b8 04 08       	push   $0x804b8d8
+ 804ad58:	50                   	push   %eax
+ 804ad59:	e8 d2 dc ff ff       	call   8048a30 <fprintf@plt>
+ 804ad5e:	83 c4 10             	add    $0x10,%esp
+ 804ad61:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804ad66:	83 ec 0c             	sub    $0xc,%esp
+ 804ad69:	50                   	push   %eax
+ 804ad6a:	e8 11 dd ff ff       	call   8048a80 <fflush@plt>
+ 804ad6f:	83 c4 10             	add    $0x10,%esp
+ 804ad72:	e8 4e 02 00 00       	call   804afc5 <_Z5Abortv>
+ 804ad77:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804ad7a:	c9                   	leave
+ 804ad7b:	c3                   	ret
+
+0804ad7c <_Z11CloseSocketi>:
+ 804ad7c:	55                   	push   %ebp
+ 804ad7d:	89 e5                	mov    %esp,%ebp
+ 804ad7f:	83 ec 08             	sub    $0x8,%esp
+ 804ad82:	83 ec 0c             	sub    $0xc,%esp
+ 804ad85:	ff 75 08             	pushl  0x8(%ebp)
+ 804ad88:	e8 e3 dd ff ff       	call   8048b70 <close@plt>
+ 804ad8d:	83 c4 10             	add    $0x10,%esp
+ 804ad90:	90                   	nop
+ 804ad91:	c9                   	leave
+ 804ad92:	c3                   	ret
+
+0804ad93 <_ZL14InitSocketNameP11sockaddr_unPc>:
+ 804ad93:	55                   	push   %ebp
+ 804ad94:	89 e5                	mov    %esp,%ebp
+ 804ad96:	83 ec 08             	sub    $0x8,%esp
+ 804ad99:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804ad9c:	66 c7 00 01 00       	movw   $0x1,(%eax)
+ 804ada1:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804ada4:	83 c0 02             	add    $0x2,%eax
+ 804ada7:	83 ec 08             	sub    $0x8,%esp
+ 804adaa:	ff 75 0c             	pushl  0xc(%ebp)
+ 804adad:	50                   	push   %eax
+ 804adae:	e8 1d de ff ff       	call   8048bd0 <strcpy@plt>
+ 804adb3:	83 c4 10             	add    $0x10,%esp
+ 804adb6:	90                   	nop
+ 804adb7:	c9                   	leave
+ 804adb8:	c3                   	ret
+
+0804adb9 <_Z18AssignNameToSocketPci>:
+ 804adb9:	55                   	push   %ebp
+ 804adba:	89 e5                	mov    %esp,%ebp
+ 804adbc:	81 ec 88 00 00 00    	sub    $0x88,%esp
+ 804adc2:	83 ec 0c             	sub    $0xc,%esp
+ 804adc5:	ff 75 08             	pushl  0x8(%ebp)
+ 804adc8:	e8 f3 dd ff ff       	call   8048bc0 <unlink@plt>
+ 804adcd:	83 c4 10             	add    $0x10,%esp
+ 804add0:	83 ec 08             	sub    $0x8,%esp
+ 804add3:	ff 75 08             	pushl  0x8(%ebp)
+ 804add6:	8d 45 86             	lea    -0x7a(%ebp),%eax
+ 804add9:	50                   	push   %eax
+ 804adda:	e8 b4 ff ff ff       	call   804ad93 <_ZL14InitSocketNameP11sockaddr_unPc>
+ 804addf:	83 c4 10             	add    $0x10,%esp
+ 804ade2:	83 ec 04             	sub    $0x4,%esp
+ 804ade5:	6a 6e                	push   $0x6e
+ 804ade7:	8d 45 86             	lea    -0x7a(%ebp),%eax
+ 804adea:	50                   	push   %eax
+ 804adeb:	ff 75 0c             	pushl  0xc(%ebp)
+ 804adee:	e8 fd dd ff ff       	call   8048bf0 <bind@plt>
+ 804adf3:	83 c4 10             	add    $0x10,%esp
+ 804adf6:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 804adf9:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 804adfd:	79 33                	jns    804ae32 <_Z18AssignNameToSocketPci+0x79>
+ 804adff:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804ae04:	68 c0 b8 04 08       	push   $0x804b8c0
+ 804ae09:	68 45 01 00 00       	push   $0x145
+ 804ae0e:	68 d8 b8 04 08       	push   $0x804b8d8
+ 804ae13:	50                   	push   %eax
+ 804ae14:	e8 17 dc ff ff       	call   8048a30 <fprintf@plt>
+ 804ae19:	83 c4 10             	add    $0x10,%esp
+ 804ae1c:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804ae21:	83 ec 0c             	sub    $0xc,%esp
+ 804ae24:	50                   	push   %eax
+ 804ae25:	e8 56 dc ff ff       	call   8048a80 <fflush@plt>
+ 804ae2a:	83 c4 10             	add    $0x10,%esp
+ 804ae2d:	e8 93 01 00 00       	call   804afc5 <_Z5Abortv>
+ 804ae32:	83 ec 04             	sub    $0x4,%esp
+ 804ae35:	ff 75 08             	pushl  0x8(%ebp)
+ 804ae38:	68 fe b8 04 08       	push   $0x804b8fe
+ 804ae3d:	6a 6e                	push   $0x6e
+ 804ae3f:	e8 f5 f1 ff ff       	call   804a039 <_Z5DEBUGcPKcz>
+ 804ae44:	83 c4 10             	add    $0x10,%esp
+ 804ae47:	90                   	nop
+ 804ae48:	c9                   	leave
+ 804ae49:	c3                   	ret
+
+0804ae4a <_Z20DeAssignNameToSocketPc>:
+ 804ae4a:	55                   	push   %ebp
+ 804ae4b:	89 e5                	mov    %esp,%ebp
+ 804ae4d:	83 ec 08             	sub    $0x8,%esp
+ 804ae50:	83 ec 0c             	sub    $0xc,%esp
+ 804ae53:	ff 75 08             	pushl  0x8(%ebp)
+ 804ae56:	e8 65 dd ff ff       	call   8048bc0 <unlink@plt>
+ 804ae5b:	83 c4 10             	add    $0x10,%esp
+ 804ae5e:	90                   	nop
+ 804ae5f:	c9                   	leave
+ 804ae60:	c3                   	ret
+
+0804ae61 <_Z10PollSocketi>:
+ 804ae61:	55                   	push   %ebp
+ 804ae62:	89 e5                	mov    %esp,%ebp
+ 804ae64:	83 ec 08             	sub    $0x8,%esp
+ 804ae67:	83 ec 0c             	sub    $0xc,%esp
+ 804ae6a:	ff 75 08             	pushl  0x8(%ebp)
+ 804ae6d:	e8 6f fb ff ff       	call   804a9e1 <_Z8PollFilei>
+ 804ae72:	83 c4 10             	add    $0x10,%esp
+ 804ae75:	c9                   	leave
+ 804ae76:	c3                   	ret
+
+0804ae77 <_Z14ReadFromSocketiPci>:
+ 804ae77:	55                   	push   %ebp
+ 804ae78:	89 e5                	mov    %esp,%ebp
+ 804ae7a:	81 ec 88 00 00 00    	sub    $0x88,%esp
+ 804ae80:	c7 45 80 6e 00 00 00 	movl   $0x6e,-0x80(%ebp)
+ 804ae87:	8b 45 10             	mov    0x10(%ebp),%eax
+ 804ae8a:	83 ec 08             	sub    $0x8,%esp
+ 804ae8d:	8d 55 80             	lea    -0x80(%ebp),%edx
+ 804ae90:	52                   	push   %edx
+ 804ae91:	8d 55 86             	lea    -0x7a(%ebp),%edx
+ 804ae94:	52                   	push   %edx
+ 804ae95:	6a 00                	push   $0x0
+ 804ae97:	50                   	push   %eax
+ 804ae98:	ff 75 0c             	pushl  0xc(%ebp)
+ 804ae9b:	ff 75 08             	pushl  0x8(%ebp)
+ 804ae9e:	e8 3d dc ff ff       	call   8048ae0 <recvfrom@plt>
+ 804aea3:	83 c4 20             	add    $0x20,%esp
+ 804aea6:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 804aea9:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804aeac:	3b 45 10             	cmp    0x10(%ebp),%eax
+ 804aeaf:	74 2c                	je     804aedd <_Z14ReadFromSocketiPci+0x66>
+ 804aeb1:	83 ec 0c             	sub    $0xc,%esp
+ 804aeb4:	68 11 b9 04 08       	push   $0x804b911
+ 804aeb9:	e8 72 dc ff ff       	call   8048b30 <perror@plt>
+ 804aebe:	83 c4 10             	add    $0x10,%esp
+ 804aec1:	e8 aa db ff ff       	call   8048a70 <__errno_location@plt>
+ 804aec6:	8b 10                	mov    (%eax),%edx
+ 804aec8:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804aecb:	52                   	push   %edx
+ 804aecc:	ff 75 f4             	pushl  -0xc(%ebp)
+ 804aecf:	50                   	push   %eax
+ 804aed0:	68 1d b9 04 08       	push   $0x804b91d
+ 804aed5:	e8 36 dc ff ff       	call   8048b10 <printf@plt>
+ 804aeda:	83 c4 10             	add    $0x10,%esp
+ 804aedd:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804aee0:	3b 45 10             	cmp    0x10(%ebp),%eax
+ 804aee3:	74 33                	je     804af18 <_Z14ReadFromSocketiPci+0xa1>
+ 804aee5:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804aeea:	68 c0 b8 04 08       	push   $0x804b8c0
+ 804aeef:	68 75 01 00 00       	push   $0x175
+ 804aef4:	68 d8 b8 04 08       	push   $0x804b8d8
+ 804aef9:	50                   	push   %eax
+ 804aefa:	e8 31 db ff ff       	call   8048a30 <fprintf@plt>
+ 804aeff:	83 c4 10             	add    $0x10,%esp
+ 804af02:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804af07:	83 ec 0c             	sub    $0xc,%esp
+ 804af0a:	50                   	push   %eax
+ 804af0b:	e8 70 db ff ff       	call   8048a80 <fflush@plt>
+ 804af10:	83 c4 10             	add    $0x10,%esp
+ 804af13:	e8 ad 00 00 00       	call   804afc5 <_Z5Abortv>
+ 804af18:	90                   	nop
+ 804af19:	c9                   	leave
+ 804af1a:	c3                   	ret
+
+0804af1b <_Z12SendToSocketiPciS_>:
+ 804af1b:	55                   	push   %ebp
+ 804af1c:	89 e5                	mov    %esp,%ebp
+ 804af1e:	81 ec 88 00 00 00    	sub    $0x88,%esp
+ 804af24:	83 ec 08             	sub    $0x8,%esp
+ 804af27:	ff 75 14             	pushl  0x14(%ebp)
+ 804af2a:	8d 45 86             	lea    -0x7a(%ebp),%eax
+ 804af2d:	50                   	push   %eax
+ 804af2e:	e8 60 fe ff ff       	call   804ad93 <_ZL14InitSocketNameP11sockaddr_unPc>
+ 804af33:	83 c4 10             	add    $0x10,%esp
+ 804af36:	8b 45 10             	mov    0x10(%ebp),%eax
+ 804af39:	83 ec 08             	sub    $0x8,%esp
+ 804af3c:	6a 6e                	push   $0x6e
+ 804af3e:	8d 55 86             	lea    -0x7a(%ebp),%edx
+ 804af41:	52                   	push   %edx
+ 804af42:	6a 00                	push   $0x0
+ 804af44:	50                   	push   %eax
+ 804af45:	ff 75 0c             	pushl  0xc(%ebp)
+ 804af48:	ff 75 08             	pushl  0x8(%ebp)
+ 804af4b:	e8 00 dc ff ff       	call   8048b50 <sendto@plt>
+ 804af50:	83 c4 20             	add    $0x20,%esp
+ 804af53:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 804af56:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804af59:	3b 45 10             	cmp    0x10(%ebp),%eax
+ 804af5c:	74 33                	je     804af91 <_Z12SendToSocketiPciS_+0x76>
+ 804af5e:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804af63:	68 c0 b8 04 08       	push   $0x804b8c0
+ 804af68:	68 86 01 00 00       	push   $0x186
+ 804af6d:	68 d8 b8 04 08       	push   $0x804b8d8
+ 804af72:	50                   	push   %eax
+ 804af73:	e8 b8 da ff ff       	call   8048a30 <fprintf@plt>
+ 804af78:	83 c4 10             	add    $0x10,%esp
+ 804af7b:	a1 d8 e0 04 08       	mov    0x804e0d8,%eax
+ 804af80:	83 ec 0c             	sub    $0xc,%esp
+ 804af83:	50                   	push   %eax
+ 804af84:	e8 f7 da ff ff       	call   8048a80 <fflush@plt>
+ 804af89:	83 c4 10             	add    $0x10,%esp
+ 804af8c:	e8 34 00 00 00       	call   804afc5 <_Z5Abortv>
+ 804af91:	90                   	nop
+ 804af92:	c9                   	leave
+ 804af93:	c3                   	ret
+
+0804af94 <_Z15CallOnUserAbortPFvvE>:
+ 804af94:	55                   	push   %ebp
+ 804af95:	89 e5                	mov    %esp,%ebp
+ 804af97:	83 ec 08             	sub    $0x8,%esp
+ 804af9a:	83 ec 08             	sub    $0x8,%esp
+ 804af9d:	ff 75 08             	pushl  0x8(%ebp)
+ 804afa0:	6a 02                	push   $0x2
+ 804afa2:	e8 19 db ff ff       	call   8048ac0 <signal@plt>
+ 804afa7:	83 c4 10             	add    $0x10,%esp
+ 804afaa:	90                   	nop
+ 804afab:	c9                   	leave
+ 804afac:	c3                   	ret
+
+0804afad <_Z5Delayi>:
+ 804afad:	55                   	push   %ebp
+ 804afae:	89 e5                	mov    %esp,%ebp
+ 804afb0:	83 ec 08             	sub    $0x8,%esp
+ 804afb3:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804afb6:	83 ec 0c             	sub    $0xc,%esp
+ 804afb9:	50                   	push   %eax
+ 804afba:	e8 41 da ff ff       	call   8048a00 <sleep@plt>
+ 804afbf:	83 c4 10             	add    $0x10,%esp
+ 804afc2:	90                   	nop
+ 804afc3:	c9                   	leave
+ 804afc4:	c3                   	ret
+
+0804afc5 <_Z5Abortv>:
+ 804afc5:	55                   	push   %ebp
+ 804afc6:	89 e5                	mov    %esp,%ebp
+ 804afc8:	83 ec 08             	sub    $0x8,%esp
+ 804afcb:	e8 c0 db ff ff       	call   8048b90 <abort@plt>
+
+0804afd0 <_Z4Exiti>:
+ 804afd0:	55                   	push   %ebp
+ 804afd1:	89 e5                	mov    %esp,%ebp
+ 804afd3:	83 ec 08             	sub    $0x8,%esp
+ 804afd6:	83 ec 0c             	sub    $0xc,%esp
+ 804afd9:	ff 75 08             	pushl  0x8(%ebp)
+ 804afdc:	e8 1f db ff ff       	call   8048b00 <exit@plt>
+
+0804afe1 <_Z10RandomInitj>:
+ 804afe1:	55                   	push   %ebp
+ 804afe2:	89 e5                	mov    %esp,%ebp
+ 804afe4:	83 ec 08             	sub    $0x8,%esp
+ 804afe7:	83 ec 0c             	sub    $0xc,%esp
+ 804afea:	ff 75 08             	pushl  0x8(%ebp)
+ 804afed:	e8 9e da ff ff       	call   8048a90 <srand@plt>
+ 804aff2:	83 c4 10             	add    $0x10,%esp
+ 804aff5:	90                   	nop
+ 804aff6:	c9                   	leave
+ 804aff7:	c3                   	ret
+
+0804aff8 <_Z6Randomv>:
+ 804aff8:	55                   	push   %ebp
+ 804aff9:	89 e5                	mov    %esp,%ebp
+ 804affb:	83 ec 08             	sub    $0x8,%esp
+ 804affe:	e8 cd da ff ff       	call   8048ad0 <rand@plt>
+ 804b003:	c9                   	leave
+ 804b004:	c3                   	ret
+
+0804b005 <_Z17AllocBoundedArrayi>:
+ 804b005:	55                   	push   %ebp
+ 804b006:	89 e5                	mov    %esp,%ebp
+ 804b008:	83 ec 18             	sub    $0x18,%esp
+ 804b00b:	e8 c0 d9 ff ff       	call   80489d0 <getpagesize@plt>
+ 804b010:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 804b013:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804b016:	8d 14 00             	lea    (%eax,%eax,1),%edx
+ 804b019:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804b01c:	01 d0                	add    %edx,%eax
+ 804b01e:	83 ec 0c             	sub    $0xc,%esp
+ 804b021:	50                   	push   %eax
+ 804b022:	e8 39 da ff ff       	call   8048a60 <_Znaj@plt>
+ 804b027:	83 c4 10             	add    $0x10,%esp
+ 804b02a:	89 45 f0             	mov    %eax,-0x10(%ebp)
+ 804b02d:	8b 55 f4             	mov    -0xc(%ebp),%edx
+ 804b030:	8b 45 f0             	mov    -0x10(%ebp),%eax
+ 804b033:	01 d0                	add    %edx,%eax
+ 804b035:	c9                   	leave
+ 804b036:	c3                   	ret
+
+0804b037 <_Z19DeallocBoundedArrayPci>:
+ 804b037:	55                   	push   %ebp
+ 804b038:	89 e5                	mov    %esp,%ebp
+ 804b03a:	83 ec 18             	sub    $0x18,%esp
+ 804b03d:	e8 8e d9 ff ff       	call   80489d0 <getpagesize@plt>
+ 804b042:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 804b045:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804b048:	8b 55 f4             	mov    -0xc(%ebp),%edx
+ 804b04b:	89 d1                	mov    %edx,%ecx
+ 804b04d:	f7 d9                	neg    %ecx
+ 804b04f:	8b 55 08             	mov    0x8(%ebp),%edx
+ 804b052:	01 ca                	add    %ecx,%edx
+ 804b054:	83 ec 04             	sub    $0x4,%esp
+ 804b057:	6a 07                	push   $0x7
+ 804b059:	50                   	push   %eax
+ 804b05a:	52                   	push   %edx
+ 804b05b:	e8 80 db ff ff       	call   8048be0 <mprotect@plt>
+ 804b060:	83 c4 10             	add    $0x10,%esp
+ 804b063:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804b066:	8b 4d 0c             	mov    0xc(%ebp),%ecx
+ 804b069:	8b 55 08             	mov    0x8(%ebp),%edx
+ 804b06c:	01 ca                	add    %ecx,%edx
+ 804b06e:	83 ec 04             	sub    $0x4,%esp
+ 804b071:	6a 07                	push   $0x7
+ 804b073:	50                   	push   %eax
+ 804b074:	52                   	push   %edx
+ 804b075:	e8 66 db ff ff       	call   8048be0 <mprotect@plt>
+ 804b07a:	83 c4 10             	add    $0x10,%esp
+ 804b07d:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804b080:	f7 d8                	neg    %eax
+ 804b082:	89 c2                	mov    %eax,%edx
+ 804b084:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804b087:	01 d0                	add    %edx,%eax
+ 804b089:	85 c0                	test   %eax,%eax
+ 804b08b:	74 18                	je     804b0a5 <_Z19DeallocBoundedArrayPci+0x6e>
+ 804b08d:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804b090:	f7 d8                	neg    %eax
+ 804b092:	89 c2                	mov    %eax,%edx
+ 804b094:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804b097:	01 d0                	add    %edx,%eax
+ 804b099:	83 ec 0c             	sub    $0xc,%esp
+ 804b09c:	50                   	push   %eax
+ 804b09d:	e8 4e da ff ff       	call   8048af0 <_ZdaPv@plt>
+ 804b0a2:	83 c4 10             	add    $0x10,%esp
+ 804b0a5:	90                   	nop
+ 804b0a6:	c9                   	leave
+ 804b0a7:	c3                   	ret
+
+0804b0a8 <_ZL12TimerHandleri>:
+ 804b0a8:	55                   	push   %ebp
+ 804b0a9:	89 e5                	mov    %esp,%ebp
+ 804b0ab:	83 ec 18             	sub    $0x18,%esp
+ 804b0ae:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804b0b1:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 804b0b4:	83 ec 0c             	sub    $0xc,%esp
+ 804b0b7:	ff 75 f4             	pushl  -0xc(%ebp)
+ 804b0ba:	e8 61 00 00 00       	call   804b120 <_ZN5Timer12TimerExpiredEv>
+ 804b0bf:	83 c4 10             	add    $0x10,%esp
+ 804b0c2:	90                   	nop
+ 804b0c3:	c9                   	leave
+ 804b0c4:	c3                   	ret
+ 804b0c5:	90                   	nop
+
+0804b0c6 <_ZN5TimerC1EPFviEib>:
+ 804b0c6:	55                   	push   %ebp
+ 804b0c7:	89 e5                	mov    %esp,%ebp
+ 804b0c9:	53                   	push   %ebx
+ 804b0ca:	83 ec 14             	sub    $0x14,%esp
+ 804b0cd:	8b 45 14             	mov    0x14(%ebp),%eax
+ 804b0d0:	88 45 f4             	mov    %al,-0xc(%ebp)
+ 804b0d3:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804b0d6:	0f b6 55 f4          	movzbl -0xc(%ebp),%edx
+ 804b0da:	88 10                	mov    %dl,(%eax)
+ 804b0dc:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804b0df:	8b 55 0c             	mov    0xc(%ebp),%edx
+ 804b0e2:	89 50 04             	mov    %edx,0x4(%eax)
+ 804b0e5:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804b0e8:	8b 55 10             	mov    0x10(%ebp),%edx
+ 804b0eb:	89 50 08             	mov    %edx,0x8(%eax)
+ 804b0ee:	8b 1d ec e0 04 08    	mov    0x804e0ec,%ebx
+ 804b0f4:	83 ec 0c             	sub    $0xc,%esp
+ 804b0f7:	ff 75 08             	pushl  0x8(%ebp)
+ 804b0fa:	e8 6f 00 00 00       	call   804b16e <_ZN5Timer19TimeOfNextInterruptEv>
+ 804b0ff:	83 c4 10             	add    $0x10,%esp
+ 804b102:	8b 55 08             	mov    0x8(%ebp),%edx
+ 804b105:	83 ec 0c             	sub    $0xc,%esp
+ 804b108:	6a 00                	push   $0x0
+ 804b10a:	50                   	push   %eax
+ 804b10b:	52                   	push   %edx
+ 804b10c:	68 a8 b0 04 08       	push   $0x804b0a8
+ 804b111:	53                   	push   %ebx
+ 804b112:	e8 57 f4 ff ff       	call   804a56e <_ZN9Interrupt8ScheduleEPFviEii7IntType>
+ 804b117:	83 c4 20             	add    $0x20,%esp
+ 804b11a:	90                   	nop
+ 804b11b:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+ 804b11e:	c9                   	leave
+ 804b11f:	c3                   	ret
+
+0804b120 <_ZN5Timer12TimerExpiredEv>:
+ 804b120:	55                   	push   %ebp
+ 804b121:	89 e5                	mov    %esp,%ebp
+ 804b123:	53                   	push   %ebx
+ 804b124:	83 ec 04             	sub    $0x4,%esp
+ 804b127:	8b 1d ec e0 04 08    	mov    0x804e0ec,%ebx
+ 804b12d:	83 ec 0c             	sub    $0xc,%esp
+ 804b130:	ff 75 08             	pushl  0x8(%ebp)
+ 804b133:	e8 36 00 00 00       	call   804b16e <_ZN5Timer19TimeOfNextInterruptEv>
+ 804b138:	83 c4 10             	add    $0x10,%esp
+ 804b13b:	8b 55 08             	mov    0x8(%ebp),%edx
+ 804b13e:	83 ec 0c             	sub    $0xc,%esp
+ 804b141:	6a 00                	push   $0x0
+ 804b143:	50                   	push   %eax
+ 804b144:	52                   	push   %edx
+ 804b145:	68 a8 b0 04 08       	push   $0x804b0a8
+ 804b14a:	53                   	push   %ebx
+ 804b14b:	e8 1e f4 ff ff       	call   804a56e <_ZN9Interrupt8ScheduleEPFviEii7IntType>
+ 804b150:	83 c4 20             	add    $0x20,%esp
+ 804b153:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804b156:	8b 40 04             	mov    0x4(%eax),%eax
+ 804b159:	8b 55 08             	mov    0x8(%ebp),%edx
+ 804b15c:	8b 52 08             	mov    0x8(%edx),%edx
+ 804b15f:	83 ec 0c             	sub    $0xc,%esp
+ 804b162:	52                   	push   %edx
+ 804b163:	ff d0                	call   *%eax
+ 804b165:	83 c4 10             	add    $0x10,%esp
+ 804b168:	90                   	nop
+ 804b169:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+ 804b16c:	c9                   	leave
+ 804b16d:	c3                   	ret
+
+0804b16e <_ZN5Timer19TimeOfNextInterruptEv>:
+ 804b16e:	55                   	push   %ebp
+ 804b16f:	89 e5                	mov    %esp,%ebp
+ 804b171:	83 ec 08             	sub    $0x8,%esp
+ 804b174:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804b177:	0f b6 00             	movzbl (%eax),%eax
+ 804b17a:	84 c0                	test   %al,%al
+ 804b17c:	74 2b                	je     804b1a9 <_ZN5Timer19TimeOfNextInterruptEv+0x3b>
+ 804b17e:	e8 75 fe ff ff       	call   804aff8 <_Z6Randomv>
+ 804b183:	89 c1                	mov    %eax,%ecx
+ 804b185:	ba 1f 85 eb 51       	mov    $0x51eb851f,%edx
+ 804b18a:	89 c8                	mov    %ecx,%eax
+ 804b18c:	f7 ea                	imul   %edx
+ 804b18e:	c1 fa 06             	sar    $0x6,%edx
+ 804b191:	89 c8                	mov    %ecx,%eax
+ 804b193:	c1 f8 1f             	sar    $0x1f,%eax
+ 804b196:	29 c2                	sub    %eax,%edx
+ 804b198:	89 d0                	mov    %edx,%eax
+ 804b19a:	69 c0 c8 00 00 00    	imul   $0xc8,%eax,%eax
+ 804b1a0:	29 c1                	sub    %eax,%ecx
+ 804b1a2:	89 c8                	mov    %ecx,%eax
+ 804b1a4:	83 c0 01             	add    $0x1,%eax
+ 804b1a7:	eb 05                	jmp    804b1ae <_ZN5Timer19TimeOfNextInterruptEv+0x40>
+ 804b1a9:	b8 64 00 00 00       	mov    $0x64,%eax
+ 804b1ae:	c9                   	leave
+ 804b1af:	c3                   	ret
+
+0804b1b0 <ThreadRoot>:
+ 804b1b0:	55                   	push   %ebp
+ 804b1b1:	89 e5                	mov    %esp,%ebp
+ 804b1b3:	52                   	push   %edx
+ 804b1b4:	ff d1                	call   *%ecx
+ 804b1b6:	ff d6                	call   *%esi
+ 804b1b8:	ff d7                	call   *%edi
+ 804b1ba:	89 ec                	mov    %ebp,%esp
+ 804b1bc:	5d                   	pop    %ebp
+ 804b1bd:	c3                   	ret
+
+0804b1be <SWITCH>:
+ 804b1be:	a3 fc e0 04 08       	mov    %eax,0x804e0fc
+ 804b1c3:	8b 44 24 04          	mov    0x4(%esp),%eax
+ 804b1c7:	89 58 08             	mov    %ebx,0x8(%eax)
+ 804b1ca:	89 48 0c             	mov    %ecx,0xc(%eax)
+ 804b1cd:	89 50 10             	mov    %edx,0x10(%eax)
+ 804b1d0:	89 70 18             	mov    %esi,0x18(%eax)
+ 804b1d3:	89 78 1c             	mov    %edi,0x1c(%eax)
+ 804b1d6:	89 68 14             	mov    %ebp,0x14(%eax)
+ 804b1d9:	89 20                	mov    %esp,(%eax)
+ 804b1db:	8b 1d fc e0 04 08    	mov    0x804e0fc,%ebx
+ 804b1e1:	89 58 04             	mov    %ebx,0x4(%eax)
+ 804b1e4:	8b 1c 24             	mov    (%esp),%ebx
+ 804b1e7:	89 58 20             	mov    %ebx,0x20(%eax)
+ 804b1ea:	8b 44 24 08          	mov    0x8(%esp),%eax
+ 804b1ee:	8b 58 04             	mov    0x4(%eax),%ebx
+ 804b1f1:	89 1d fc e0 04 08    	mov    %ebx,0x804e0fc
+ 804b1f7:	8b 58 08             	mov    0x8(%eax),%ebx
+ 804b1fa:	8b 48 0c             	mov    0xc(%eax),%ecx
+ 804b1fd:	8b 50 10             	mov    0x10(%eax),%edx
+ 804b200:	8b 70 18             	mov    0x18(%eax),%esi
+ 804b203:	8b 78 1c             	mov    0x1c(%eax),%edi
+ 804b206:	8b 68 14             	mov    0x14(%eax),%ebp
+ 804b209:	8b 20                	mov    (%eax),%esp
+ 804b20b:	8b 40 20             	mov    0x20(%eax),%eax
+ 804b20e:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 804b212:	a1 fc e0 04 08       	mov    0x804e0fc,%eax
+ 804b217:	c3                   	ret
+ 804b218:	66 90                	xchg   %ax,%ax
+ 804b21a:	66 90                	xchg   %ax,%ax
+ 804b21c:	66 90                	xchg   %ax,%ax
+ 804b21e:	66 90                	xchg   %ax,%ax
+
+0804b220 <__libc_csu_init>:
+ 804b220:	55                   	push   %ebp
+ 804b221:	57                   	push   %edi
+ 804b222:	56                   	push   %esi
+ 804b223:	53                   	push   %ebx
+ 804b224:	e8 17 da ff ff       	call   8048c40 <__x86.get_pc_thunk.bx>
+ 804b229:	81 c3 d7 2d 00 00    	add    $0x2dd7,%ebx
+ 804b22f:	83 ec 0c             	sub    $0xc,%esp
+ 804b232:	8b 6c 24 28          	mov    0x28(%esp),%ebp
+ 804b236:	8d b3 f0 fe ff ff    	lea    -0x110(%ebx),%esi
+ 804b23c:	e8 3b d7 ff ff       	call   804897c <_init>
+ 804b241:	8d 83 ec fe ff ff    	lea    -0x114(%ebx),%eax
+ 804b247:	29 c6                	sub    %eax,%esi
+ 804b249:	c1 fe 02             	sar    $0x2,%esi
+ 804b24c:	85 f6                	test   %esi,%esi
+ 804b24e:	74 25                	je     804b275 <__libc_csu_init+0x55>
+ 804b250:	31 ff                	xor    %edi,%edi
+ 804b252:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+ 804b258:	83 ec 04             	sub    $0x4,%esp
+ 804b25b:	55                   	push   %ebp
+ 804b25c:	ff 74 24 2c          	pushl  0x2c(%esp)
+ 804b260:	ff 74 24 2c          	pushl  0x2c(%esp)
+ 804b264:	ff 94 bb ec fe ff ff 	call   *-0x114(%ebx,%edi,4)
+ 804b26b:	83 c7 01             	add    $0x1,%edi
+ 804b26e:	83 c4 10             	add    $0x10,%esp
+ 804b271:	39 fe                	cmp    %edi,%esi
+ 804b273:	75 e3                	jne    804b258 <__libc_csu_init+0x38>
+ 804b275:	83 c4 0c             	add    $0xc,%esp
+ 804b278:	5b                   	pop    %ebx
+ 804b279:	5e                   	pop    %esi
+ 804b27a:	5f                   	pop    %edi
+ 804b27b:	5d                   	pop    %ebp
+ 804b27c:	c3                   	ret
+ 804b27d:	8d 76 00             	lea    0x0(%esi),%esi
+
+0804b280 <__libc_csu_fini>:
+ 804b280:	f3 c3                	repz ret
+
+Disassembly of section .fini:
+
+0804b284 <_fini>:
+ 804b284:	53                   	push   %ebx
+ 804b285:	83 ec 08             	sub    $0x8,%esp
+ 804b288:	e8 b3 d9 ff ff       	call   8048c40 <__x86.get_pc_thunk.bx>
+ 804b28d:	81 c3 73 2d 00 00    	add    $0x2d73,%ebx
+ 804b293:	83 c4 08             	add    $0x8,%esp
+ 804b296:	5b                   	pop    %ebx
+ 804b297:	c3                   	ret
